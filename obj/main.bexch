@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\FASE\cwk\homespecifications.gpr
+20240422220154 086b7e6fa50158f34cd723c5884b4124
+[BOUND OBJECT FILES]
+C:\FASE\cwk\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\FASE\cwk\obj\
+-LC:\FASE\cwk\obj\
+-LC:/gnat/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000
