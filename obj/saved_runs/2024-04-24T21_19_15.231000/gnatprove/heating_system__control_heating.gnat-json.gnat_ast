@@ -1,0 +1,226 @@
+(* Module for defining a ref holding the value of variable "temp" defined at heating_system.ads:7, created in Gnat2Why.Decls.Translate_Variable *)
+module Heating_system__control_heating__temp
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  val temp [model_trace:881] [model_projected]
+  [name:Temp] [sloc:heating_system.ads:7]: int
+
+end
+
+(* Module for defining a ref holding the value of variable "windows_open" defined at heating_system.ads:7, created in Gnat2Why.Decls.Translate_Variable *)
+module Heating_system__control_heating__windows_open
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  val windows_open [model_projected] [model_trace:884]
+  [name:Windows_Open] [sloc:heating_system.ads:7]: bool
+
+end
+
+(* Module for axiomatizing type "temperature" defined at heating_system.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Heating_system__temperature
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  
+  type temperature  = <range 0 20>
+  
+  function   first () requires { True } ensures  { True } returns int = 0
+  
+  function   last () requires { True } ensures  { True } returns int = 20
+  
+  function   in_range (x : int) requires { True } ensures  { True } returns
+     = ((first <= x) /\ (x <= last))
+  
+  clone export ada__model.Static_Discrete with axiom . type t = temperature,
+    function first = first, function last = last,
+    predicate in_range = in_range
+  
+  type temperature__ref  = { mutable temperature__content : temperature }
+  
+  function   temperature__ref_temperature__content__projection
+    (a : temperature__ref) requires {  } ensures  {  } returns
+    temperature = a.temperature__content
+  
+  meta model_projection function temperature__ref_temperature__content__projection
+  
+  meta inline:no function temperature__ref_temperature__content__projection
+  
+  function   temperature__havoc (x : temperature__ref) requires {  } ensures 
+    {  } returns unit
+
+end
+
+(* Module giving axioms for type "temperature" defined at heating_system.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Heating_system__temperature___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Heating_system__temperature
+  
+  function   dynamic_invariant
+    (([mlw:proxy_symbol] [introduced] temp___expr_165) : int
+    ([mlw:proxy_symbol] [introduced] temp___is_init_161) : bool
+    ([mlw:proxy_symbol] [introduced] temp___skip_constant_162) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_toplevel_163) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_typ_inv_164) : bool) requires
+    { True } ensures  { True } returns
+     = (if
+       ((([mlw:proxy_symbol] [introduced] temp___is_init_161) = True) \/
+          (Heating_system__temperature.first
+             <= Heating_system__temperature.last))
+       then
+       (Heating_system__temperature.dynamic_property
+          Heating_system__temperature.first Heating_system__temperature.last
+          ([mlw:proxy_symbol] [introduced] temp___expr_165))
+       )
+  
+  function   default_initial_assumption
+    (([mlw:proxy_symbol] [introduced] temp___expr_166) : int
+    ([mlw:proxy_symbol] [introduced] temp___skip_top_level_167) : bool)
+    requires { True } ensures  { True } returns  = True
+
+end
+
+(* Module giving an empty axiom for the entity "temp" defined at heating_system.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Heating_system__control_heating__temp___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module giving an empty axiom for the entity "windows_open" defined at heating_system.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Heating_system__control_heating__windows_open___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "control_heating" defined at heating_system.ads:7, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Heating_system__control_heating__subprogram_def
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        _gnatprove_standard.Main
+  use        _gnatprove_standard.Boolean
+  use        Heating_system__control_heating__temp
+  use        Heating_system__control_heating__windows_open
+  use        Heating_system__temperature___axiom
+  use        Heating_system__temperature___axiom
+  use        Heating_system__control_heating__temp___axiom
+  use        Heating_system__control_heating__windows_open___axiom
+  
+  function [GP_Subp:heating_system.ads:7] [sloc:heating_system.ads:7] def
+    (__void_param : unit) requires { True } ensures 
+    { ([sloc:heating_system.ads:9] ([GP_Reason:VC_POSTCONDITION]
+                                   [GP_Sloc:heating_system.ads:9:14]
+                                   [comment:     Post => (Temp >= 17 and Temp <= 19);              ^ heating_system.ads:9:14:VC_POSTCONDITION]
+                                   [model_vc_post] [GP_Id:0]
+                                   [GP_Shape:pragargs__and] (([GP_Sloc:heating_system.ads:9:15]
+                                                             [GP_Pretty_Ada:895] (
+                                                             !Heating_system__control_heating__temp.temp
+                                                               >= 17)) /\
+                                                               ([GP_Sloc:heating_system.ads:9:30]
+                                                               [GP_Pretty_Ada:899] (
+                                                               !Heating_system__control_heating__temp.temp
+                                                                 <= 19))))) }
+    returns
+     = (* Assume dynamic invariants of inputs of the subprogram heating_system.ads:7 *);
+        assume
+        { (Heating_system__temperature___axiom.dynamic_invariant
+             !Heating_system__control_heating__temp.temp True False True True) };
+        (* Assume moved pointers in outputs of the subprogram heating_system.ads:7 *);
+        (* Check for RTE in the Pre of the subprogram heating_system.ads:7 *);
+        abstract ensures
+        { True } begin  (let _ = True in ())  end;
+        (* Assume Pre of the subprogram heating_system.ads:7 *);
+        (try
+        ();
+          ([GP_Sloc:heating_system.adb:9:7] ([sloc:heating_system.adb:9] 
+                                            (if
+                                            ([sloc:heating_system.adb:13] ([branch_id=833]
+                                            _gnatprove_standard.Main.spark__branch
+                                            :=
+                                            (_gnatprove_standard.Boolean.andb
+                                               (0
+                                                  <= !Heating_system__control_heating__temp.temp)
+                                               (!Heating_system__control_heating__temp.temp
+                                                  <= 16))));
+                                            ([branch_id=833] _gnatprove_standard.Main.spark__branch).bool__content
+                                            then
+                                            ();
+                                            ([GP_Sloc:heating_system.adb:14:13] 
+                                            ([sloc:heating_system.adb:14] 
+                                            (if
+                                            ([sloc:heating_system.adb:14] ([branch_id=837]
+                                            _gnatprove_standard.Main.spark__branch
+                                            := --pp_not NOT IMPLEMENTED));
+                                            ([branch_id=837] _gnatprove_standard.Main.spark__branch).bool__content
+                                            then
+                                            ();
+                                            ([GP_Sloc:heating_system.adb:15:21] 
+                                            ([sloc:heating_system.adb:15] (
+                                            Heating_system__control_heating__temp.temp
+                                            := ( 18))))  else ())))
+                                            (if
+                                            ([sloc:heating_system.adb:20] ([branch_id=843]
+                                            _gnatprove_standard.Main.spark__branch
+                                            :=
+                                            (!Heating_system__control_heating__temp.temp
+                                               = 20)));
+                                            ([branch_id=843] _gnatprove_standard.Main.spark__branch).bool__content
+                                            then
+                                            ();
+                                            ([GP_Sloc:heating_system.adb:21:13] 
+                                            ([sloc:heating_system.adb:21] 
+                                            (if
+                                            ([sloc:heating_system.adb:21] ([branch_id=845]
+                                            _gnatprove_standard.Main.spark__branch
+                                            :=
+                                            !Heating_system__control_heating__windows_open.windows_open));
+                                            ([branch_id=845] _gnatprove_standard.Main.spark__branch).bool__content
+                                            then
+                                            ();
+                                            ([GP_Sloc:heating_system.adb:22:21] 
+                                            ([sloc:heating_system.adb:22] (
+                                            Heating_system__control_heating__temp.temp
+                                            := ( 19))))  else ())))) else
+                                            ();
+                                            ([GP_Sloc:heating_system.adb:28:13] 
+                                            ([sloc:heating_system.adb:28] 
+                                            (if
+                                            ([sloc:heating_system.adb:28] ([branch_id=854]
+                                            _gnatprove_standard.Main.spark__branch
+                                            :=
+                                            !Heating_system__control_heating__windows_open.windows_open));
+                                            ([branch_id=854] _gnatprove_standard.Main.spark__branch).bool__content
+                                            then
+                                            ();
+                                            ([GP_Sloc:heating_system.adb:29:28] 
+                                            ([sloc:heating_system.adb:29] (
+                                            Heating_system__control_heating__windows_open.windows_open
+                                            :=
+                                            (_gnatprove_standard.Boolean.of_int
+                                               0))))
+                                             else ()))))));
+          raise Return__exc with | Return__exc  -> ());
+        abstract ensures
+        { True } begin  (let _ =
+                       (_gnatprove_standard.Boolean.andb
+                          (!Heating_system__control_heating__temp.temp >= 17)
+                          (!Heating_system__control_heating__temp.temp <= 19))
+                       in ())  end
+
+end

@@ -1,0 +1,183 @@
+{
+  "spark": [
+    {
+      "name": "Heating_System",
+      "sloc": [
+        {
+          "file": "heating_system.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Heating_System.Control_Heating",
+      "sloc": [
+        {
+          "file": "heating_system.ads",
+          "line": 7
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "heating_system.ads",
+      "line": 7,
+      "col": 56,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Heating_System.Control_Heating",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "C:\\FASE\\cwk\\obj\\gnatprove\\heating_system__control_heating"
+  },
+  "proof": [
+    {
+      "file": "heating_system.ads",
+      "line": 10,
+      "col": 16,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Heating_System.Control_Heating",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "heating_system.ads",
+      "check_line": 10,
+      "check_col": 16,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Heating_System.Control_Heating",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Heating_System.Control_Heating",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Heating_System.Control_Heating",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Heating_System",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 3.68899985915050E-04,
+    "init_why_sections": 1.45800004247576E-03,
+    "gnatwhy3.run_vcs": 0.00000000000000E+00,
+    "globals (advanced)": 2.97680008225143E-03,
+    "flow analysis": 5.17169991508126E-03,
+    "marking": 1.16039998829365E-03,
+    "translation of standard": 6.01499993354082E-03,
+    "properties (advanced)": 2.75099999271333E-04,
+    "gnatwhy3.register_vcs": 0.00000000000000E+00,
+    "globals (basic)": 3.74839990399778E-03,
+    "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
+    "gnatwhy3.save_session": 0.00000000000000E+00,
+    "gnatwhy3.init": 1.40625000000000E-01
+  }
+}

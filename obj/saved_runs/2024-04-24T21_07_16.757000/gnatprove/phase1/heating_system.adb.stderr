@@ -1,0 +1,7 @@
+heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used before end of specification
+heating_system.adb:11:07: error: missing case values: -16#8000_0000# .. 16#7FFF_FFFF#
+heating_system.adb:15:27: error: expected type "Standard.Integer"
+heating_system.adb:15:27: error: found type "Standard.Boolean"
+heating_system.adb:23:27: error: expected type "Standard.Integer"
+heating_system.adb:23:27: error: found type "Standard.Boolean"
+heating_system.ads:7:50: error: formal parameter "Temperature" cannot be used before end of specification

@@ -1,0 +1,2 @@
+heating_system.adb:33:33: error: no space allowed here
+heating_system.adb:37:13: error: no "if" for this "end if"

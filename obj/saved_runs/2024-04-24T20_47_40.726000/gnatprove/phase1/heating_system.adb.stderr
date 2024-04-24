@@ -1,0 +1,5 @@
+heating_system.adb:10:07: error: missing case values: 0 .. 20
+heating_system.adb:14:27: error: expected type "Temp" defined at heating_system.ads:3
+heating_system.adb:14:27: error: found type "Standard.Boolean"
+heating_system.adb:22:27: error: expected type "Temp" defined at heating_system.ads:3
+heating_system.adb:22:27: error: found type "Standard.Boolean"

@@ -1,0 +1,5 @@
+heating_system.adb:1:14: error: missing body for "Control_Heating" declared at heating_system.ads:6
+heating_system.adb:10:07: error: missing case values: -16#8000_0000# .. 16
+heating_system.adb:10:07: error: missing case value: 18
+heating_system.adb:10:07: error: missing case values: 20 .. 16#7FFF_FFFF#
+heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used before end of specification

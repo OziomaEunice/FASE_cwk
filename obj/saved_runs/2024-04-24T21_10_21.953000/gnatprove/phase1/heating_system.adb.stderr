@@ -1,0 +1,6 @@
+heating_system.adb:7:07: error: "Temp" conflicts with declaration at heating_system.ads:7
+heating_system.adb:11:07: error: missing case values: 0 .. 20
+heating_system.adb:15:20: error: expected type "Temperature" defined at heating_system.ads:4
+heating_system.adb:15:20: error: found type "Standard.Boolean"
+heating_system.adb:23:20: error: expected type "Temperature" defined at heating_system.ads:4
+heating_system.adb:23:20: error: found type "Standard.Boolean"

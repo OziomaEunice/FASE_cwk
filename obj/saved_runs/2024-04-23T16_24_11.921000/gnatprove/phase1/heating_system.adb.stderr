@@ -1,0 +1,4 @@
+heating_system.adb:10:11: error: missing operand
+heating_system.adb:15:27: error: missing operand
+heating_system.adb:21:27: error: missing operand
+heating_system.adb:25:03: error: missing "end case;" for "case" at line 10

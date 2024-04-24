@@ -1,0 +1,6 @@
+heating_system.adb:14:20: warning: "Windows_Open" may be referenced before it has a value [enabled by default]
+heating_system.adb:14:20: high: "Windows_Open" is not initialized[#1]
+heating_system.adb:21:16: high: "Windows_Open" is not initialized[#2]
+heating_system.adb:28:16: high: "Windows_Open" is not initialized[#3]
+heating_system.ads:7:56: medium: "Windows_Open" might not be initialized in "Control_Heating"[#0]
+heating_system.ads:9:15: medium: postcondition might fail, cannot prove Temp >= 17[#4]

@@ -1,0 +1,2 @@
+heating_system.adb:9:07: error: missing case values: 17 .. 19
+heating_system.adb:20:21: error: maximum allowed choice value is 20

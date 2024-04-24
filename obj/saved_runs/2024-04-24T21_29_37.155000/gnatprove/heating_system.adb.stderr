@@ -1,0 +1,1 @@
+heating_system.ads:10:30: medium: postcondition might fail, cannot prove Temp <= 19[#0]

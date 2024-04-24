@@ -1,0 +1,207 @@
+{
+  "spark": [
+    {
+      "name": "Heating_System",
+      "sloc": [
+        {
+          "file": "heating_system.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Heating_System.Control_Heating",
+      "sloc": [
+        {
+          "file": "heating_system.ads",
+          "line": 7
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "heating_system.ads",
+      "line": 7,
+      "col": 56,
+      "rule": "UNINITIALIZED",
+      "severity": "medium",
+      "entity": {
+        "name": "Heating_System.Control_Heating",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "heating_system__flow__0.trace",
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "heating_system.adb",
+      "line": 14,
+      "col": 20,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Heating_System.Control_Heating",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "heating_system__flow__1.trace",
+      "msg_id": 1,
+      "how_proved": "flow"
+    },
+    {
+      "file": "heating_system.adb",
+      "line": 21,
+      "col": 16,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Heating_System.Control_Heating",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "heating_system__flow__2.trace",
+      "msg_id": 2,
+      "how_proved": "flow"
+    },
+    {
+      "file": "heating_system.adb",
+      "line": 28,
+      "col": 16,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Heating_System.Control_Heating",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "heating_system__flow__3.trace",
+      "msg_id": 3,
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "C:\\FASE\\cwk\\obj\\gnatprove\\heating_system__control_heating"
+  },
+  "proof": [
+    {
+      "file": "heating_system.ads",
+      "line": 9,
+      "col": 15,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Heating_System.Control_Heating",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 7
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown\n(unknown)",
+              "steps": 1,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown\n(unknown)",
+              "steps": 1,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "heating_system.ads",
+      "check_line": 9,
+      "check_col": 14,
+      "msg_id": 4,
+      "session_dir": 1,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Heating_System",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "gnatwhy3.transformations.inline_trivial": 0.00000000000000E+00,
+    "codepeer results": 7.69299978855997E-04,
+    "init_why_sections": 1.02748401463032E-01,
+    "gnatwhy3.transformations.detect_polymorphism": 0.00000000000000E+00,
+    "gnatwhy3.transformations.eliminate_literal": 0.00000000000000E+00,
+    "gnatwhy3.run_vcs": 3.90625000000000E-01,
+    "globals (advanced)": 2.97402292490005E-01,
+    "gnatwhy3.transformations.eliminate_algebraic_if_poly": 0.00000000000000E+00,
+    "gnatwhy3.transformations.eliminate_definition_if_poly": 0.00000000000000E+00,
+    "flow analysis": 1.75217896699905E-01,
+    "gnatwhy3.transformations.simplify_formula": 0.00000000000000E+00,
+    "marking": 1.68169999960810E-03,
+    "translation of standard": 2.81458586454391E-01,
+    "properties (advanced)": 6.29800022579730E-04,
+    "gnatwhy3.register_vcs": 0.00000000000000E+00,
+    "gnatwhy3.transformations.eliminate_epsilon": 0.00000000000000E+00,
+    "globals (basic)": 3.19269997999072E-03,
+    "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
+    "gnatwhy3.transformations.prepare_for_counterexmp": 0.00000000000000E+00,
+    "gnatwhy3.save_session": 0.00000000000000E+00,
+    "gnatwhy3.transformations.eliminate_inductive": 0.00000000000000E+00,
+    "gnatwhy3.transformations.encoding_smt_if_poly": 0.00000000000000E+00,
+    "gnatwhy3.transformations.eliminate_unused_hypo": 0.00000000000000E+00,
+    "gnatwhy3.transformations.eliminate_builtin": 0.00000000000000E+00,
+    "gnatwhy3.transformations.discriminate_if_poly": 0.00000000000000E+00,
+    "gnatwhy3.init": 1.56250000000000E-01
+  }
+}

@@ -1,0 +1,2 @@
+heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used before end of specification
+heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used before end of specification

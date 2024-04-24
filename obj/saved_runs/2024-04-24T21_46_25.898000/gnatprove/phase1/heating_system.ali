@@ -1,0 +1,36 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U heating_system%b	heating_system.adb	602f134c OO PK
+
+U heating_system%s	heating_system.ads	43e81d43 OO PK
+
+D heating_system.ads	20240424203116 43e81d43 heating_system%s
+D heating_system.adb	20240424204618 23c70e0f heating_system%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 heating_system.ads
+1K9*Heating_System 12l5 12e19 2|1b14 50l5 50t19
+4I9*Temperature<short_short_integer> 7r43 2|4r43
+7U14*Control_Heating 7=30 7<56 2|4b14 48l8 48t23
+7i30 Temp{4I9} 9r15 10r17 10r32 2|4b30 13r12 21m16 25m19 36m19
+7b56 Windows_Open{boolean} 2|4b56 8m7 20r20 23r19 24m19 32r19 33m19 42r16
+. 43m15
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS heating_system__control_heating 0
+GG EK_GLOBALS heating_system__control_heating local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 heating_system proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS heating_system 0
+GG EK_GLOBALS heating_system local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 refined_initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE heating_system TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE heating_system__control_heating FALSE FALSE FALSE FALSE TRUE heating_system VISIBLE_PART
+GG EK_END_MARKER

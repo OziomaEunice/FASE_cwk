@@ -1,0 +1,5 @@
+main.adb:11:04: error: invalid use of subtype mark in expression or call
+main.adb:14:04: error: "Windows_Open" is undefined (more references follow)
+main.adb:18:24: error: missing argument for "image" attribute
+main.adb:22:04: error: missing argument for parameter "Temp" in call to "control_heating" declared at heating_system.ads:7
+main.adb:26:24: error: missing argument for "image" attribute

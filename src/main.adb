@@ -1,13 +1,30 @@
---  with Temperature; use Temperature;
---  with Frige_And_Oven; use Frige_And_Oven;
---  with Exterior_Interior_Areas; use Exterior_Interior_Areas;
---  with Cm_Levels; use Cm_Levels;
+with Heating_System; use Heating_System;
+--  with Ventilation_System; use Ventilation_System;
 
 with Ada.Text_IO; use Ada.Text_IO;
 
 
 procedure main is
 begin
+
+   -- set the Temperature at 21
+   Temperature := 21;
+
+   -- set windows status to be open
+   Windows_Open := True;
+
    -- print output in the console
-   Put_Line("Hi");
+   Put_Line("Temperature of the house is set at: ");
+   Put_Line(Temperature'Image);
+   Put_Line("Windows are currently: ");
+   Put_Line(Windows_Open'Image);
+
+   Control_Heating;
+
+   Put_Line("Update");
+   Put_Line("Temperature of the house is set at: ");
+   Put_Line(Temperature'Image);
+   Put_Line("Windows are currently: ");
+   Put_Line(Windows_Open'Image);
+
 end main;

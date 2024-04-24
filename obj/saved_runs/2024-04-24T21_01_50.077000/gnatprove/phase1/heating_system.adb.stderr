@@ -1,0 +1,2 @@
+heating_system.adb:9:07: error: missing "begin" for procedure "Control_Heating" at line 5
+heating_system.adb:30:03: error: missing "end;" for "begin" at line 27
