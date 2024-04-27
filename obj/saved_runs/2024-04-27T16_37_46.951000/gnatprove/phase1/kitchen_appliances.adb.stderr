@@ -1,0 +1,4 @@
+kitchen_appliances.adb:12:14: error: expected type "Fridge" defined at kitchen_appliances.ads:3
+kitchen_appliances.adb:12:14: error: found type "Oven" defined at kitchen_appliances.ads:4
+kitchen_appliances.adb:13:14: error: expected type "Oven" defined at kitchen_appliances.ads:4
+kitchen_appliances.adb:13:14: error: found type "Fridge" defined at kitchen_appliances.ads:3

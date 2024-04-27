@@ -1,0 +1,2 @@
+main.adb:11:04: error: "Temp" is undefined (more references follow)
+main.adb:22:04: error: missing argument for parameter "Temp" in call to "control_heating" declared at heating_system.ads:7
