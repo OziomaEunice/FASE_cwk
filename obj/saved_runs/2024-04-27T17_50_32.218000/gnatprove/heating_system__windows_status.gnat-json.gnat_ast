@@ -1,0 +1,180 @@
+(* Module for defining a ref holding the value of variable "window" defined at heating_system.ads:17, created in Gnat2Why.Decls.Translate_Variable *)
+module Heating_system__windows_status__window
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  val window [model_trace:948] [name:Window]
+  [model_projected] [sloc:heating_system.ads:17]: int
+
+end
+
+(* Module for defining a ref holding the value of variable "current_windows_status" defined at heating_system.adb:39, created in Gnat2Why.Decls.Translate_Variable *)
+module Heating_system__windows_status__current_windows_status
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  val current_windows_status [name:Current_Windows_Status] [model_projected]
+  [model_trace:870] [sloc:heating_system.adb:39]: int
+
+end
+
+(* Module for axiomatizing type "windows" defined at heating_system.ads:5, created in Gnat2Why.Types.Translate_Type *)
+module Heating_system__windows
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  
+  type windows  
+  
+  function   first () requires { True } ensures  { True } returns int = 0
+  
+  function   last () requires { True } ensures  { True } returns int = 1
+  
+  function   in_range (x : int) requires { True } ensures  { True } returns
+     = ((first <= x) /\ (x <= last))
+  
+  clone export ada__model.Static_Discrete with axiom . type t = windows,
+    function first = first, function last = last,
+    predicate in_range = in_range
+  
+  type windows__ref  = { mutable windows__content : windows }
+  
+  function   windows__ref_windows__content__projection (a : windows__ref)
+    requires {  } ensures  {  } returns windows = a.windows__content
+  
+  meta model_projection function windows__ref_windows__content__projection
+  
+  meta inline:no function windows__ref_windows__content__projection
+  
+  function   windows__havoc (x : windows__ref) requires {  } ensures  {  }
+    returns unit
+
+end
+
+(* Module giving axioms for type "windows" defined at heating_system.ads:5, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Heating_system__windows___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Heating_system__windows
+  
+  function   dynamic_invariant
+    (([mlw:proxy_symbol] [introduced] temp___expr_172) : int
+    ([mlw:proxy_symbol] [introduced] temp___is_init_168) : bool
+    ([mlw:proxy_symbol] [introduced] temp___skip_constant_169) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_toplevel_170) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_typ_inv_171) : bool) requires
+    { True } ensures  { True } returns
+     = (if
+       ((([mlw:proxy_symbol] [introduced] temp___is_init_168) = True) \/
+          (Heating_system__windows.first <= Heating_system__windows.last))
+       then
+       (Heating_system__windows.dynamic_property
+          Heating_system__windows.first Heating_system__windows.last
+          ([mlw:proxy_symbol] [introduced] temp___expr_172))
+       )
+  
+  function   default_initial_assumption
+    (([mlw:proxy_symbol] [introduced] temp___expr_173) : int
+    ([mlw:proxy_symbol] [introduced] temp___skip_top_level_174) : bool)
+    requires { True } ensures  { True } returns  = True
+
+end
+
+(* Module giving an empty axiom for the entity "current_windows_status" defined at heating_system.adb:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Heating_system__windows_status__current_windows_status___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module giving an empty axiom for the entity "window" defined at heating_system.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Heating_system__windows_status__window___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "windows_status" defined at heating_system.ads:17, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Heating_system__windows_status__subprogram_def
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        _gnatprove_standard.Main
+  use        Heating_system__windows_status__window
+  use        Heating_system__windows_status__current_windows_status
+  use        Heating_system__windows___axiom
+  use        Heating_system__windows_status__current_windows_status___axiom
+  use        Heating_system__windows___axiom
+  use        Heating_system__windows_status__window___axiom
+  
+  function [GP_Subp:heating_system.ads:17] [sloc:heating_system.ads:17] def
+    (__void_param : unit) requires { True } ensures 
+    { ([sloc:heating_system.ads:19] ([GP_Reason:VC_POSTCONDITION]
+                                    [GP_Sloc:heating_system.ads:19:14]
+                                    [GP_Shape:pragargs__cmp]
+                                    [comment:     Post => Window = W_Closed;              ^ heating_system.ads:19:14:VC_POSTCONDITION]
+                                    [model_vc_post]
+                                    [GP_Id:1] ([GP_Pretty_Ada:1003]
+                                              [GP_Sloc:heating_system.ads:19:14] (
+                                              !Heating_system__windows_status__window.window
+                                                = 1)))) } returns
+     = (* Assume dynamic invariants of inputs of the subprogram heating_system.ads:17 *);
+        assume
+        { (Heating_system__windows___axiom.dynamic_invariant
+             !Heating_system__windows_status__window.window False False True
+             True) };
+        (* Assume moved pointers in outputs of the subprogram heating_system.ads:17 *);
+        (* Check for RTE in the Pre of the subprogram heating_system.ads:17 *);
+        abstract ensures
+        { True } begin  (let _ = True in ())  end;
+        (* Assume Pre of the subprogram heating_system.ads:17 *);
+        (try
+        ();
+          ([sloc:heating_system.adb:39] assume
+          { (Heating_system__windows___axiom.default_initial_assumption
+               !Heating_system__windows_status__current_windows_status.current_windows_status
+               False) };
+          assume
+          { (Heating_system__windows___axiom.dynamic_invariant
+               !Heating_system__windows_status__current_windows_status.current_windows_status
+               False False True True) });
+          ();
+          ([GP_Sloc:heating_system.adb:43:17] ([sloc:heating_system.adb:43] ()));
+          ([GP_Sloc:heating_system.adb:43:14] ([sloc:heating_system.adb:43] (
+                                              Heating_system__windows_status__window.window
+                                              :=
+                                              !Heating_system__windows_status__current_windows_status.current_windows_status)));
+          ([GP_Sloc:heating_system.adb:48:10] ([sloc:heating_system.adb:48] ()));
+          ([GP_Sloc:heating_system.adb:48:7] ([sloc:heating_system.adb:48] 
+                                             (if
+                                             ([sloc:heating_system.adb:48] ([branch_id=878]
+                                             _gnatprove_standard.Main.spark__branch
+                                             :=
+                                             (!Heating_system__windows_status__current_windows_status.current_windows_status
+                                                = 0)));
+                                             ([branch_id=878] _gnatprove_standard.Main.spark__branch).bool__content
+                                             then
+                                             ();
+                                             ([GP_Sloc:heating_system.adb:49:17] 
+                                             ([sloc:heating_system.adb:49] (
+                                             Heating_system__windows_status__window.window
+                                             := ( 1))))  else ())));
+          raise Return__exc with | Return__exc  -> ());
+        abstract ensures
+        { True } begin  (let _ =
+                       (!Heating_system__windows_status__window.window = 1)
+                       in ())  end
+
+end

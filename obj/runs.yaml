@@ -1131,3 +1131,233 @@
     '
   output_parser: GNATprove_Parser
   timestamp: '2024-04-27T17:17:13.773000'
+'2024-04-27T17:38:41.811000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:19:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:38:41.811000'
+'2024-04-27T17:50:32.218000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.adb:39:07: warning: variable "Current_Windows_Status" is read but
+    never assigned [-gnatwv]
+
+    heating_system.adb:43:17: high: "Current_Windows_Status" is not initialized[#0]
+
+    heating_system.adb:48:10: high: "Current_Windows_Status" is not initialized[#1]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:50:32.218000'
+'2024-04-27T18:00:28.853000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:17:30: medium: "Window" might not be initialized in "Windows_Status"[#0]
+
+    heating_system.ads:19:14: medium: "Window" might not be initialized[#1]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:00:28.853000'
+'2024-04-27T18:00:54.378000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:17:30: medium: "Window" might not be initialized in "Windows_Status"[#0]
+
+    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
+    value [enabled by default]
+
+    heating_system.ads:18:14: high: "Window" is not initialized[#1]
+
+    heating_system.ads:19:14: medium: "Window" might not be initialized[#2]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:00:54.378000'
+'2024-04-27T18:01:39.580000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
+    value [enabled by default]
+
+    heating_system.ads:18:14: high: "Window" is not initialized[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:01:39.580000'
+'2024-04-27T18:12:22.639000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    heating_system.adb:39:31: error: subtype mark required in this context
+
+    heating_system.adb:39:31: error: found "Window" declared at heating_system.ads:17
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:12:22.639000'
+'2024-04-27T18:13:58.255000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:17:30: medium: "Window" might not be initialized in "Windows_Status"[#0]
+
+    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
+    value [enabled by default]
+
+    heating_system.ads:18:14: high: "Window" is not initialized[#1]
+
+    heating_system.ads:19:14: medium: "Window" might not be initialized[#2]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:13:58.255000'
+'2024-04-27T18:15:12.119000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
+    value [enabled by default]
+
+    heating_system.ads:18:14: high: "Window" is not initialized[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:15:12.119000'
+'2024-04-27T18:20:20.051000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    heating_system.adb:40:07: error: statement not allowed in declarative part
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:20:20.051000'
+'2024-04-27T18:20:45.673000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
+    value [enabled by default]
+
+    heating_system.ads:18:14: high: "Window" is not initialized[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:20:45.673000'
+'2024-04-27T18:22:06.449000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:22:06.449000'
+'2024-04-27T18:23:18.728000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:23:18.728000'
+'2024-04-27T18:23:33.967000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T18:23:33.967000'

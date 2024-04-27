@@ -1,0 +1,221 @@
+module Heating_system__control_temperature__temp
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val temp : int__ref
+end
+
+module Heating_system__temperature
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type temperature = <range 0 40>
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (40 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = temperature,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type temperature__ref = { mutable temperature__content : temperature }
+  
+  function temperature__ref_temperature__content__projection (a: temperature__ref) : temperature =
+    a.temperature__content
+  
+  meta "model_projection" function temperature__ref_temperature__content__projection
+  
+  meta "inline:no" function temperature__ref_temperature__content__projection
+  
+  val temperature__havoc (x: temperature__ref) : unit
+    writes { x }
+end
+
+module Heating_system__temperature___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Heating_system__temperature as Heating_system__temperature
+  
+  predicate dynamic_invariant (temp___expr_165: int) (temp___is_init_161: bool) (temp___skip_constant_162: bool) (temp___do_toplevel_163: bool) (temp___do_typ_inv_164: bool) =
+    if ((temp___is_init_161 = True) \/
+          (Heating_system__temperature.first
+             <= Heating_system__temperature.last)) then
+      (((Heating_system__temperature.dynamic_property
+           Heating_system__temperature.first)
+          Heating_system__temperature.last)
+         temp___expr_165)
+    else true
+  
+  val dynamic_invariant (temp___expr_165: int) (temp___is_init_161: bool) (temp___skip_constant_162: bool) (temp___do_toplevel_163: bool) (temp___do_typ_inv_164: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_165 : int))
+                      (temp___is_init_161 : bool))
+                     (temp___skip_constant_162 : bool))
+                    (temp___do_toplevel_163 : bool))
+                   (temp___do_typ_inv_164 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_166: int) (temp___skip_top_level_167: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_166: int) (temp___skip_top_level_167: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_166 : int))
+                   (temp___skip_top_level_167 : bool)) }
+end
+
+module Heating_system__control_temperature__temp___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Heating_system__control_temperature__subprogram_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use _gnatprove_standard.Main as Main
+  use _gnatprove_standard.Boolean as Boolean
+  use Heating_system__control_temperature__temp as Heating_system__control_temperature__temp
+  use Heating_system__temperature___axiom as Heating_system__temperature___axiom
+  use Heating_system__temperature___axiom as Heating_system__temperature___axiom
+  use Heating_system__control_temperature__temp___axiom as Heating_system__control_temperature__temp___axiom
+  
+  let def (__void_param : unit)
+    requires { [#"heating_system.ads" 13 0 0] true }
+    ensures { [#"heating_system.ads" 13 0 0]
+              [#"heating_system.ads" 15 0 0]
+              [@GP_Reason:VC_POSTCONDITION]
+              [@comment:     Post => (Temp >= 17 and Temp <= 19);              ^ heating_system.ads:15:14:VC_POSTCONDITION]
+              [@GP_Sloc:heating_system.ads:15:14]
+              [@model_vc_post]
+              [@GP_Id:0]
+              [@GP_Shape:pragargs__and]
+              (([@GP_Pretty_Ada:942]
+                [@GP_Sloc:heating_system.ads:15:15]
+                ((Heating_system__control_temperature__temp.temp.int__content)
+                   >= (17 : int))) /\
+                 ([@GP_Pretty_Ada:946]
+                  [@GP_Sloc:heating_system.ads:15:30]
+                  ((Heating_system__control_temperature__temp.temp.int__content)
+                     <= (19 : int)))) }
+  = [@vc:divergent]
+    (([@GNAT-comment:Assume dynamic invariants of inputs of the subprogram heating_system.ads:13]
+      ());
+     assume {
+       ((((Heating_system__temperature___axiom.dynamic_invariant
+             (Heating_system__control_temperature__temp.temp.int__content))
+            True)
+           False)
+          True)
+         True };
+     ([@GNAT-comment:Assume moved pointers in outputs of the subprogram heating_system.ads:13]
+      ());
+     ([@GNAT-comment:Check for RTE in the Pre of the subprogram heating_system.ads:13]
+      ());
+     (begin
+        ensures { true }
+        let _ =
+          let _ =
+            ((Heating_system__control_temperature__temp.temp.int__content)
+               = (15 : int)) in
+          () in
+        ()
+      end);
+     ([@GNAT-comment:Assume Pre of the subprogram heating_system.ads:13] ());
+     assume {
+       [@GP_Pretty_Ada:976]
+       ((Heating_system__control_temperature__temp.temp.int__content)
+          = (15 : int)) };
+     (try
+        ([@GP_Sloc:heating_system.adb:7:12]
+         [#"heating_system.adb" 7 0 0]
+         [#"heating_system.adb" 7 0 0]
+         (Heating_system__control_temperature__temp.temp.int__content <-
+            (15 : int)));
+        ([@GP_Sloc:heating_system.adb:11:7]
+         [#"heating_system.adb" 11 0 0]
+         (if (([#"heating_system.adb" 15 0 0]
+               [#"heating_system.adb" 15 0 0]
+               (([@branch_id=833] Main.spark__branch).bool__content <-
+                  ((Boolean.andb
+                      ((0 : int)
+                         <= (Heating_system__control_temperature__temp.temp.int__content)))
+                     ((Heating_system__control_temperature__temp.temp.int__content)
+                        <= (16 : int)))));
+              (([@branch_id=833] Main.spark__branch).bool__content)) then
+            ([@GP_Sloc:heating_system.adb:16:13]
+             [#"heating_system.adb" 16 0 0]
+             (if (([#"heating_system.adb" 16 0 0]
+                   [#"heating_system.adb" 16 0 0]
+                   (([@branch_id=837] Main.spark__branch).bool__content <-
+                      ((Boolean.orb
+                          ((Heating_system__control_temperature__temp.temp.int__content)
+                             < (17 : int)))
+                         ((Heating_system__control_temperature__temp.temp.int__content)
+                            > (19 : int)))));
+                  (([@branch_id=837] Main.spark__branch).bool__content)) then
+                ([@GP_Sloc:heating_system.adb:17:21]
+                 [#"heating_system.adb" 17 0 0]
+                 [#"heating_system.adb" 17 0 0]
+                 (Heating_system__control_temperature__temp.temp.int__content <-
+                    (18 : int)))
+              else ()))
+          else
+            (if (([#"heating_system.adb" 22 0 0]
+                  [#"heating_system.adb" 22 0 0]
+                  (([@branch_id=848] Main.spark__branch).bool__content <-
+                     ((Boolean.andb
+                         ((20 : int)
+                            <= (Heating_system__control_temperature__temp.temp.int__content)))
+                        ((Heating_system__control_temperature__temp.temp.int__content)
+                           <= (40 : int)))));
+                 (([@branch_id=848] Main.spark__branch).bool__content)) then
+               ([@GP_Sloc:heating_system.adb:23:16]
+                [#"heating_system.adb" 23 0 0]
+                (if (([#"heating_system.adb" 23 0 0]
+                      [#"heating_system.adb" 23 0 0]
+                      (([@branch_id=852] Main.spark__branch).bool__content <-
+                         ((Heating_system__control_temperature__temp.temp.int__content)
+                            >= (20 : int))));
+                     (([@branch_id=852] Main.spark__branch).bool__content)) then
+                   ([@GP_Sloc:heating_system.adb:24:24]
+                    [#"heating_system.adb" 24 0 0]
+                    [#"heating_system.adb" 24 0 0]
+                    (Heating_system__control_temperature__temp.temp.int__content <-
+                       (19 : int)))
+                 else ()))
+             else
+               ([@GP_Sloc:heating_system.adb:30:16]
+                [#"heating_system.adb" 30 0 0] ()))));
+        (raise Return__exc)
+      with Return__exc -> ()
+      end);
+     (begin
+        ensures { true }
+        let _ =
+          let _ =
+            (Boolean.andb
+               ((Heating_system__control_temperature__temp.temp.int__content)
+                  >= (17 : int)))
+              ((Heating_system__control_temperature__temp.temp.int__content)
+                 <= (19 : int)) in
+          () in
+        ()
+      end))
+end

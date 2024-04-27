@@ -1,0 +1,268 @@
+{
+  "spark": [
+    {
+      "name": "Heating_System",
+      "sloc": [
+        {
+          "file": "heating_system.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Heating_System.Control_Temperature",
+      "sloc": [
+        {
+          "file": "heating_system.ads",
+          "line": 13
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Heating_System.Windows_Status",
+      "sloc": [
+        {
+          "file": "heating_system.ads",
+          "line": 17
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "heating_system.ads",
+      "line": 18,
+      "col": 14,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Heating_System.Windows_Status",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 17
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 0,
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "C:\\FASE\\cwk\\obj\\gnatprove\\heating_system__control_temperature",
+    " 2": "C:\\FASE\\cwk\\obj\\gnatprove\\heating_system__windows_status"
+  },
+  "proof": [
+    {
+      "file": "heating_system.ads",
+      "line": 15,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Heating_System.Control_Temperature",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "heating_system.ads",
+      "check_line": 15,
+      "check_col": 14,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "heating_system.ads",
+      "line": 19,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Heating_System.Windows_Status",
+        "sloc": [
+          {
+            "file": "heating_system.ads",
+            "line": 17
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "heating_system.ads",
+      "check_line": 19,
+      "check_col": 14,
+      "session_dir": 2,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Heating_System.Windows_Status",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 17
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Heating_System.Windows_Status",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 17
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Heating_System",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Heating_System.Control_Temperature",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 13
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Heating_System.Control_Temperature",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 13
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Heating_System.Control_Temperature",
+          "sloc": [
+            {
+              "file": "heating_system.ads",
+              "line": 13
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 5.76200021896511E-04,
+    "init_why_sections": 1.66379997972399E-03,
+    "gnatwhy3.run_vcs": 0.00000000000000E+00,
+    "globals (advanced)": 1.06250001117587E-02,
+    "flow analysis": 8.24229978024960E-03,
+    "marking": 1.86600000597537E-03,
+    "translation of standard": 8.25070030987263E-03,
+    "properties (advanced)": 5.97500009462237E-04,
+    "gnatwhy3.register_vcs": 0.00000000000000E+00,
+    "globals (basic)": 7.86370038986206E-03,
+    "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
+    "gnatwhy3.save_session": 0.00000000000000E+00,
+    "gnatwhy3.init": 4.53125000000000E-01
+  }
+}

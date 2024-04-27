@@ -1,0 +1,313 @@
+{
+  "spark": [
+    {
+      "name": "Kitchen_Appliances",
+      "sloc": [
+        {
+          "file": "kitchen_appliances.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Kitchen_Appliances.Fridge_Status",
+      "sloc": [
+        {
+          "file": "kitchen_appliances.ads",
+          "line": 12
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Kitchen_Appliances.Oven_Status",
+      "sloc": [
+        {
+          "file": "kitchen_appliances.ads",
+          "line": 15
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "kitchen_appliances.ads",
+      "line": 15,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Kitchen_Appliances.Oven_Status",
+        "sloc": [
+          {
+            "file": "kitchen_appliances.ads",
+            "line": 15
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "kitchen_appliances.ads",
+      "line": 12,
+      "col": 29,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Kitchen_Appliances.Fridge_Status",
+        "sloc": [
+          {
+            "file": "kitchen_appliances.ads",
+            "line": 12
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "C:\\FASE\\cwk\\obj\\gnatprove\\kitchen_appliances__oven_status",
+    " 2": "C:\\FASE\\cwk\\obj\\gnatprove\\kitchen_appliances__fridge_status"
+  },
+  "proof": [
+    {
+      "file": "kitchen_appliances.ads",
+      "line": 16,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Kitchen_Appliances.Oven_Status",
+        "sloc": [
+          {
+            "file": "kitchen_appliances.ads",
+            "line": 15
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "kitchen_appliances.ads",
+      "check_line": 16,
+      "check_col": 14,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "kitchen_appliances.ads",
+      "line": 13,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Kitchen_Appliances.Fridge_Status",
+        "sloc": [
+          {
+            "file": "kitchen_appliances.ads",
+            "line": 12
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "kitchen_appliances.ads",
+      "check_line": 13,
+      "check_col": 14,
+      "session_dir": 2,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Kitchen_Appliances.Oven_Status",
+          "sloc": [
+            {
+              "file": "kitchen_appliances.ads",
+              "line": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Kitchen_Appliances.Oven_Status",
+          "sloc": [
+            {
+              "file": "kitchen_appliances.ads",
+              "line": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Kitchen_Appliances.Oven_Status",
+          "sloc": [
+            {
+              "file": "kitchen_appliances.ads",
+              "line": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Kitchen_Appliances",
+          "sloc": [
+            {
+              "file": "kitchen_appliances.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Kitchen_Appliances.Fridge_Status",
+          "sloc": [
+            {
+              "file": "kitchen_appliances.ads",
+              "line": 12
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Kitchen_Appliances.Fridge_Status",
+          "sloc": [
+            {
+              "file": "kitchen_appliances.ads",
+              "line": 12
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Kitchen_Appliances.Fridge_Status",
+          "sloc": [
+            {
+              "file": "kitchen_appliances.ads",
+              "line": 12
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 1.03170005604625E-03,
+    "init_why_sections": 2.47499998658895E-03,
+    "gnatwhy3.run_vcs": 0.00000000000000E+00,
+    "globals (advanced)": 9.64379962533712E-03,
+    "flow analysis": 1.46126002073288E-02,
+    "marking": 1.87709997408092E-03,
+    "translation of standard": 1.20924003422260E-02,
+    "properties (advanced)": 9.55299998167902E-04,
+    "gnatwhy3.register_vcs": 0.00000000000000E+00,
+    "globals (basic)": 8.55949986726046E-03,
+    "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
+    "gnatwhy3.save_session": 0.00000000000000E+00,
+    "gnatwhy3.init": 3.12500000000000E-01
+  }
+}

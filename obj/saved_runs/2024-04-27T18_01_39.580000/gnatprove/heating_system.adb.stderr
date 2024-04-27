@@ -1,0 +1,2 @@
+heating_system.ads:18:14: warning: "Window" may be referenced before it has a value [enabled by default]
+heating_system.ads:18:14: high: "Window" is not initialized[#0]

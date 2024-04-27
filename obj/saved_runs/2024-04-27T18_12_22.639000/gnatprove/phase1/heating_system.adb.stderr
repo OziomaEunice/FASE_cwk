@@ -1,0 +1,2 @@
+heating_system.adb:39:31: error: subtype mark required in this context
+heating_system.adb:39:31: error: found "Window" declared at heating_system.ads:17

@@ -1,0 +1,2 @@
+heating_system.ads:17:30: medium: "Window" might not be initialized in "Windows_Status"[#0]
+heating_system.ads:19:14: medium: "Window" might not be initialized[#1]

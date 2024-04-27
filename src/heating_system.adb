@@ -34,9 +34,21 @@ package body Heating_System with SPARK_Mode is
    
    
    -- Implementation for the Windows control function
-   procedure Windows_Status (Window: out Windows) is
+   procedure Windows_Status (Window: in out Windows) is
+      
+      Current_Windows_Status: Windows:= W_Open; -- initialise current status
+      
    begin
+      
       Window := W_Open;
+      
+      -- check what the is the current status of windows:
+      -- if they are open, then they should be closed,
+      -- else if they are closed, they should remain closed.
+      if Current_Windows_Status = W_Open then
+         Window := W_Closed;
+      end if;
+      
    end Windows_Status;
    
 

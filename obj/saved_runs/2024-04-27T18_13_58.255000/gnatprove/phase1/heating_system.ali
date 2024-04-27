@@ -1,0 +1,48 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U heating_system%b	heating_system.adb	fd2c21df OO PK
+
+U heating_system%s	heating_system.ads	a241f803 OO PK
+
+D heating_system.ads	20240427170046 a241f803 heating_system%s
+D heating_system.adb	20240427171338 5f6dd9dc heating_system%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 heating_system.ads
+1K9*Heating_System 21l5 21e19 2|1b14 55l5 55t19
+4I9*Temperature<short_short_integer> 8r11 13r48 2|4r47
+5E9*Windows 5e38 9r11 17r42 2|37r42 39r31
+5n21*W_Open{5E9} 18r23 2|39r41 48r35
+5n29*W_Closed{5E9} 18r42 19r23 2|49r20
+7R9*Heating_Sys 10e14
+8i7*T{4I9}
+9e7*W{5E9}
+13U14*Control_Temperature 13=35 2|4b14 33l8 33t27
+13i35 Temp{4I9} 14r13 15r15 15r30 2|4b34 7m7 11r12 16r17 16r30 17m16 23r20
+. 24m19
+17U14*Windows_Status 17<30 2|37b14 52l8 52t22
+17e30 Window{5E9} 18r14 18r33 19r14 2|37b30 49m10
+X 2 heating_system.adb
+39e7 Current_Windows_Status{1|5E9} 48r10
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS heating_system__control_temperature 0
+GG EK_GLOBALS heating_system__control_temperature local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 heating_system proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS heating_system__windows_status 0
+GG EK_GLOBALS heating_system__windows_status local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 heating_system proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS heating_system 0
+GG EK_GLOBALS heating_system local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 refined_initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE heating_system__control_temperature FALSE FALSE FALSE FALSE TRUE heating_system VISIBLE_PART
+GG EK_FLOW_SCOPE heating_system__windows_status FALSE FALSE FALSE FALSE TRUE heating_system VISIBLE_PART
+GG EK_FLOW_SCOPE heating_system TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_END_MARKER
