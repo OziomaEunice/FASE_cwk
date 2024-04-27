@@ -1,0 +1,3 @@
+heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
+heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
+heating_system.ads:15:32: error: invalid prefix in selected component "Temp"

@@ -993,3 +993,120 @@
     '
   output_parser: GNATprove_Parser
   timestamp: '2024-04-27T16:44:41.275000'
+'2024-04-27T17:04:52.649000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    heating_system.adb:1:14: error: missing body for "Windows_Status" declared at
+    heating_system.ads:17
+
+    heating_system.adb:30:16: error: "Put_Line" is undefined
+
+    heating_system.adb:30:16: error: possible missing "with Ada.Text_IO; use Ada.Text_IO"
+
+    heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:15:32: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:18:13: error: invalid prefix in selected component "Window"
+
+    heating_system.ads:19:14: error: invalid prefix in selected component "Windows"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:04:52.649000'
+'2024-04-27T17:05:28.154000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    heating_system.adb:1:14: error: missing body for "Windows_Status" declared at
+    heating_system.ads:17
+
+    heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:15:32: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:18:13: error: invalid prefix in selected component "Window"
+
+    heating_system.ads:19:14: error: invalid prefix in selected component "Windows"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:05:28.154000'
+'2024-04-27T17:08:09.836000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
+
+    heating_system.ads:15:32: error: invalid prefix in selected component "Temp"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:08:09.836000'
+'2024-04-27T17:09:21.814000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    heating_system.adb:1:14: error: missing body for "Windows_Status" declared at
+    heating_system.ads:17
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:09:21.814000'
+'2024-04-27T17:13:55.549000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    heating_system.adb:39:07: error: invalid prefix in selected component "Window"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:13:55.549000'
+'2024-04-27T17:14:23.300000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:19:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:14:23.300000'

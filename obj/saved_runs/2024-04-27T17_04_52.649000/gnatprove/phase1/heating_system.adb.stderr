@@ -1,0 +1,8 @@
+heating_system.adb:1:14: error: missing body for "Windows_Status" declared at heating_system.ads:17
+heating_system.adb:30:16: error: "Put_Line" is undefined
+heating_system.adb:30:16: error: possible missing "with Ada.Text_IO; use Ada.Text_IO"
+heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
+heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
+heating_system.ads:15:32: error: invalid prefix in selected component "Temp"
+heating_system.ads:18:13: error: invalid prefix in selected component "Window"
+heating_system.ads:19:14: error: invalid prefix in selected component "Windows"
