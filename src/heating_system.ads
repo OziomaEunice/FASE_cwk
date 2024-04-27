@@ -14,7 +14,7 @@ package Heating_System with SPARK_Mode is
      Pre => Temp = 15,
      Post => (Temp >= 17 and Temp <= 19);
    
-   procedure Windows_Status (Window: in out Windows) with
+   procedure Windows_Status (Window: out Windows) with
      Pre => Window = W_Open,
      Post => Window = W_Closed;
 

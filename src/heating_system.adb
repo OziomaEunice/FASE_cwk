@@ -34,7 +34,7 @@ package body Heating_System with SPARK_Mode is
    
    
    -- Implementation for the Windows control function
-   procedure Windows_Status (Window: in out Windows) is
+   procedure Windows_Status (Window: out Windows) is
    begin
       Window := W_Open;
    end Windows_Status;

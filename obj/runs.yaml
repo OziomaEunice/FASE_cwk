@@ -1110,3 +1110,24 @@
     '
   output_parser: GNATprove_Parser
   timestamp: '2024-04-27T17:14:23.300000'
+'2024-04-27T17:17:13.773000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    heating_system.ads:18:13: warning: "Window" may be referenced before it has a
+    value [enabled by default]
+
+    heating_system.ads:18:13: high: "Window" is not initialized[#0]
+
+    heating_system.ads:19:14: medium: postcondition might fail[#1]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-27T17:17:13.773000'

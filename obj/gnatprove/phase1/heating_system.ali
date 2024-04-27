@@ -10,18 +10,18 @@ RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U heating_system%b	heating_system.adb	4ae6d7d1 OO PK
+U heating_system%b	heating_system.adb	fa3dfb76 OO PK
 
-U heating_system%s	heating_system.ads	27d4e872 OO PK
+U heating_system%s	heating_system.ads	1dd9e472 OO PK
 
-D heating_system.ads	20240427161316 27d4e872 heating_system%s
-D heating_system.adb	20240427161412 6d323fa3 heating_system%b
+D heating_system.ads	20240427161704 1dd9e472 heating_system%s
+D heating_system.adb	20240427161700 e7e41f04 heating_system%b
 D system.ads		20210520051134 2ffa5114 system%s
 G a Z
 X 1 heating_system.ads
 1K9*Heating_System 21l5 21e19 2|1b14 43l5 43t19
 4I9*Temperature<short_short_integer> 8r11 13r48 2|4r47
-5E9*Windows 5e38 9r11 17r45 2|37r45
+5E9*Windows 5e38 9r11 17r42 2|37r42
 5n21*W_Open{5E9} 18r22 2|39r17
 5n29*W_Closed{5E9} 19r23
 7R9*Heating_Sys 10e14
@@ -30,7 +30,7 @@ X 1 heating_system.ads
 13U14*Control_Temperature 13=35 2|4b14 33l8 33t27
 13i35 Temp{4I9} 14r13 15r15 15r30 2|4b34 7m7 11r12 16r17 16r30 17m16 23r20
 . 24m19
-17U14*Windows_Status 17=30 2|37b14 40l8 40t22
+17U14*Windows_Status 17<30 2|37b14 40l8 40t22
 17e30 Window{5E9} 18r13 19r14 2|37b30 39m7
 
 QQ SPARKVERSION SPARK Community 2021 (20210519)
