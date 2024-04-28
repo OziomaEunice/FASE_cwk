@@ -1,0 +1,206 @@
+module Heating_system__windows_status__window
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val window : int__ref
+end
+
+module Heating_system__windows_status__current_windows_status
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val current_windows_status : int__ref
+end
+
+module Heating_system__windows
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type windows
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (1 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = windows,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type windows__ref = { mutable windows__content : windows }
+  
+  function windows__ref_windows__content__projection (a: windows__ref) : windows =
+    a.windows__content
+  
+  meta "model_projection" function windows__ref_windows__content__projection
+  
+  meta "inline:no" function windows__ref_windows__content__projection
+  
+  val windows__havoc (x: windows__ref) : unit
+    writes { x }
+end
+
+module Heating_system__windows___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Heating_system__windows as Heating_system__windows
+  
+  predicate dynamic_invariant (temp___expr_172: int) (temp___is_init_168: bool) (temp___skip_constant_169: bool) (temp___do_toplevel_170: bool) (temp___do_typ_inv_171: bool) =
+    if ((temp___is_init_168 = True) \/
+          (Heating_system__windows.first <= Heating_system__windows.last)) then
+      (((Heating_system__windows.dynamic_property
+           Heating_system__windows.first)
+          Heating_system__windows.last)
+         temp___expr_172)
+    else true
+  
+  val dynamic_invariant (temp___expr_172: int) (temp___is_init_168: bool) (temp___skip_constant_169: bool) (temp___do_toplevel_170: bool) (temp___do_typ_inv_171: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_172 : int))
+                      (temp___is_init_168 : bool))
+                     (temp___skip_constant_169 : bool))
+                    (temp___do_toplevel_170 : bool))
+                   (temp___do_typ_inv_171 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_173: int) (temp___skip_top_level_174: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_173: int) (temp___skip_top_level_174: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_173 : int))
+                   (temp___skip_top_level_174 : bool)) }
+end
+
+module Heating_system__windows_status__current_windows_status___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Heating_system__windows_status__window___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Heating_system__windows_status__subprogram_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use _gnatprove_standard.Main as Main
+  use _gnatprove_standard.Boolean as Boolean
+  use Heating_system__windows_status__window as Heating_system__windows_status__window
+  use Heating_system__windows_status__current_windows_status as Heating_system__windows_status__current_windows_status
+  use Heating_system__windows___axiom as Heating_system__windows___axiom
+  use Heating_system__windows_status__current_windows_status___axiom as Heating_system__windows_status__current_windows_status___axiom
+  use Heating_system__windows___axiom as Heating_system__windows___axiom
+  use Heating_system__windows_status__window___axiom as Heating_system__windows_status__window___axiom
+  
+  let def (__void_param : unit)
+    requires { [#"heating_system.ads" 17 0 0] true }
+    ensures { [#"heating_system.ads" 17 0 0]
+              [#"heating_system.ads" 19 0 0]
+              [@GP_Reason:VC_POSTCONDITION]
+              [@GP_Sloc:heating_system.ads:19:14]
+              [@GP_Shape:pragargs__cmp]
+              [@comment:     Post => Window = W_Closed;              ^ heating_system.ads:19:14:VC_POSTCONDITION]
+              [@model_vc_post]
+              [@GP_Id:1]
+              [@GP_Sloc:heating_system.ads:19:14]
+              [@GP_Pretty_Ada:1027]
+              ((Heating_system__windows_status__window.window.int__content)
+                 = (1 : int)) }
+  = [@vc:divergent]
+    (([@GNAT-comment:Assume dynamic invariants of inputs of the subprogram heating_system.ads:17]
+      ());
+     assume {
+       ((((Heating_system__windows___axiom.dynamic_invariant
+             (Heating_system__windows_status__window.window.int__content))
+            True)
+           False)
+          True)
+         True };
+     ([@GNAT-comment:Assume moved pointers in outputs of the subprogram heating_system.ads:17]
+      ());
+     ([@GNAT-comment:Check for RTE in the Pre of the subprogram heating_system.ads:17]
+      ());
+     (begin
+        ensures { true }
+        let _ =
+          let _ =
+            (Boolean.orb
+               ((Heating_system__windows_status__window.window.int__content)
+                  = (0 : int)))
+              ((Heating_system__windows_status__window.window.int__content)
+                 = (1 : int)) in
+          () in
+        ()
+      end);
+     ([@GNAT-comment:Assume Pre of the subprogram heating_system.ads:17] ());
+     assume {
+       [@GP_Pretty_Ada:1017]
+       (((Heating_system__windows_status__window.window.int__content)
+           = (0 : int)) \/
+          ((Heating_system__windows_status__window.window.int__content)
+             = (1 : int))) };
+     (try
+        ([#"heating_system.adb" 38 0 0]
+         (([#"heating_system.adb" 38 0 0]
+           (Heating_system__windows_status__current_windows_status.current_windows_status.int__content <-
+              (0 : int)));
+          ([#"heating_system.adb" 38 0 0]
+           assume {
+             [#"heating_system.adb" 38 0 0]
+             (((((Heating_system__windows___axiom.dynamic_invariant
+                    (Heating_system__windows_status__current_windows_status.current_windows_status.int__content))
+                   True)
+                  False)
+                 True)
+                True) })));
+        ([@GP_Sloc:heating_system.adb:40:14]
+         [#"heating_system.adb" 40 0 0]
+         [#"heating_system.adb" 40 0 0]
+         (Heating_system__windows_status__window.window.int__content <-
+            (0 : int)));
+        ([@GP_Sloc:heating_system.adb:45:10]
+         [#"heating_system.adb" 45 0 0] ());
+        ([@GP_Sloc:heating_system.adb:45:7]
+         [#"heating_system.adb" 45 0 0]
+         (if (([#"heating_system.adb" 45 0 0]
+               [#"heating_system.adb" 45 0 0]
+               (([@branch_id=879] Main.spark__branch).bool__content <-
+                  ((Heating_system__windows_status__current_windows_status.current_windows_status.int__content)
+                     = (0 : int))));
+              (([@branch_id=879] Main.spark__branch).bool__content)) then
+            ([@GP_Sloc:heating_system.adb:46:17]
+             [#"heating_system.adb" 46 0 0]
+             [#"heating_system.adb" 46 0 0]
+             (Heating_system__windows_status__window.window.int__content <-
+                (1 : int)))
+          else ()));
+        (raise Return__exc)
+      with Return__exc -> ()
+      end);
+     (begin
+        ensures { true }
+        let _ =
+          let _ =
+            ((Heating_system__windows_status__window.window.int__content)
+               = (1 : int)) in
+          () in
+        ()
+      end))
+end

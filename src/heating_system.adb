@@ -5,6 +5,7 @@ package body Heating_System with SPARK_Mode is
    begin  
       -- Initialize Temperature to be at 15°C
       Temp := 15;
+      --Temp := 17;
       
       -- Control temperature and window status
       -- (temperature must be between 17°C and 19°C)

@@ -1,0 +1,5 @@
+home.adb:4:14: error: missing body for "House_Temperature" declared at home.ads:16
+home.adb:4:14: error: missing body for "Control_Windows" declared at home.ads:19
+home.adb:4:14: error: missing body for "IsFridgeOpenOrClosed" declared at home.ads:22
+home.adb:4:14: error: missing body for "IsOvenOpenOrClosed" declared at home.ads:25
+home.adb:4:14: error: missing body for "CarbonMonoxide" declared at home.ads:28

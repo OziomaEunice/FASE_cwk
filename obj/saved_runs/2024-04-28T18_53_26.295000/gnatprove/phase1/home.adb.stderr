@@ -1,0 +1,2 @@
+home.adb:8:06: error: statement expected
+home.adb:8:07: error: illegal character, replaced by "("

@@ -1,0 +1,3 @@
+home.ads:22:14: medium: postcondition might fail[#2]
+home.ads:24:36: high: "fr.O" is not initialized in "IsFridgeOpenOrClosed"[#1]
+home.ads:27:34: high: "ov.F" is not initialized in "IsOvenOpenOrClosed"[#0]

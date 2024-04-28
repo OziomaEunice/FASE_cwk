@@ -1,0 +1,445 @@
+(* Module for axiomatizing type "fridge" defined at kitchen_appliances.ads:3, created in Gnat2Why.Types.Translate_Type *)
+module Kitchen_appliances__fridge
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  
+  type fridge  
+  
+  function   first () requires { True } ensures  { True } returns int = 0
+  
+  function   last () requires { True } ensures  { True } returns int = 1
+  
+  function   in_range (x : int) requires { True } ensures  { True } returns
+     = ((first <= x) /\ (x <= last))
+  
+  clone export ada__model.Static_Discrete with axiom . type t = fridge,
+    function first = first, function last = last,
+    predicate in_range = in_range
+  
+  type fridge__ref  = { mutable fridge__content : fridge }
+  
+  function   fridge__ref_fridge__content__projection (a : fridge__ref)
+    requires {  } ensures  {  } returns fridge = a.fridge__content
+  
+  meta model_projection function fridge__ref_fridge__content__projection
+  
+  meta inline:no function fridge__ref_fridge__content__projection
+  
+  function   fridge__havoc (x : fridge__ref) requires {  } ensures  {  }
+    returns unit
+
+end
+
+(* Module defining to_rep/of_rep for type "fridge" defined at kitchen_appliances.ads:3, created in Gnat2Why.Types.Translate_Type *)
+module Kitchen_appliances__fridge__rep
+  
+  use        Kitchen_appliances__fridge
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  clone export ada__model.Rep_Proj_Int with axiom . type t = Kitchen_appliances__fridge.fridge,
+    predicate in_range = Kitchen_appliances__fridge.in_range
+  
+  meta model_projection function to_rep
+  
+  meta inline:no function to_rep
+
+end
+
+(* Module for axiomatizing type "oven" defined at kitchen_appliances.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Kitchen_appliances__oven
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  
+  type oven  
+  
+  function   first () requires { True } ensures  { True } returns int = 0
+  
+  function   last () requires { True } ensures  { True } returns int = 1
+  
+  function   in_range (x : int) requires { True } ensures  { True } returns
+     = ((first <= x) /\ (x <= last))
+  
+  clone export ada__model.Static_Discrete with axiom . type t = oven,
+    function first = first, function last = last,
+    predicate in_range = in_range
+  
+  type oven__ref  = { mutable oven__content : oven }
+  
+  function   oven__ref_oven__content__projection (a : oven__ref) requires
+    {  } ensures  {  } returns oven = a.oven__content
+  
+  meta model_projection function oven__ref_oven__content__projection
+  
+  meta inline:no function oven__ref_oven__content__projection
+  
+  function   oven__havoc (x : oven__ref) requires {  } ensures  {  } returns
+    unit
+
+end
+
+(* Module defining to_rep/of_rep for type "oven" defined at kitchen_appliances.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Kitchen_appliances__oven__rep
+  
+  use        Kitchen_appliances__oven
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  clone export ada__model.Rep_Proj_Int with axiom . type t = Kitchen_appliances__oven.oven,
+    predicate in_range = Kitchen_appliances__oven.in_range
+  
+  meta model_projection function to_rep
+  
+  meta inline:no function to_rep
+
+end
+
+(* Module for axiomatizing the record theory associated to type "not_open" defined at kitchen_appliances.ads:6, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
+module Kitchen_appliances__not_open__rep
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use        Kitchen_appliances__fridge
+  use        Kitchen_appliances__fridge__rep
+  use        Kitchen_appliances__oven
+  use        Kitchen_appliances__oven__rep
+  
+  type __split_fields  = { [model_trace:.1143]
+                           [name:F]rec__kitchen_appliances__not_open__f : Kitchen_appliances__fridge.fridge;
+                           [model_trace:.1148]
+                           [name:O]rec__kitchen_appliances__not_open__o : Kitchen_appliances__oven.oven }
+  
+  function [model_trace:.1143] [name:F] 
+    __split_fields_rec__kitchen_appliances__not_open__f__projection
+    (a : __split_fields) requires {  } ensures  {  } returns
+    Kitchen_appliances__fridge.fridge = a.rec__kitchen_appliances__not_open__f
+  
+  meta model_projection function __split_fields_rec__kitchen_appliances__not_open__f__projection
+  
+  meta inline:no function __split_fields_rec__kitchen_appliances__not_open__f__projection
+  
+  function [model_trace:.1148] [name:O] 
+    __split_fields_rec__kitchen_appliances__not_open__o__projection
+    (a : __split_fields) requires {  } ensures  {  } returns
+    Kitchen_appliances__oven.oven = a.rec__kitchen_appliances__not_open__o
+  
+  meta model_projection function __split_fields_rec__kitchen_appliances__not_open__o__projection
+  
+  meta inline:no function __split_fields_rec__kitchen_appliances__not_open__o__projection
+  
+  type __split_fields__ref  = { mutable __split_fields__content : __split_fields }
+  
+  function   __split_fields__ref___split_fields__content__projection
+    (a : __split_fields__ref) requires {  } ensures  {  } returns
+    __split_fields = a.__split_fields__content
+  
+  meta model_projection function __split_fields__ref___split_fields__content__projection
+  
+  meta inline:no function __split_fields__ref___split_fields__content__projection
+  
+  function   __split_fields__havoc (x : __split_fields__ref) requires {  }
+    ensures  {  } returns unit
+  
+  type __rep  = { __split_fields : __split_fields }
+  
+  function   __rep___split_fields__projection (a : __rep) requires {  }
+    ensures  {  } returns __split_fields = a.__split_fields
+  
+  meta model_projection function __rep___split_fields__projection
+  
+  meta inline:no function __rep___split_fields__projection
+  
+  function   to_base (a : __rep) requires { True } ensures  { True } returns
+    __rep = a
+  
+  function   of_base (a : __rep) requires { True } ensures  { True } returns
+    __rep = a
+  
+  function   kitchen_appliances__not_open__f__pred (a : __rep) requires
+    { True } ensures  { True } returns  = True
+  
+  function   rec__kitchen_appliances__not_open__f_ (a : __rep) requires
+    { (kitchen_appliances__not_open__f__pred a) } ensures 
+    { (result = a.__split_fields.rec__kitchen_appliances__not_open__f) }
+    returns Kitchen_appliances__fridge.fridge
+  
+  function   kitchen_appliances__not_open__o__pred (a : __rep) requires
+    { True } ensures  { True } returns  = True
+  
+  function   rec__kitchen_appliances__not_open__o_ (a : __rep) requires
+    { (kitchen_appliances__not_open__o__pred a) } ensures 
+    { (result = a.__split_fields.rec__kitchen_appliances__not_open__o) }
+    returns Kitchen_appliances__oven.oven
+  
+  function   bool_eq (a : __rep b : __rep) requires { True } ensures 
+    { True } returns
+    bool = (if
+           (((Kitchen_appliances__fridge__rep.to_rep
+                a.__split_fields.rec__kitchen_appliances__not_open__f)
+               = (Kitchen_appliances__fridge__rep.to_rep
+                    b.__split_fields.rec__kitchen_appliances__not_open__f))
+              /\
+              ((Kitchen_appliances__oven__rep.to_rep
+                  a.__split_fields.rec__kitchen_appliances__not_open__o)
+                 = (Kitchen_appliances__oven__rep.to_rep
+                      b.__split_fields.rec__kitchen_appliances__not_open__o)))
+           then True  else False)
+
+end
+
+(* Module for axiomatizing type "not_open" defined at kitchen_appliances.ads:6, created in Gnat2Why.Types.Translate_Type *)
+module Kitchen_appliances__not_open
+  
+  use export Kitchen_appliances__not_open__rep
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  
+  type not_open  = --pp_transparent_type_definition NOT IMPLEMENTED
+  
+  function   value__size () requires {  } ensures  {  } returns int
+  
+  function   object__size () requires {  } ensures  {  } returns int
+  
+  function   alignment () requires {  } ensures  {  } returns int
+  
+  axiom value__size_axiom : ((value__size ) >= 0)
+  
+  axiom object__size_axiom : ((object__size ) >= 0)
+  
+  axiom alignment_axiom : ((alignment ) >= 0)
+  
+  function   kitchen_appliances__not_open__f__first__bit () requires {  }
+    ensures  {  } returns int
+  
+  function   kitchen_appliances__not_open__f__last__bit () requires {  }
+    ensures  {  } returns int
+  
+  function   kitchen_appliances__not_open__f__position () requires {  }
+    ensures  {  } returns int
+  
+  axiom kitchen_appliances__not_open__f__first__bit_axiom : ((kitchen_appliances__not_open__f__first__bit
+                                                                ) >= 0)
+  
+  axiom kitchen_appliances__not_open__f__last__bit_axiom : ((kitchen_appliances__not_open__f__last__bit
+                                                               )
+                                                              > (kitchen_appliances__not_open__f__first__bit
+                                                                   ))
+  
+  axiom kitchen_appliances__not_open__f__position_axiom : ((kitchen_appliances__not_open__f__position
+                                                              ) >= 0)
+  
+  function   kitchen_appliances__not_open__o__first__bit () requires {  }
+    ensures  {  } returns int
+  
+  function   kitchen_appliances__not_open__o__last__bit () requires {  }
+    ensures  {  } returns int
+  
+  function   kitchen_appliances__not_open__o__position () requires {  }
+    ensures  {  } returns int
+  
+  axiom kitchen_appliances__not_open__o__first__bit_axiom : ((kitchen_appliances__not_open__o__first__bit
+                                                                ) >= 0)
+  
+  axiom kitchen_appliances__not_open__o__last__bit_axiom : ((kitchen_appliances__not_open__o__last__bit
+                                                               )
+                                                              > (kitchen_appliances__not_open__o__first__bit
+                                                                   ))
+  
+  axiom kitchen_appliances__not_open__o__position_axiom : ((kitchen_appliances__not_open__o__position
+                                                              ) >= 0)
+  
+  function   user_eq (a : not_open b : not_open) requires { True } ensures 
+    { True } returns bool
+  
+  function   dummy () requires {  } ensures  {  } returns not_open
+  
+  type not_open__ref  = { mutable not_open__content : not_open }
+  
+  function   not_open__ref_not_open__content__projection (a : not_open__ref)
+    requires {  } ensures  {  } returns not_open = a.not_open__content
+  
+  meta model_projection function not_open__ref_not_open__content__projection
+  
+  meta inline:no function not_open__ref_not_open__content__projection
+  
+  function   not_open__havoc (x : not_open__ref) requires {  } ensures  {  }
+    returns unit
+
+end
+
+(* Module giving axioms for type "not_open" defined at kitchen_appliances.ads:6, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Kitchen_appliances__not_open___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use        Kitchen_appliances__not_open
+  
+  function   dynamic_invariant
+    (([mlw:proxy_symbol]
+    [introduced] temp___expr_193) : Kitchen_appliances__not_open.not_open
+    ([mlw:proxy_symbol] [introduced] temp___is_init_189) : bool
+    ([mlw:proxy_symbol] [introduced] temp___skip_constant_190) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_toplevel_191) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_typ_inv_192) : bool) requires
+    { True } ensures  { True } returns  = True
+  
+  function   default_initial_assumption
+    (([mlw:proxy_symbol]
+    [introduced] temp___expr_194) : Kitchen_appliances__not_open.not_open
+    ([mlw:proxy_symbol] [introduced] temp___skip_top_level_195) : bool)
+    requires { True } ensures  { True } returns  = True
+
+end
+
+(* Module for defining a ref holding the value of variable "ov" defined at home.ads:27, created in Gnat2Why.Decls.Translate_Variable *)
+module Home__isovenopenorclosed__ov
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use        Kitchen_appliances__not_open
+  
+  val ov__split_fields [model_trace:1008] [name:ov]
+  [model_projected] [sloc:home.ads:27]: Kitchen_appliances__not_open.__split_fields
+
+end
+
+(* Module giving an empty axiom for the entity "ov" defined at home.ads:27, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Home__isovenopenorclosed__ov___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module giving axioms for type "fridge" defined at kitchen_appliances.ads:3, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Kitchen_appliances__fridge___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Kitchen_appliances__fridge
+  
+  function   dynamic_invariant
+    (([mlw:proxy_symbol] [introduced] temp___expr_179) : int
+    ([mlw:proxy_symbol] [introduced] temp___is_init_175) : bool
+    ([mlw:proxy_symbol] [introduced] temp___skip_constant_176) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_toplevel_177) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_typ_inv_178) : bool) requires
+    { True } ensures  { True } returns
+     = (if
+       ((([mlw:proxy_symbol] [introduced] temp___is_init_175) = True) \/
+          (Kitchen_appliances__fridge.first
+             <= Kitchen_appliances__fridge.last))
+       then
+       (Kitchen_appliances__fridge.dynamic_property
+          Kitchen_appliances__fridge.first Kitchen_appliances__fridge.last
+          ([mlw:proxy_symbol] [introduced] temp___expr_179))
+       )
+  
+  function   default_initial_assumption
+    (([mlw:proxy_symbol] [introduced] temp___expr_180) : int
+    ([mlw:proxy_symbol] [introduced] temp___skip_top_level_181) : bool)
+    requires { True } ensures  { True } returns  = True
+
+end
+
+(* Module giving axioms for type "oven" defined at kitchen_appliances.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Kitchen_appliances__oven___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Kitchen_appliances__oven
+  
+  function   dynamic_invariant
+    (([mlw:proxy_symbol] [introduced] temp___expr_186) : int
+    ([mlw:proxy_symbol] [introduced] temp___is_init_182) : bool
+    ([mlw:proxy_symbol] [introduced] temp___skip_constant_183) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_toplevel_184) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_typ_inv_185) : bool) requires
+    { True } ensures  { True } returns
+     = (if
+       ((([mlw:proxy_symbol] [introduced] temp___is_init_182) = True) \/
+          (Kitchen_appliances__oven.first <= Kitchen_appliances__oven.last))
+       then
+       (Kitchen_appliances__oven.dynamic_property
+          Kitchen_appliances__oven.first Kitchen_appliances__oven.last
+          ([mlw:proxy_symbol] [introduced] temp___expr_186))
+       )
+  
+  function   default_initial_assumption
+    (([mlw:proxy_symbol] [introduced] temp___expr_187) : int
+    ([mlw:proxy_symbol] [introduced] temp___skip_top_level_188) : bool)
+    requires { True } ensures  { True } returns  = True
+
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "isovenopenorclosed" defined at home.ads:27, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Home__isovenopenorclosed__subprogram_def
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Kitchen_appliances__not_open
+  use        Kitchen_appliances__not_open___axiom
+  use        Home__isovenopenorclosed__ov
+  use        Kitchen_appliances__oven
+  use        Kitchen_appliances__oven__rep
+  use        Home__isovenopenorclosed__ov___axiom
+  use        Kitchen_appliances__fridge___axiom
+  use        Kitchen_appliances__oven___axiom
+  use        Kitchen_appliances__not_open___axiom
+  
+  function [GP_Subp:home.ads:27] [sloc:home.ads:27] def (__void_param : unit)
+    requires { True } ensures 
+    { ([sloc:home.ads:28] ([GP_Reason:VC_POSTCONDITION]
+                          [GP_Shape:pragargs__cmp] [GP_Sloc:home.ads:28:14]
+                          [model_vc_post] [GP_Id:3]
+                          [comment:     Post => ov.O = O_Closed;              ^ home.ads:28:14:VC_POSTCONDITION] 
+                          ([GP_Pretty_Ada:1409]
+                          [GP_Sloc:home.ads:28:14] ((Kitchen_appliances__oven__rep.to_rep
+                                                       ( --pp_record_aggregate NOT IMPLEMENTED).Kitchen_appliances__not_open.__split_fields.Kitchen_appliances__not_open.rec__kitchen_appliances__not_open__o)
+                                                      = 1)))) } returns
+     = (* Assume dynamic invariants of inputs of the subprogram home.ads:27 *);
+        assume
+        { (Kitchen_appliances__not_open___axiom.dynamic_invariant
+             --pp_record_aggregate NOT IMPLEMENTED False False True True) };
+        (* Assume moved pointers in outputs of the subprogram home.ads:27 *);
+        (* Check for RTE in the Pre of the subprogram home.ads:27 *);
+        abstract ensures
+        { True } begin  (let _ = True in ())  end;
+        (* Assume Pre of the subprogram home.ads:27 *);
+        (try
+        ();
+          ([GP_Sloc:home.adb:26:12] ([sloc:home.adb:26] (let ([mlw:proxy_symbol]
+                                    [introduced] temp___232) =
+                                    (let ([mlw:proxy_symbol]
+                                      [introduced] temp___231) =
+                                      ( --pp_record_aggregate NOT IMPLEMENTED)
+                                      in abstract ensures
+                                      { True } begin  (let _ =
+                                                     ([mlw:proxy_symbol]
+                                                       [introduced] temp___231).Kitchen_appliances__not_open.__split_fields.Kitchen_appliances__not_open.rec__kitchen_appliances__not_open__o
+                                                     in ())  end;
+                                      --pp_record_update NOT IMPLEMENTED)
+                                    in (
+                                    Home__isovenopenorclosed__ov.ov__split_fields
+                                    :=
+                                    ([mlw:proxy_symbol]
+                                      [introduced] temp___232).Kitchen_appliances__not_open.__split_fields))));
+          raise Return__exc with | Return__exc  -> ());
+        abstract ensures
+        { True } begin  (let _ =
+                       ((Kitchen_appliances__oven__rep.to_rep
+                           ( --pp_record_aggregate NOT IMPLEMENTED).Kitchen_appliances__not_open.__split_fields.Kitchen_appliances__not_open.rec__kitchen_appliances__not_open__o)
+                          = 1)
+                       in ())  end
+
+end

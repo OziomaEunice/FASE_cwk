@@ -1,0 +1,126 @@
+(* Module for defining a ref holding the value of variable "cm" defined at home.ads:30, created in Gnat2Why.Decls.Translate_Variable *)
+module Home__carbonmonoxide__cm
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  val cm [model_projected] [name:cm]
+  [model_trace:1045] [sloc:home.ads:30]: int
+
+end
+
+(* Module for axiomatizing type "carbon_monoxide" defined at home.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Home__carbon_monoxide
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  
+  type carbon_monoxide  
+  
+  function   first () requires { True } ensures  { True } returns int = 0
+  
+  function   last () requires { True } ensures  { True } returns int = 1
+  
+  function   in_range (x : int) requires { True } ensures  { True } returns
+     = ((first <= x) /\ (x <= last))
+  
+  clone export ada__model.Static_Discrete with axiom . type t = carbon_monoxide,
+    function first = first, function last = last,
+    predicate in_range = in_range
+  
+  type carbon_monoxide__ref  = { mutable carbon_monoxide__content : carbon_monoxide }
+  
+  function   carbon_monoxide__ref_carbon_monoxide__content__projection
+    (a : carbon_monoxide__ref) requires {  } ensures  {  } returns
+    carbon_monoxide = a.carbon_monoxide__content
+  
+  meta model_projection function carbon_monoxide__ref_carbon_monoxide__content__projection
+  
+  meta inline:no function carbon_monoxide__ref_carbon_monoxide__content__projection
+  
+  function   carbon_monoxide__havoc (x : carbon_monoxide__ref) requires {  }
+    ensures  {  } returns unit
+
+end
+
+(* Module giving axioms for type "carbon_monoxide" defined at home.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Home__carbon_monoxide___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Home__carbon_monoxide
+  
+  function   dynamic_invariant
+    (([mlw:proxy_symbol] [introduced] temp___expr_217) : int
+    ([mlw:proxy_symbol] [introduced] temp___is_init_213) : bool
+    ([mlw:proxy_symbol] [introduced] temp___skip_constant_214) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_toplevel_215) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_typ_inv_216) : bool) requires
+    { True } ensures  { True } returns
+     = (if
+       ((([mlw:proxy_symbol] [introduced] temp___is_init_213) = True) \/
+          (Home__carbon_monoxide.first <= Home__carbon_monoxide.last))
+       then
+       (Home__carbon_monoxide.dynamic_property Home__carbon_monoxide.first
+          Home__carbon_monoxide.last ([mlw:proxy_symbol]
+          [introduced] temp___expr_217))
+       )
+  
+  function   default_initial_assumption
+    (([mlw:proxy_symbol] [introduced] temp___expr_218) : int
+    ([mlw:proxy_symbol] [introduced] temp___skip_top_level_219) : bool)
+    requires { True } ensures  { True } returns  = True
+
+end
+
+(* Module giving an empty axiom for the entity "cm" defined at home.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Home__carbonmonoxide__cm___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "carbonmonoxide" defined at home.ads:30, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Home__carbonmonoxide__subprogram_def
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Home__carbonmonoxide__cm
+  use        Home__carbon_monoxide___axiom
+  use        Home__carbon_monoxide___axiom
+  use        Home__carbonmonoxide__cm___axiom
+  
+  function [GP_Subp:home.ads:30] [sloc:home.ads:30] def (__void_param : unit)
+    requires { True } ensures 
+    { ([sloc:home.ads:32] ([GP_Reason:VC_POSTCONDITION]
+                          [GP_Shape:pragargs__cmp]
+                          [comment:     Post => cm = Safe;              ^ home.ads:32:14:VC_POSTCONDITION]
+                          [model_vc_post] [GP_Id:6]
+                          [GP_Sloc:home.ads:32:14] ([GP_Sloc:home.ads:32:14]
+                                                   [GP_Pretty_Ada:1449] (
+                                                   !Home__carbonmonoxide__cm.cm
+                                                     = 0)))) } returns
+     = (* Assume dynamic invariants of inputs of the subprogram home.ads:30 *);
+        assume
+        { (Home__carbon_monoxide___axiom.dynamic_invariant
+             !Home__carbonmonoxide__cm.cm False False True True) };
+        (* Assume moved pointers in outputs of the subprogram home.ads:30 *);
+        (* Check for RTE in the Pre of the subprogram home.ads:30 *);
+        abstract ensures
+        { True } begin  (let _ = True in ())  end;
+        (* Assume Pre of the subprogram home.ads:30 *);
+        (try
+        ();
+          ([GP_Sloc:home.adb:41:10] ([sloc:home.adb:41] (
+                                    Home__carbonmonoxide__cm.cm := ( 0))));
+          raise Return__exc with | Return__exc  -> ());
+        abstract ensures
+        { True } begin  (let _ = (!Home__carbonmonoxide__cm.cm = 0) in ())  end
+
+end

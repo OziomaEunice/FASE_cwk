@@ -1,441 +1,56 @@
-'2024-04-24T20:41:08.831000':
+'2024-04-28T18:53:26.295000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
   label: Basic Prove File
   output: 'Phase 1 of 2: generation of Global contracts ...
 
-    heating_system.adb:10:07: error: missing case values: -20 .. 30
+    home.adb:8:06: error: statement expected
 
-    heating_system.adb:14:27: error: expected type "Temp" defined at heating_system.ads:3
-
-    heating_system.adb:14:27: error: found type "Standard.Boolean"
-
-    heating_system.adb:22:27: error: expected type "Temp" defined at heating_system.ads:3
-
-    heating_system.adb:22:27: error: found type "Standard.Boolean"
+    home.adb:8:07: error: illegal character, replaced by "("
 
     gnatprove: error during generation of Global contracts
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:41:08.831000'
-'2024-04-24T20:41:50.535000':
+  timestamp: '2024-04-28T18:53:26.295000'
+'2024-04-28T18:53:47.233000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
   label: Basic Prove File
   output: 'Phase 1 of 2: generation of Global contracts ...
 
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
+    home.adb:9:03: error: statement expected
 
     gnatprove: error during generation of Global contracts
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:41:50.535000'
-'2024-04-24T20:45:58.871000':
+  timestamp: '2024-04-28T18:53:47.233000'
+'2024-04-28T18:54:11.962000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
   label: Basic Prove File
   output: 'Phase 1 of 2: generation of Global contracts ...
 
-    heating_system.adb:18:09: error: "when" (case statement alternative) expected
+    home.adb:4:14: error: missing body for "House_Temperature" declared at home.ads:16
+
+    home.adb:4:14: error: missing body for "Control_Windows" declared at home.ads:19
+
+    home.adb:4:14: error: missing body for "IsFridgeOpenOrClosed" declared at home.ads:22
+
+    home.adb:4:14: error: missing body for "IsOvenOpenOrClosed" declared at home.ads:25
+
+    home.adb:4:14: error: missing body for "CarbonMonoxide" declared at home.ads:28
 
     gnatprove: error during generation of Global contracts
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:45:58.871000'
-'2024-04-24T20:46:44.421000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:46:44.421000'
-'2024-04-24T20:47:40.726000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:10:07: error: missing case values: 0 .. 20
-
-    heating_system.adb:14:27: error: expected type "Temp" defined at heating_system.ads:3
-
-    heating_system.adb:14:27: error: found type "Standard.Boolean"
-
-    heating_system.adb:22:27: error: expected type "Temp" defined at heating_system.ads:3
-
-    heating_system.adb:22:27: error: found type "Standard.Boolean"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:47:40.726000'
-'2024-04-24T20:49:07.037000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:50: error: "Temp" is undefined
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:49:07.037000'
-'2024-04-24T20:49:20.010000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:49:20.010000'
-'2024-04-24T20:50:58.243000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:10:07: error: missing case values: 0 .. 20
-
-    heating_system.adb:14:20: error: expected type "Temperature" defined at heating_system.ads:3
-
-    heating_system.adb:14:20: error: found type "Standard.Boolean"
-
-    heating_system.adb:22:20: error: expected type "Temperature" defined at heating_system.ads:3
-
-    heating_system.adb:22:20: error: found type "Standard.Boolean"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:50:58.243000'
-'2024-04-24T20:52:57.106000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:52:57.106000'
-'2024-04-24T20:54:47.841000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:89: error: missing ";"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:54:47.841000'
-'2024-04-24T20:55:12.306000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:6:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:55:12.306000'
-'2024-04-24T20:59:55.052000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:10:04: error: no "begin" for this "end"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T20:59:55.052000'
-'2024-04-24T21:00:42.794000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:7:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:00:42.794000'
-'2024-04-24T21:01:50.077000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:9:07: error: missing "begin" for procedure "Control_Heating"
-    at line 5
-
-    heating_system.adb:30:03: error: missing "end;" for "begin" at line 27
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:01:50.077000'
-'2024-04-24T21:02:15.786000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.ads:7:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:02:15.786000'
-'2024-04-24T21:07:16.757000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    heating_system.adb:11:07: error: missing case values: -16#8000_0000# .. 16#7FFF_FFFF#
-
-    heating_system.adb:15:27: error: expected type "Standard.Integer"
-
-    heating_system.adb:15:27: error: found type "Standard.Boolean"
-
-    heating_system.adb:23:27: error: expected type "Standard.Integer"
-
-    heating_system.adb:23:27: error: found type "Standard.Boolean"
-
-    heating_system.ads:7:50: error: formal parameter "Temperature" cannot be used
-    before end of specification
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:07:16.757000'
-'2024-04-24T21:10:21.953000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:7:07: error: "Temp" conflicts with declaration at heating_system.ads:7
-
-    heating_system.adb:11:07: error: missing case values: 0 .. 20
-
-    heating_system.adb:15:20: error: expected type "Temperature" defined at heating_system.ads:4
-
-    heating_system.adb:15:20: error: found type "Standard.Boolean"
-
-    heating_system.adb:23:20: error: expected type "Temperature" defined at heating_system.ads:4
-
-    heating_system.adb:23:20: error: found type "Standard.Boolean"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:10:21.953000'
-'2024-04-24T21:13:52.950000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:9:07: error: missing case values: 0 .. 20
-
-    heating_system.adb:13:20: error: expected type "Temperature" defined at heating_system.ads:4
-
-    heating_system.adb:13:20: error: found type "Standard.Boolean"
-
-    heating_system.adb:20:20: error: expected type "Temperature" defined at heating_system.ads:4
-
-    heating_system.adb:20:20: error: found type "Standard.Boolean"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:13:52.950000'
-'2024-04-24T21:16:50.056000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:9:07: error: missing case values: 17 .. 19
-
-    heating_system.adb:20:21: error: maximum allowed choice value is 20
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:16:50.056000'
-'2024-04-24T21:19:15.231000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.adb:14:20: warning: "Windows_Open" may be referenced before it
-    has a value [enabled by default]
-
-    heating_system.adb:14:20: high: "Windows_Open" is not initialized[#1]
-
-    heating_system.adb:21:16: high: "Windows_Open" is not initialized[#2]
-
-    heating_system.adb:28:16: high: "Windows_Open" is not initialized[#3]
-
-    heating_system.ads:7:56: medium: "Windows_Open" might not be initialized in "Control_Heating"[#0]
-
-    heating_system.ads:9:15: medium: postcondition might fail, cannot prove Temp >=
-    17[#4]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:19:15.231000'
-'2024-04-24T21:26:31.620000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.adb:14:20: warning: "Windows_Open" may be referenced before it
-    has a value [enabled by default]
-
-    heating_system.adb:14:20: high: "Windows_Open" is not initialized[#1]
-
-    heating_system.adb:21:16: high: "Windows_Open" is not initialized[#2]
-
-    heating_system.adb:28:16: high: "Windows_Open" is not initialized[#3]
-
-    heating_system.ads:7:56: medium: "Windows_Open" might not be initialized in "Control_Heating"[#0]
-
-    heating_system.ads:9:15: medium: postcondition might fail, cannot prove Temp >=
-    17[#4]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:26:31.620000'
-'2024-04-24T21:27:37.951000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:9:30: medium: postcondition might fail, cannot prove Temp <=
-    19[#0]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:27:37.951000'
-'2024-04-24T21:29:11.855000':
+  timestamp: '2024-04-28T18:54:11.962000'
+'2024-04-28T19:17:05.410000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -448,25 +63,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:29:11.855000'
-'2024-04-24T21:29:37.155000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:10:30: medium: postcondition might fail, cannot prove Temp
-    <= 19[#0]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:29:37.155000'
-'2024-04-24T21:31:26.897000':
+  timestamp: '2024-04-28T19:17:05.410000'
+'2024-04-28T19:17:14.915000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -479,54 +77,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:31:26.897000'
-'2024-04-24T21:43:59.094000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:30:09: error: missing "end if;" for "if" at line 20
-
-    heating_system.adb:32:33: error: no space allowed here
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:43:59.094000'
-'2024-04-24T21:45:02.212000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:33:33: error: no space allowed here
-
-    heating_system.adb:37:13: error: no "if" for this "end if"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:45:02.212000'
-'2024-04-24T21:45:59.979000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:38:13: error: no "if" for this "end if"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:45:59.979000'
-'2024-04-24T21:46:25.898000':
+  timestamp: '2024-04-28T19:17:14.915000'
+'2024-04-28T19:17:31.362000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -539,64 +91,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:46:25.898000'
-'2024-04-24T21:53:21.780000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:5:36: error: missing ":"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:53:21.780000'
-'2024-04-24T21:54:33.830000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:5:06: error: declaration expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:54:33.830000'
-'2024-04-24T21:55:07.786000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:5:36: error: missing ":"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:55:07.786000'
-'2024-04-24T21:57:38.639000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:5:36: error: missing ":"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:57:38.639000'
-'2024-04-24T21:59:18.713000':
+  timestamp: '2024-04-28T19:17:31.362000'
+'2024-04-28T19:17:41.503000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -609,8 +105,36 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T21:59:18.713000'
-'2024-04-24T22:13:13.742000':
+  timestamp: '2024-04-28T19:17:41.503000'
+'2024-04-28T19:17:52.356000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    home.adb:9:03: error: statement expected
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T19:17:52.356000'
+'2024-04-28T19:22:06.439000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    home.adb:9:03: error: statement expected
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T19:22:06.439000'
+'2024-04-28T19:22:20.071000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -623,8 +147,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T22:13:13.742000'
-'2024-04-24T22:13:54.095000':
+  timestamp: '2024-04-28T19:22:20.071000'
+'2024-04-28T19:22:27.673000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -637,20 +161,64 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T22:13:54.095000'
-'2024-04-24T22:14:26.884000':
+  timestamp: '2024-04-28T19:22:27.673000'
+'2024-04-28T19:42:44.846000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
   label: Basic Prove File
-  output: 'error: wrong argument for --mode
+  output: 'Phase 1 of 2: generation of Global contracts ...
 
-    Try "gnatprove --help" for more information.
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:22:14: medium: postcondition might fail[#2]
+
+    home.ads:24:36: high: "fr.O" is not initialized in "IsFridgeOpenOrClosed"[#1]
+
+    home.ads:27:34: high: "ov.F" is not initialized in "IsOvenOpenOrClosed"[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T22:14:26.884000'
-'2024-04-24T22:14:43.597000':
+  timestamp: '2024-04-28T19:42:44.846000'
+'2024-04-28T19:44:34.127000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:22:14: medium: postcondition might fail[#2]
+
+    home.ads:24:36: high: "fr.O" is not initialized in "IsFridgeOpenOrClosed"[#1]
+
+    home.ads:27:34: high: "ov.F" is not initialized in "IsOvenOpenOrClosed"[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T19:44:34.127000'
+'2024-04-28T19:48:03.083000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:22:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T19:48:03.083000'
+'2024-04-28T19:51:04.863000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -663,125 +231,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-24T22:14:43.597000'
-'2024-04-27T15:21:02.323000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    main.adb:11:04: error: invalid use of subtype mark in expression or call
-
-    main.adb:18:24: error: missing argument for "image" attribute
-
-    main.adb:22:04: error: missing argument for parameter "Temp" in call to "control_heating"
-    declared at heating_system.ads:7
-
-    main.adb:26:24: error: missing argument for "image" attribute
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:21:02.323000'
-'2024-04-27T15:25:18.574000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    main.adb:11:04: error: "Temp" is undefined (more references follow)
-
-    main.adb:22:04: error: missing argument for parameter "Temp" in call to "control_heating"
-    declared at heating_system.ads:7
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:25:18.574000'
-'2024-04-27T15:25:36.815000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    main.adb:11:04: error: invalid use of subtype mark in expression or call
-
-    main.adb:18:24: error: missing argument for "image" attribute
-
-    main.adb:22:04: error: missing argument for parameter "Temp" in call to "control_heating"
-    declared at heating_system.ads:7
-
-    main.adb:26:24: error: missing argument for "image" attribute
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:25:36.815000'
-'2024-04-27T15:29:53.794000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:4:23: error: missing "new"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:29:53.794000'
-'2024-04-27T15:32:42.300000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:4:23: error: missing "new"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:32:42.300000'
-'2024-04-27T15:34:06.982000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:4:23: error: missing "new"
-
-    heating_system.ads:13:13: error: mixed logical operators in expression
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:34:06.982000'
-'2024-04-27T15:34:49.823000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:4:23: error: missing "new"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:34:49.823000'
-'2024-04-27T15:57:56.997000':
+  timestamp: '2024-04-28T19:51:04.863000'
+'2024-04-28T19:51:57.021000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -790,154 +241,14 @@
 
     Phase 2 of 2: flow analysis and proof ...
 
-    main.adb:7:11: info: SPARK_Mode not applied to this compilation unit
-
-    main.adb:7:11: info: only enclosed declarations with SPARK_Mode will be analyzed
+    home.adb:10:07: medium: precondition might fail, cannot prove Temp = 15[#0]
 
     Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:57:56.997000'
-'2024-04-27T15:58:19.139000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:11:03: error: statement expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T15:58:19.139000'
-'2024-04-27T16:24:05.660000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.ads:6:27: error: component declaration expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:24:05.660000'
-'2024-04-27T16:24:30.529000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.ads:6:27: error: component declaration expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:24:30.529000'
-'2024-04-27T16:24:50.479000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.ads:6:27: error: component declaration expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:24:50.479000'
-'2024-04-27T16:28:43.520000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.ads:6:27: error: component declaration expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:28:43.520000'
-'2024-04-27T16:30:00.748000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.ads:6:27: error: component declaration expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:30:00.748000'
-'2024-04-27T16:31:24.806000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.ads:6:27: error: component declaration expected
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:31:24.806000'
-'2024-04-27T16:34:36.536000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.adb:12:15: error: expected type "Fridge" defined at kitchen_appliances.ads:3
-
-    kitchen_appliances.adb:12:15: error: found type "Oven" defined at kitchen_appliances.ads:4
-
-    kitchen_appliances.adb:13:15: error: expected type "Oven" defined at kitchen_appliances.ads:4
-
-    kitchen_appliances.adb:13:15: error: found type "Fridge" defined at kitchen_appliances.ads:3
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:34:36.536000'
-'2024-04-27T16:37:46.951000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    kitchen_appliances.adb:12:14: error: expected type "Fridge" defined at kitchen_appliances.ads:3
-
-    kitchen_appliances.adb:12:14: error: found type "Oven" defined at kitchen_appliances.ads:4
-
-    kitchen_appliances.adb:13:14: error: expected type "Oven" defined at kitchen_appliances.ads:4
-
-    kitchen_appliances.adb:13:14: error: found type "Fridge" defined at kitchen_appliances.ads:3
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:37:46.951000'
-'2024-04-27T16:39:56.399000':
+  timestamp: '2024-04-28T19:51:57.021000'
+'2024-04-28T19:57:26.282000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -950,8 +261,24 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:39:56.399000'
-'2024-04-27T16:41:02.544000':
+  timestamp: '2024-04-28T19:57:26.282000'
+'2024-04-28T20:07:56.810000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.adb:10:07: medium: precondition might fail, cannot prove Temp = 15[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T20:07:56.810000'
+'2024-04-28T20:08:51.843000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -964,8 +291,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:41:02.544000'
-'2024-04-27T16:42:38.452000':
+  timestamp: '2024-04-28T20:08:51.843000'
+'2024-04-28T20:14:34.722000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -978,8 +305,24 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:42:38.452000'
-'2024-04-27T16:44:41.275000':
+  timestamp: '2024-04-28T20:14:34.722000'
+'2024-04-28T20:20:32.597000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:25:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T20:20:32.597000'
+'2024-04-28T20:21:42.655000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -992,109 +335,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T16:44:41.275000'
-'2024-04-27T17:04:52.649000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:1:14: error: missing body for "Windows_Status" declared at
-    heating_system.ads:17
-
-    heating_system.adb:30:16: error: "Put_Line" is undefined
-
-    heating_system.adb:30:16: error: possible missing "with Ada.Text_IO; use Ada.Text_IO"
-
-    heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:15:32: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:18:13: error: invalid prefix in selected component "Window"
-
-    heating_system.ads:19:14: error: invalid prefix in selected component "Windows"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:04:52.649000'
-'2024-04-27T17:05:28.154000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:1:14: error: missing body for "Windows_Status" declared at
-    heating_system.ads:17
-
-    heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:15:32: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:18:13: error: invalid prefix in selected component "Window"
-
-    heating_system.ads:19:14: error: invalid prefix in selected component "Windows"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:05:28.154000'
-'2024-04-27T17:08:09.836000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.ads:14:13: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:15:15: error: invalid prefix in selected component "Temp"
-
-    heating_system.ads:15:32: error: invalid prefix in selected component "Temp"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:08:09.836000'
-'2024-04-27T17:09:21.814000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:1:14: error: missing body for "Windows_Status" declared at
-    heating_system.ads:17
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:09:21.814000'
-'2024-04-27T17:13:55.549000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:39:07: error: invalid prefix in selected component "Window"
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:13:55.549000'
-'2024-04-27T17:14:23.300000':
+  timestamp: '2024-04-28T20:21:42.655000'
+'2024-04-28T20:22:38.644000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -1103,14 +345,14 @@
 
     Phase 2 of 2: flow analysis and proof ...
 
-    heating_system.ads:19:14: medium: postcondition might fail[#0]
+    home.ads:28:14: medium: postcondition might fail[#0]
 
     Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:14:23.300000'
-'2024-04-27T17:17:13.773000':
+  timestamp: '2024-04-28T20:22:38.644000'
+'2024-04-28T20:23:30.546000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -1119,207 +361,14 @@
 
     Phase 2 of 2: flow analysis and proof ...
 
-    heating_system.ads:18:13: warning: "Window" may be referenced before it has a
-    value [enabled by default]
-
-    heating_system.ads:18:13: high: "Window" is not initialized[#0]
-
-    heating_system.ads:19:14: medium: postcondition might fail[#1]
+    home.ads:28:14: medium: postcondition might fail[#0]
 
     Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:17:13.773000'
-'2024-04-27T17:38:41.811000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:19:14: medium: postcondition might fail[#0]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:38:41.811000'
-'2024-04-27T17:50:32.218000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.adb:39:07: warning: variable "Current_Windows_Status" is read but
-    never assigned [-gnatwv]
-
-    heating_system.adb:43:17: high: "Current_Windows_Status" is not initialized[#0]
-
-    heating_system.adb:48:10: high: "Current_Windows_Status" is not initialized[#1]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T17:50:32.218000'
-'2024-04-27T18:00:28.853000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:17:30: medium: "Window" might not be initialized in "Windows_Status"[#0]
-
-    heating_system.ads:19:14: medium: "Window" might not be initialized[#1]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:00:28.853000'
-'2024-04-27T18:00:54.378000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:17:30: medium: "Window" might not be initialized in "Windows_Status"[#0]
-
-    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
-    value [enabled by default]
-
-    heating_system.ads:18:14: high: "Window" is not initialized[#1]
-
-    heating_system.ads:19:14: medium: "Window" might not be initialized[#2]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:00:54.378000'
-'2024-04-27T18:01:39.580000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
-    value [enabled by default]
-
-    heating_system.ads:18:14: high: "Window" is not initialized[#0]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:01:39.580000'
-'2024-04-27T18:12:22.639000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:39:31: error: subtype mark required in this context
-
-    heating_system.adb:39:31: error: found "Window" declared at heating_system.ads:17
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:12:22.639000'
-'2024-04-27T18:13:58.255000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:17:30: medium: "Window" might not be initialized in "Windows_Status"[#0]
-
-    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
-    value [enabled by default]
-
-    heating_system.ads:18:14: high: "Window" is not initialized[#1]
-
-    heating_system.ads:19:14: medium: "Window" might not be initialized[#2]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:13:58.255000'
-'2024-04-27T18:15:12.119000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
-    value [enabled by default]
-
-    heating_system.ads:18:14: high: "Window" is not initialized[#0]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:15:12.119000'
-'2024-04-27T18:20:20.051000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    heating_system.adb:40:07: error: statement not allowed in declarative part
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:20:20.051000'
-'2024-04-27T18:20:45.673000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    heating_system.ads:18:14: warning: "Window" may be referenced before it has a
-    value [enabled by default]
-
-    heating_system.ads:18:14: high: "Window" is not initialized[#0]
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:20:45.673000'
-'2024-04-27T18:22:06.449000':
+  timestamp: '2024-04-28T20:23:30.546000'
+'2024-04-28T20:24:57.863000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -1332,8 +381,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:22:06.449000'
-'2024-04-27T18:23:18.728000':
+  timestamp: '2024-04-28T20:24:57.863000'
+'2024-04-28T20:26:21.004000':
   category: GNATprove
   files:
   - C:\FASE\cwk\obj\gnatprove
@@ -1346,18 +395,4 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:23:18.728000'
-'2024-04-27T18:23:33.967000':
-  category: GNATprove
-  files:
-  - C:\FASE\cwk\obj\gnatprove
-  label: Basic Prove File
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2024-04-27T18:23:33.967000'
+  timestamp: '2024-04-28T20:26:21.004000'
