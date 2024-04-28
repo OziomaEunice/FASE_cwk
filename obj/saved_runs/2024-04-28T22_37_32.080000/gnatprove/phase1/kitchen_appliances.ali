@@ -1,0 +1,47 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U kitchen_appliances%b	kitchen_appliances.adb	64e704f8 OO PK
+
+U kitchen_appliances%s	kitchen_appliances.ads	7aba944d OO PK
+
+D kitchen_appliances.ads  20240427154228 7aba944d kitchen_appliances%s
+D kitchen_appliances.adb  20240428192336 1e5d90b5 kitchen_appliances%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 kitchen_appliances.ads
+1K9*Kitchen_Appliances 18l5 18e23 2|1b14 19l5 19t23
+3E9*Fridge 3e37 7r10
+3n20*F_Open{3E9} 16r39 2|15r14
+3n28*F_Closed{3E9} 13r20 2|6r14
+4E9*Oven 4e35 8r10
+4n18*O_Open{4E9} 13r39 2|7r14
+4n26*O_Closed{4E9} 16r20 2|14r14
+6R9*Not_Open 9e14 12r36 15r34 2|3r36 11r34
+7e7*F{3E9} 13r16 16r35 2|6m9 15m9
+8e7*O{4E9} 13r35 16r16 2|7m9 14m9
+12U14*Fridge_Status 12<29 2|3b14 8l8 8t21
+12r29 S{6R9} 13r14 13r33 2|3b29 6m7 7m7
+15U14*Oven_Status 15<27 2|11b14 16l8 16t19
+15r27 S{6R9} 16r14 16r33 2|11b27 14m7 15m7
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS kitchen_appliances__fridge_status 0
+GG EK_GLOBALS kitchen_appliances__fridge_status local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 kitchen_appliances proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS kitchen_appliances__oven_status 0
+GG EK_GLOBALS kitchen_appliances__oven_status local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 kitchen_appliances proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS kitchen_appliances 0
+GG EK_GLOBALS kitchen_appliances local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 refined_initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE kitchen_appliances__oven_status FALSE FALSE FALSE FALSE TRUE kitchen_appliances VISIBLE_PART
+GG EK_FLOW_SCOPE kitchen_appliances TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE kitchen_appliances__fridge_status FALSE FALSE FALSE FALSE TRUE kitchen_appliances VISIBLE_PART
+GG EK_END_MARKER

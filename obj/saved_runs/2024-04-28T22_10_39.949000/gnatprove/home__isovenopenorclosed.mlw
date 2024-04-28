@@ -1,0 +1,512 @@
+module Kitchen_appliances__fridge
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type fridge
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (1 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = fridge,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type fridge__ref = { mutable fridge__content : fridge }
+  
+  function fridge__ref_fridge__content__projection (a: fridge__ref) : fridge =
+    a.fridge__content
+  
+  meta "model_projection" function fridge__ref_fridge__content__projection
+  
+  meta "inline:no" function fridge__ref_fridge__content__projection
+  
+  val fridge__havoc (x: fridge__ref) : unit
+    writes { x }
+end
+
+module Kitchen_appliances__fridge__rep
+  use Kitchen_appliances__fridge as Kitchen_appliances__fridge
+  use _gnatprove_standard.Main
+  use int.Int
+  clone export ada__model.Rep_Proj_Int with
+    axiom .,
+    type t = Kitchen_appliances__fridge.fridge,
+    predicate in_range = Kitchen_appliances__fridge.in_range
+  
+  meta "model_projection" function to_rep
+  
+  meta "inline:no" function to_rep
+end
+
+module Kitchen_appliances__oven
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type oven
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (1 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = oven,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type oven__ref = { mutable oven__content : oven }
+  
+  function oven__ref_oven__content__projection (a: oven__ref) : oven =
+    a.oven__content
+  
+  meta "model_projection" function oven__ref_oven__content__projection
+  
+  meta "inline:no" function oven__ref_oven__content__projection
+  
+  val oven__havoc (x: oven__ref) : unit
+    writes { x }
+end
+
+module Kitchen_appliances__oven__rep
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  use _gnatprove_standard.Main
+  use int.Int
+  clone export ada__model.Rep_Proj_Int with
+    axiom .,
+    type t = Kitchen_appliances__oven.oven,
+    predicate in_range = Kitchen_appliances__oven.in_range
+  
+  meta "model_projection" function to_rep
+  
+  meta "inline:no" function to_rep
+end
+
+module Kitchen_appliances__not_open__rep
+  use _gnatprove_standard.Main
+  use int.Int
+  use Kitchen_appliances__fridge as Kitchen_appliances__fridge
+  use Kitchen_appliances__fridge__rep as Kitchen_appliances__fridge__rep
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  use Kitchen_appliances__oven__rep as Kitchen_appliances__oven__rep
+  
+  type __split_fields = {
+                       rec__kitchen_appliances__not_open__f :
+                         Kitchen_appliances__fridge.fridge;
+                       rec__kitchen_appliances__not_open__o :
+                         Kitchen_appliances__oven.oven
+                       }
+  
+  function __split_fields_rec__kitchen_appliances__not_open__f__projection (a: __split_fields) : 
+    Kitchen_appliances__fridge.fridge =
+    a.rec__kitchen_appliances__not_open__f
+  
+  meta "model_projection" function __split_fields_rec__kitchen_appliances__not_open__f__projection
+  
+  meta "inline:no" function __split_fields_rec__kitchen_appliances__not_open__f__projection
+  
+  function __split_fields_rec__kitchen_appliances__not_open__o__projection (a: __split_fields) : 
+    Kitchen_appliances__oven.oven =
+    a.rec__kitchen_appliances__not_open__o
+  
+  meta "model_projection" function __split_fields_rec__kitchen_appliances__not_open__o__projection
+  
+  meta "inline:no" function __split_fields_rec__kitchen_appliances__not_open__o__projection
+  
+  type __split_fields__ref = {
+                            mutable __split_fields__content : __split_fields
+                            }
+  
+  function __split_fields__ref___split_fields__content__projection (a: __split_fields__ref) : __split_fields =
+    __split_fields__content a
+  
+  meta "model_projection" function __split_fields__ref___split_fields__content__projection
+  
+  meta "inline:no" function __split_fields__ref___split_fields__content__projection
+  
+  val __split_fields__havoc (x: __split_fields__ref) : unit
+    writes { x }
+  
+  type __rep = { __split_fields : __split_fields }
+  
+  function __rep___split_fields__projection (a: __rep) : __split_fields =
+    __split_fields a
+  
+  meta "model_projection" function __rep___split_fields__projection
+  
+  meta "inline:no" function __rep___split_fields__projection
+  
+  function to_base (a: __rep) : __rep = a
+  
+  val to_base (a: __rep) : __rep
+    ensures { result = (to_base (a : __rep)) }
+  
+  function of_base (a: __rep) : __rep = a
+  
+  val of_base (a: __rep) : __rep
+    ensures { result = (of_base (a : __rep)) }
+  
+  predicate kitchen_appliances__not_open__f__pred (a: __rep) = true
+  
+  val kitchen_appliances__not_open__f__pred (a: __rep) : bool
+    ensures { result <-> (kitchen_appliances__not_open__f__pred (a : __rep)) }
+  
+  val rec__kitchen_appliances__not_open__f_ (a: __rep) : Kitchen_appliances__fridge.fridge
+    requires { kitchen_appliances__not_open__f__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__kitchen_appliances__not_open__f)) }
+  
+  predicate kitchen_appliances__not_open__o__pred (a: __rep) = true
+  
+  val kitchen_appliances__not_open__o__pred (a: __rep) : bool
+    ensures { result <-> (kitchen_appliances__not_open__o__pred (a : __rep)) }
+  
+  val rec__kitchen_appliances__not_open__o_ (a: __rep) : Kitchen_appliances__oven.oven
+    requires { kitchen_appliances__not_open__o__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__kitchen_appliances__not_open__o)) }
+  
+  function bool_eq (a: __rep) (b: __rep) : bool =
+    if (((Kitchen_appliances__fridge__rep.to_rep
+            ((__split_fields a).rec__kitchen_appliances__not_open__f))
+           = (Kitchen_appliances__fridge__rep.to_rep
+                ((__split_fields b).rec__kitchen_appliances__not_open__f))) /\
+          ((Kitchen_appliances__oven__rep.to_rep
+              ((__split_fields a).rec__kitchen_appliances__not_open__o))
+             = (Kitchen_appliances__oven__rep.to_rep
+                  ((__split_fields b).rec__kitchen_appliances__not_open__o)))) then
+      True
+    else False
+  
+  val bool_eq (a: __rep) (b: __rep) : bool
+    ensures { result = ((bool_eq (a : __rep)) (b : __rep)) }
+end
+
+module Kitchen_appliances__not_open
+  use export Kitchen_appliances__not_open__rep
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type not_open = __rep
+  
+  val function value__size : int
+  
+  val function object__size : int
+  
+  val function alignment : int
+  
+  axiom value__size_axiom: (value__size >= (0 : int))
+  
+  axiom object__size_axiom: (object__size >= (0 : int))
+  
+  axiom alignment_axiom: (alignment >= (0 : int))
+  
+  val function kitchen_appliances__not_open__f__first__bit : int
+  
+  val function kitchen_appliances__not_open__f__last__bit : int
+  
+  val function kitchen_appliances__not_open__f__position : int
+  
+  axiom kitchen_appliances__not_open__f__first__bit_axiom:
+    (kitchen_appliances__not_open__f__first__bit >= (0 : int))
+  
+  axiom kitchen_appliances__not_open__f__last__bit_axiom:
+    (kitchen_appliances__not_open__f__last__bit
+       > kitchen_appliances__not_open__f__first__bit)
+  
+  axiom kitchen_appliances__not_open__f__position_axiom:
+    (kitchen_appliances__not_open__f__position >= (0 : int))
+  
+  val function kitchen_appliances__not_open__o__first__bit : int
+  
+  val function kitchen_appliances__not_open__o__last__bit : int
+  
+  val function kitchen_appliances__not_open__o__position : int
+  
+  axiom kitchen_appliances__not_open__o__first__bit_axiom:
+    (kitchen_appliances__not_open__o__first__bit >= (0 : int))
+  
+  axiom kitchen_appliances__not_open__o__last__bit_axiom:
+    (kitchen_appliances__not_open__o__last__bit
+       > kitchen_appliances__not_open__o__first__bit)
+  
+  axiom kitchen_appliances__not_open__o__position_axiom:
+    (kitchen_appliances__not_open__o__position >= (0 : int))
+  
+  val function user_eq (a: not_open) (b: not_open) : bool
+  
+  val function dummy : not_open
+  
+  type not_open__ref = { mutable not_open__content : not_open }
+  
+  function not_open__ref_not_open__content__projection (a: not_open__ref) : not_open =
+    a.not_open__content
+  
+  meta "model_projection" function not_open__ref_not_open__content__projection
+  
+  meta "inline:no" function not_open__ref_not_open__content__projection
+  
+  val not_open__havoc (x: not_open__ref) : unit
+    writes { x }
+end
+
+module Kitchen_appliances__not_open___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use Kitchen_appliances__not_open as Kitchen_appliances__not_open
+  
+  predicate dynamic_invariant (temp___expr_193: Kitchen_appliances__not_open.not_open) (temp___is_init_189: bool) (temp___skip_constant_190: bool) (temp___do_toplevel_191: bool) (temp___do_typ_inv_192: bool) =
+    true
+  
+  val dynamic_invariant (temp___expr_193: Kitchen_appliances__not_open.not_open) (temp___is_init_189: bool) (temp___skip_constant_190: bool) (temp___do_toplevel_191: bool) (temp___do_typ_inv_192: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant
+                       (temp___expr_193 :
+                          Kitchen_appliances__not_open.not_open))
+                      (temp___is_init_189 : bool))
+                     (temp___skip_constant_190 : bool))
+                    (temp___do_toplevel_191 : bool))
+                   (temp___do_typ_inv_192 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_194: Kitchen_appliances__not_open.not_open) (temp___skip_top_level_195: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_194: Kitchen_appliances__not_open.not_open) (temp___skip_top_level_195: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption
+                    (temp___expr_194 : Kitchen_appliances__not_open.not_open))
+                   (temp___skip_top_level_195 : bool)) }
+end
+
+module Home__isovenopenorclosed__ov
+  use _gnatprove_standard.Main
+  use int.Int
+  use Kitchen_appliances__not_open as Kitchen_appliances__not_open
+  
+  val ov__split_fields : Kitchen_appliances__not_open.__split_fields__ref
+end
+
+module Kitchen_appliances__fridge_status___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Kitchen_appliances__not_open as Kitchen_appliances__not_open
+  use Kitchen_appliances__not_open___axiom as Kitchen_appliances__not_open___axiom
+  use Kitchen_appliances__fridge as Kitchen_appliances__fridge
+  use Kitchen_appliances__fridge__rep as Kitchen_appliances__fridge__rep
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  use Kitchen_appliances__oven__rep as Kitchen_appliances__oven__rep
+  
+  val fridge_status (s__split_fields: Kitchen_appliances__not_open.__split_fields__ref) : 
+    unit
+    requires { true }
+    writes { s__split_fields }
+    ensures { ((([@GP_Pretty_Ada:1296]
+                 ((Kitchen_appliances__fridge__rep.to_rep
+                     ((Kitchen_appliances__not_open.__split_fields
+                          { Kitchen_appliances__not_open.__split_fields =
+                              (Kitchen_appliances__not_open.__split_fields__content
+                                  s__split_fields) }).Kitchen_appliances__not_open.rec__kitchen_appliances__not_open__f))
+                    = (1 : int))) /\
+                  ([@GP_Pretty_Ada:1302]
+                   ((Kitchen_appliances__oven__rep.to_rep
+                       ((Kitchen_appliances__not_open.__split_fields
+                            { Kitchen_appliances__not_open.__split_fields =
+                                (Kitchen_appliances__not_open.__split_fields__content
+                                    s__split_fields) }).Kitchen_appliances__not_open.rec__kitchen_appliances__not_open__o))
+                      = (0 : int)))) /\
+                 (((((Kitchen_appliances__not_open___axiom.dynamic_invariant
+                        { Kitchen_appliances__not_open.__split_fields =
+                            (Kitchen_appliances__not_open.__split_fields__content
+                                s__split_fields) })
+                       True)
+                      True)
+                     True)
+                    True)) }
+end
+
+module Home__isovenopenorclosed__ov___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Kitchen_appliances__fridge___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Kitchen_appliances__fridge as Kitchen_appliances__fridge
+  
+  predicate dynamic_invariant (temp___expr_179: int) (temp___is_init_175: bool) (temp___skip_constant_176: bool) (temp___do_toplevel_177: bool) (temp___do_typ_inv_178: bool) =
+    if ((temp___is_init_175 = True) \/
+          (Kitchen_appliances__fridge.first
+             <= Kitchen_appliances__fridge.last)) then
+      (((Kitchen_appliances__fridge.dynamic_property
+           Kitchen_appliances__fridge.first)
+          Kitchen_appliances__fridge.last)
+         temp___expr_179)
+    else true
+  
+  val dynamic_invariant (temp___expr_179: int) (temp___is_init_175: bool) (temp___skip_constant_176: bool) (temp___do_toplevel_177: bool) (temp___do_typ_inv_178: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_179 : int))
+                      (temp___is_init_175 : bool))
+                     (temp___skip_constant_176 : bool))
+                    (temp___do_toplevel_177 : bool))
+                   (temp___do_typ_inv_178 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_180: int) (temp___skip_top_level_181: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_180: int) (temp___skip_top_level_181: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_180 : int))
+                   (temp___skip_top_level_181 : bool)) }
+end
+
+module Kitchen_appliances__oven___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  
+  predicate dynamic_invariant (temp___expr_186: int) (temp___is_init_182: bool) (temp___skip_constant_183: bool) (temp___do_toplevel_184: bool) (temp___do_typ_inv_185: bool) =
+    if ((temp___is_init_182 = True) \/
+          (Kitchen_appliances__oven.first <= Kitchen_appliances__oven.last)) then
+      (((Kitchen_appliances__oven.dynamic_property
+           Kitchen_appliances__oven.first)
+          Kitchen_appliances__oven.last)
+         temp___expr_186)
+    else true
+  
+  val dynamic_invariant (temp___expr_186: int) (temp___is_init_182: bool) (temp___skip_constant_183: bool) (temp___do_toplevel_184: bool) (temp___do_typ_inv_185: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_186 : int))
+                      (temp___is_init_182 : bool))
+                     (temp___skip_constant_183 : bool))
+                    (temp___do_toplevel_184 : bool))
+                   (temp___do_typ_inv_185 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_187: int) (temp___skip_top_level_188: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_187: int) (temp___skip_top_level_188: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_187 : int))
+                   (temp___skip_top_level_188 : bool)) }
+end
+
+module Home__isovenopenorclosed__subprogram_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Kitchen_appliances__not_open as Kitchen_appliances__not_open
+  use Kitchen_appliances__not_open___axiom as Kitchen_appliances__not_open___axiom
+  use Home__isovenopenorclosed__ov as Home__isovenopenorclosed__ov
+  use Kitchen_appliances__fridge_status___axiom as Kitchen_appliances__fridge_status___axiom
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  use Kitchen_appliances__oven__rep as Kitchen_appliances__oven__rep
+  use Home__isovenopenorclosed__ov___axiom as Home__isovenopenorclosed__ov___axiom
+  use Kitchen_appliances__fridge___axiom as Kitchen_appliances__fridge___axiom
+  use Kitchen_appliances__oven___axiom as Kitchen_appliances__oven___axiom
+  use Kitchen_appliances__not_open___axiom as Kitchen_appliances__not_open___axiom
+  use Kitchen_appliances__fridge_status___axiom as Kitchen_appliances__fridge_status___axiom
+  
+  let def (__void_param : unit)
+    requires { [#"home.ads" 28 0 0] true }
+    ensures { [#"home.ads" 28 0 0]
+              [#"home.ads" 29 0 0]
+              [@GP_Reason:VC_POSTCONDITION]
+              [@GP_Shape:pragargs__cmp]
+              [@comment:     Post => ov.O = O_Open;              ^ home.ads:29:14:VC_POSTCONDITION]
+              [@GP_Sloc:home.ads:29:14]
+              [@model_vc_post]
+              [@GP_Id:5]
+              [@GP_Sloc:home.ads:29:14]
+              [@GP_Pretty_Ada:1539]
+              ((Kitchen_appliances__oven__rep.to_rep
+                  ((Kitchen_appliances__not_open.__split_fields
+                       { Kitchen_appliances__not_open.__split_fields =
+                           (Kitchen_appliances__not_open.__split_fields__content
+                               Home__isovenopenorclosed__ov.ov__split_fields) }).
+                     Kitchen_appliances__not_open.rec__kitchen_appliances__not_open__o))
+                 = (0 : int)) }
+  = [@vc:divergent]
+    (([@GNAT-comment:Assume dynamic invariants of inputs of the subprogram home.ads:28]
+      ());
+     assume {
+       ((((Kitchen_appliances__not_open___axiom.dynamic_invariant
+             { Kitchen_appliances__not_open.__split_fields =
+                 (Kitchen_appliances__not_open.__split_fields__content
+                     Home__isovenopenorclosed__ov.ov__split_fields) })
+            False)
+           False)
+          True)
+         True };
+     ([@GNAT-comment:Assume moved pointers in outputs of the subprogram home.ads:28]
+      ());
+     ([@GNAT-comment:Check for RTE in the Pre of the subprogram home.ads:28]
+      ());
+     ([@GNAT-comment:Assume Pre of the subprogram home.ads:28] ());
+     (try
+        ([@GP_Sloc:home.adb:41:7] [#"home.adb" 41 0 0] ());
+        ([@GP_Sloc:home.adb:41:7]
+         [#"home.adb" 41 0 0]
+         (let temp___compl_232 =
+            { Kitchen_appliances__not_open.__split_fields =
+                (Kitchen_appliances__not_open.__split_fields__content
+                    Home__isovenopenorclosed__ov.ov__split_fields) } in
+          ([#"home.adb" 41 0 0] (val _f : unit in
+                                 _f));
+          (Kitchen_appliances__fridge_status___axiom.fridge_status
+             Home__isovenopenorclosed__ov.ov__split_fields)));
+        (raise Return__exc)
+      with Return__exc -> ()
+      end);
+     (begin
+        ensures { true }
+        let _ =
+          let _ =
+            ((Kitchen_appliances__oven__rep.to_rep
+                ((Kitchen_appliances__not_open.__split_fields
+                     { Kitchen_appliances__not_open.__split_fields =
+                         (Kitchen_appliances__not_open.__split_fields__content
+                             Home__isovenopenorclosed__ov.ov__split_fields) }).
+                   Kitchen_appliances__not_open.rec__kitchen_appliances__not_open__o))
+               = (0 : int)) in
+          () in
+        ()
+      end))
+end

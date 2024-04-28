@@ -1,0 +1,2 @@
+home.ads:30:42: warning: unused initial value of "cm"[#0]
+home.ads:31:14: medium: postcondition might fail[#1]

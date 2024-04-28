@@ -396,3 +396,410 @@
     '
   output_parser: GNATprove_Parser
   timestamp: '2024-04-28T20:26:21.004000'
+'2024-04-28T21:17:59.497000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.adb:48:07: warning: initialization of "IsTemperatureStable" has no effect[#0]
+
+    home.adb:49:07: warning: initialization of "AreWindowsOK" has no effect[#1]
+
+    home.adb:50:07: warning: initialization of "Fridge_OK" has no effect[#2]
+
+    home.adb:51:07: warning: initialization of "Oven_OK" has no effect[#3]
+
+    home.adb:55:07: medium: precondition might fail, cannot prove ht.TemperatureSetting
+    < 17[#10]
+
+    home.adb:55:25: high: "HomeData.FridgeStatus.O" is not initialized[#4]
+
+    home.adb:55:25: high: "HomeData.OvenStatus.F" is not initialized[#5]
+
+    home.adb:55:25: high: "HomeData.OvenStatus.O" is not initialized[#6]
+
+    home.adb:55:25: high: "HomeData.TemperatureSetting" is not initialized[#7]
+
+    home.adb:55:25: high: "HomeData.WindowsStatus" is not initialized[#8]
+
+    home.adb:55:25: high: "HomeData.FridgeStatus.F" is not initialized[#9]
+
+    home.ads:31:06: warning: postcondition does not mention function result [-gnatw.t]
+
+    home.ads:31:15: warning: call to "Check_CarbonMonoxide" within its postcondition
+    will lead to infinite recursion
+
+    home.ads:31:46: warning: call to "Check_CarbonMonoxide" within its postcondition
+    will lead to infinite recursion
+
+    home.ads:32:14: medium: postcondition might fail, cannot prove Check_CarbonMonoxide
+    = Safe[#11]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:17:59.497000'
+'2024-04-28T21:23:25.588000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.adb:48:07: warning: initialization of "IsTemperatureStable" has no effect[#0]
+
+    home.adb:49:07: warning: initialization of "AreWindowsOK" has no effect[#1]
+
+    home.adb:50:07: warning: initialization of "Fridge_OK" has no effect[#2]
+
+    home.adb:51:07: warning: initialization of "Oven_OK" has no effect[#3]
+
+    home.adb:55:07: medium: precondition might fail, cannot prove ht.TemperatureSetting
+    < 17[#10]
+
+    home.adb:55:25: high: "HomeData.FridgeStatus.O" is not initialized[#4]
+
+    home.adb:55:25: high: "HomeData.OvenStatus.F" is not initialized[#5]
+
+    home.adb:55:25: high: "HomeData.OvenStatus.O" is not initialized[#6]
+
+    home.adb:55:25: high: "HomeData.TemperatureSetting" is not initialized[#7]
+
+    home.adb:55:25: high: "HomeData.WindowsStatus" is not initialized[#8]
+
+    home.adb:55:25: high: "HomeData.FridgeStatus.F" is not initialized[#9]
+
+    home.ads:31:06: warning: postcondition does not mention function result [-gnatw.t]
+
+    home.ads:31:15: warning: call to "Check_CarbonMonoxide" within its postcondition
+    will lead to infinite recursion
+
+    home.ads:31:46: warning: call to "Check_CarbonMonoxide" within its postcondition
+    will lead to infinite recursion
+
+    home.ads:32:14: medium: postcondition might fail, cannot prove Check_CarbonMonoxide
+    = Safe[#11]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:23:25.588000'
+'2024-04-28T21:47:28.273000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.adb:56:07: medium: precondition might fail, cannot prove ht.TemperatureSetting
+    < 17[#12]
+
+    home.adb:56:25: high: "House_Temp_Result.FridgeStatus.F" is not initialized[#0]
+
+    home.adb:56:25: high: "House_Temp_Result.WindowsStatus" is not initialized[#1]
+
+    home.adb:56:25: high: "House_Temp_Result.FridgeStatus.O" is not initialized[#2]
+
+    home.adb:56:25: high: "House_Temp_Result.OvenStatus.F" is not initialized[#3]
+
+    home.adb:56:25: high: "House_Temp_Result.OvenStatus.O" is not initialized[#4]
+
+    home.adb:56:25: high: "House_Temp_Result.TemperatureSetting" is not initialized[#5]
+
+    home.adb:57:23: high: "Windows_Result.FridgeStatus.F" is not initialized[#6]
+
+    home.adb:57:23: high: "Windows_Result.TemperatureSetting" is not initialized[#7]
+
+    home.adb:57:23: high: "Windows_Result.FridgeStatus.O" is not initialized[#8]
+
+    home.adb:57:23: high: "Windows_Result.WindowsStatus" is not initialized[#9]
+
+    home.adb:57:23: high: "Windows_Result.OvenStatus.F" is not initialized[#10]
+
+    home.adb:57:23: high: "Windows_Result.OvenStatus.O" is not initialized[#11]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:47:28.273000'
+'2024-04-28T21:51:31.179000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.adb:58:07: warning: initialization of "Fridge_Result" has no effect[#0]
+
+    home.adb:59:07: warning: initialization of "Oven_Result" has no effect[#1]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:51:31.179000'
+'2024-04-28T21:53:03.200000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:53:03.200000'
+'2024-04-28T21:56:09.692000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:31:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:56:09.692000'
+'2024-04-28T21:57:08.311000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:30:42: warning: unused initial value of "cm"[#0]
+
+    home.ads:31:14: medium: postcondition might fail[#1]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:57:08.311000'
+'2024-04-28T21:57:43.422000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T21:57:43.422000'
+'2024-04-28T22:02:05.672000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:02:05.672000'
+'2024-04-28T22:03:31.146000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:03:31.146000'
+'2024-04-28T22:04:39.395000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:04:39.395000'
+'2024-04-28T22:06:52.794000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:06:52.794000'
+'2024-04-28T22:10:39.949000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:19:20: medium: postcondition might fail, cannot prove ht.TemperatureSetting
+    = ht.TemperatureSetting''old[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:10:39.949000'
+'2024-04-28T22:12:36.110000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:19:20: medium: postcondition might fail, cannot prove ht.TemperatureSetting
+    = ht.TemperatureSetting''Old + 1[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:12:36.110000'
+'2024-04-28T22:14:08.707000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:14:08.707000'
+'2024-04-28T22:14:51.709000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:14:51.709000'
+'2024-04-28T22:36:49.885000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    home.ads:32:14: medium: postcondition might fail[#0]
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:36:49.885000'
+'2024-04-28T22:37:32.080000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:37:32.080000'
+'2024-04-28T22:37:56.469000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:37:56.469000'
+'2024-04-28T22:39:54.146000':
+  category: GNATprove
+  files:
+  - C:\FASE\cwk\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\FASE\cwk\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2024-04-28T22:39:54.146000'

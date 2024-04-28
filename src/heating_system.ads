@@ -11,7 +11,7 @@ package Heating_System with SPARK_Mode is
    
    
    procedure Control_Temperature (Temp: in out Temperature) with
-     Pre => Temp = 15,
+     Pre => Temp <= 40,
      Post => (Temp >= 17 and Temp <= 19);
    
    procedure Windows_Status (Window: in out Windows) with

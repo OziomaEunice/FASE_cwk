@@ -1,0 +1,1263 @@
+{
+  "spark": [
+    {
+      "name": "Home",
+      "sloc": [
+        {
+          "file": "home.ads",
+          "line": 4
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Home.House_Temperature",
+      "sloc": [
+        {
+          "file": "home.ads",
+          "line": 16
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Home.Control_Windows",
+      "sloc": [
+        {
+          "file": "home.ads",
+          "line": 20
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Home.IsFridgeOpenOrClosed",
+      "sloc": [
+        {
+          "file": "home.ads",
+          "line": 24
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Home.IsOvenOpenOrClosed",
+      "sloc": [
+        {
+          "file": "home.ads",
+          "line": 27
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Home.Check_CarbonMonoxide",
+      "sloc": [
+        {
+          "file": "home.ads",
+          "line": 30
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "home.ads",
+      "line": 24,
+      "col": 36,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Home.IsFridgeOpenOrClosed",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 24
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.ads",
+      "line": 27,
+      "col": 34,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Home.IsOvenOpenOrClosed",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 27
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 48,
+      "col": 7,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__0.trace",
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 49,
+      "col": 7,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__1.trace",
+      "msg_id": 1,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 50,
+      "col": 7,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__2.trace",
+      "msg_id": 2,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 51,
+      "col": 7,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__3.trace",
+      "msg_id": 3,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 55,
+      "col": 25,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__4.trace",
+      "msg_id": 4,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 55,
+      "col": 25,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__5.trace",
+      "msg_id": 5,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 55,
+      "col": 25,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__6.trace",
+      "msg_id": 6,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 55,
+      "col": 25,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__7.trace",
+      "msg_id": 7,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 55,
+      "col": 25,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__8.trace",
+      "msg_id": 8,
+      "how_proved": "flow"
+    },
+    {
+      "file": "home.adb",
+      "line": 55,
+      "col": 25,
+      "rule": "UNINITIALIZED",
+      "severity": "high",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "home__flow__9.trace",
+      "msg_id": 9,
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "C:\\FASE\\cwk\\obj\\gnatprove\\home__isfridgeopenorclosed",
+    " 2": "C:\\FASE\\cwk\\obj\\gnatprove\\home__isovenopenorclosed",
+    " 3": "C:\\FASE\\cwk\\obj\\gnatprove\\home__house_temperature",
+    " 4": "C:\\FASE\\cwk\\obj\\gnatprove\\home__control_windows",
+    " 5": "C:\\FASE\\cwk\\obj\\gnatprove\\home__check_carbonmonoxide"
+  },
+  "proof": [
+    {
+      "file": "home.ads",
+      "line": 25,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Home.IsFridgeOpenOrClosed",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 24
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.ads",
+      "check_line": 25,
+      "check_col": 14,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "home.ads",
+      "line": 28,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Home.IsOvenOpenOrClosed",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 27
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.ads",
+      "check_line": 28,
+      "check_col": 14,
+      "session_dir": 2,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "home.adb",
+      "line": 10,
+      "col": 7,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Home.House_Temperature",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.adb",
+      "check_line": 10,
+      "check_col": 7,
+      "session_dir": 3,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "home.ads",
+      "line": 18,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Home.House_Temperature",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.ads",
+      "check_line": 18,
+      "check_col": 14,
+      "session_dir": 3,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "home.adb",
+      "line": 20,
+      "col": 7,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Home.Control_Windows",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 20
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.adb",
+      "check_line": 20,
+      "check_col": 7,
+      "session_dir": 4,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "home.ads",
+      "line": 22,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Home.Control_Windows",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 20
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.ads",
+      "check_line": 22,
+      "check_col": 14,
+      "session_dir": 4,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "home.adb",
+      "line": 55,
+      "col": 7,
+      "rule": "VC_PRECONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown\n()",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.adb",
+      "check_line": 55,
+      "check_col": 7,
+      "msg_id": 10,
+      "session_dir": 5,
+      "how_proved": "prover"
+    },
+    {
+      "file": "home.adb",
+      "line": 61,
+      "col": 7,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.adb",
+      "check_line": 61,
+      "check_col": 7,
+      "session_dir": 5,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "home.ads",
+      "line": 32,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Home.Check_CarbonMonoxide",
+        "sloc": [
+          {
+            "file": "home.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown\n()",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "home.ads",
+      "check_line": 31,
+      "check_col": 14,
+      "msg_id": 11,
+      "session_dir": 5,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Heating_System.Control_Temperature",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 13
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Heating_System.Control_Temperature",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 13
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Heating_System.Control_Temperature",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 13
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Home.House_Temperature",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 16
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Heating_System.Control_Temperature",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 13
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Home.House_Temperature",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 16
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Heating_System.Control_Temperature",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 13
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Heating_System.Control_Temperature",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 13
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Heating_System.Control_Temperature",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 13
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Home.House_Temperature",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 16
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Heating_System.Windows_Status",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Heating_System.Windows_Status",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Heating_System.Windows_Status",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Home.Control_Windows",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Heating_System.Windows_Status",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Home.Control_Windows",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Heating_System.Windows_Status",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Heating_System.Windows_Status",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Heating_System.Windows_Status",
+            "sloc": [
+              {
+                "file": "heating_system.ads",
+                "line": 17
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Home.Control_Windows",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Kitchen_Appliances.Oven_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Kitchen_Appliances.Oven_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Kitchen_Appliances.Oven_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Home.IsFridgeOpenOrClosed",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 24
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Kitchen_Appliances.Oven_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Home.IsFridgeOpenOrClosed",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 24
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Kitchen_Appliances.Oven_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Kitchen_Appliances.Oven_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 15
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Kitchen_Appliances.Oven_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 15
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Home.IsFridgeOpenOrClosed",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 24
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Kitchen_Appliances.Fridge_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 12
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Kitchen_Appliances.Fridge_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 12
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Kitchen_Appliances.Fridge_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 12
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Home.IsOvenOpenOrClosed",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Kitchen_Appliances.Fridge_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 12
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Home.IsOvenOpenOrClosed",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Kitchen_Appliances.Fridge_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 12
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Kitchen_Appliances.Fridge_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 12
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Kitchen_Appliances.Fridge_Status",
+            "sloc": [
+              {
+                "file": "kitchen_appliances.ads",
+                "line": 12
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Home.IsOvenOpenOrClosed",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Home",
+          "sloc": [
+            {
+              "file": "home.ads",
+              "line": 4
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 6.18299993220717E-04,
+    "init_why_sections": 1.56080001033843E-03,
+    "gnatwhy3.run_vcs": 0.00000000000000E+00,
+    "globals (advanced)": 4.52410010620952E-03,
+    "flow analysis": 1.39819001778960E-02,
+    "marking": 8.06899974122643E-04,
+    "translation of standard": 6.58609997481108E-03,
+    "properties (advanced)": 2.83100001979619E-04,
+    "gnatwhy3.register_vcs": 0.00000000000000E+00,
+    "globals (basic)": 6.11579976975918E-03,
+    "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
+    "gnatwhy3.save_session": 4.68750000000000E-02,
+    "gnatwhy3.init": 2.40625000000000E+00
+  }
+}

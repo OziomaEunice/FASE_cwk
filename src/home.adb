@@ -44,11 +44,44 @@ package body Home with SPARK_Mode is
    end IsOvenOpenOrClosed;
     
    
-   -- make the CarbonMonoxide a FUNCTION instead of PROCEDURE !!!
-   procedure CarbonMonoxide (cm: out Carbon_Monoxide) is
+   procedure CheckLevelOfCarbonMonoxide (cm: in out Carbon_Monoxide) is
+      -- These variables store the results of all the
+      -- above procedures
+      Temperature_Result : HomeSettingForEnergy := (TemperatureSetting => 15,
+                                                WindowsStatus => W_Closed,
+                                                FridgeStatus => (F => F_Open, O => O_Closed),
+                                                OvenStatus => (F => F_Open, O => O_Closed));
+      Windows_Result : HomeSettingForEnergy := (TemperatureSetting => 15,
+                                                WindowsStatus => W_Closed,
+                                                FridgeStatus => (F => F_Open, O => O_Closed),
+                                                OvenStatus => (F => F_Open, O => O_Closed));
+      Fridge_Result : Not_Open;
+      Oven_Result : Not_Open;
    begin
-      cm := Safe;
-   end CarbonMonoxide;
+      -- call the procedures to get their results
+      House_Temperature(Temperature_Result);
+      Control_Windows(Windows_Result);
+      IsFridgeOpenOrClosed(Fridge_Result);
+      IsOvenOpenOrClosed(Oven_Result);
+      
+      
+      -- Evaluate the results and if they are all
+      -- in good conditions, return safe, else return unsafe
+      if Temperature_Result.TemperatureSetting >= 17 and
+         Temperature_Result.TemperatureSetting <= 19 and
+         Windows_Result.WindowsStatus = W_Closed and 
+         Fridge_Result.F = F_Open and
+         Oven_Result.O = O_Closed then
+         
+         cm := Safe;
+         
+      else
+         cm := Unsafe;
+      end if;
+      
+        
+   end CheckLevelOfCarbonMonoxide;
+   
    
 
 end Home;

@@ -1,0 +1,15 @@
+home.adb:48:07: warning: initialization of "IsTemperatureStable" has no effect[#0]
+home.adb:49:07: warning: initialization of "AreWindowsOK" has no effect[#1]
+home.adb:50:07: warning: initialization of "Fridge_OK" has no effect[#2]
+home.adb:51:07: warning: initialization of "Oven_OK" has no effect[#3]
+home.adb:55:07: medium: precondition might fail, cannot prove ht.TemperatureSetting < 17[#10]
+home.adb:55:25: high: "HomeData.FridgeStatus.O" is not initialized[#4]
+home.adb:55:25: high: "HomeData.OvenStatus.F" is not initialized[#5]
+home.adb:55:25: high: "HomeData.OvenStatus.O" is not initialized[#6]
+home.adb:55:25: high: "HomeData.TemperatureSetting" is not initialized[#7]
+home.adb:55:25: high: "HomeData.WindowsStatus" is not initialized[#8]
+home.adb:55:25: high: "HomeData.FridgeStatus.F" is not initialized[#9]
+home.ads:31:06: warning: postcondition does not mention function result [-gnatw.t]
+home.ads:31:15: warning: call to "Check_CarbonMonoxide" within its postcondition will lead to infinite recursion
+home.ads:31:46: warning: call to "Check_CarbonMonoxide" within its postcondition will lead to infinite recursion
+home.ads:32:14: medium: postcondition might fail, cannot prove Check_CarbonMonoxide = Safe[#11]

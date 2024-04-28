@@ -1,0 +1,2 @@
+home.adb:58:07: warning: initialization of "Fridge_Result" has no effect[#0]
+home.adb:59:07: warning: initialization of "Oven_Result" has no effect[#1]

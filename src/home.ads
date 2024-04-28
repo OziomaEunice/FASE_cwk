@@ -14,7 +14,6 @@ package Home with SPARK_Mode is
 
    
    procedure House_Temperature (ht: in out HomeSettingForEnergy) with
-     Pre => ht.TemperatureSetting < 17,
      Post => (ht.TemperatureSetting >= 17 and ht.TemperatureSetting <= 19); 
 
    procedure Control_Windows (ch: in out HomeSettingForEnergy) with
@@ -27,9 +26,9 @@ package Home with SPARK_Mode is
    procedure IsOvenOpenOrClosed (ov: out Not_Open) with
      Post => ov.O = O_Open;
    
-   procedure CarbonMonoxide (cm: out Carbon_Monoxide) with
-     --Pre => cm = Unsafe or cm = Safe,
-     Post => cm = Safe;
+   procedure CheckLevelOfCarbonMonoxide (cm: in out Carbon_Monoxide) with
+     Pre => cm = Unsafe or cm = Safe,
+     Post => (cm = Safe or cm = Unsafe);
    
    
 end Home;

@@ -1,0 +1,1 @@
+home.ads:19:20: medium: postcondition might fail, cannot prove ht.TemperatureSetting = ht.TemperatureSetting'Old + 1[#0]

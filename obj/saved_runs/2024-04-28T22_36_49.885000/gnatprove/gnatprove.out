@@ -1,0 +1,40 @@
+Summary of SPARK analysis
+=========================
+
+---------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow   CodePeer      Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------
+Data Dependencies                 .          .          .            .           .          .
+Flow Dependencies                 .          .          .            .           .          .
+Initialization                    6          6          .            .           .          .
+Non-Aliasing                      .          .          .            .           .          .
+Run-time Checks                   .          .          .            .           .          .
+Assertions                        .          .          .            .           .          .
+Functional Contracts             12          .          .    11 (CVC4)           .          1
+LSP Verification                  .          .          .            .           .          .
+Termination                       .          .          .            .           .          .
+Concurrency                       .          .          .            .           .          .
+---------------------------------------------------------------------------------------------
+Total                            18    6 (33%)          .     11 (61%)           .     1 (6%)
+
+
+max steps used for successful proof: 1
+
+Analyzed 4 units
+in unit heating_system, 3 subprograms and packages out of 3 analyzed
+  Heating_System at heating_system.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Heating_System.Control_Temperature at heating_system.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Heating_System.Windows_Status at heating_system.ads:17 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+in unit home, 6 subprograms and packages out of 6 analyzed
+  Home at home.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Home.CheckLevelOfCarbonMonoxide at home.ads:30 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 1 checks out of 2 proved
+  Home.Control_Windows at home.ads:20 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Home.House_Temperature at home.ads:16 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Home.IsFridgeOpenOrClosed at home.ads:24 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Home.IsOvenOpenOrClosed at home.ads:27 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+in unit kitchen_appliances, 3 subprograms and packages out of 3 analyzed
+  Kitchen_Appliances at kitchen_appliances.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Kitchen_Appliances.Fridge_Status at kitchen_appliances.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Kitchen_Appliances.Oven_Status at kitchen_appliances.ads:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+in unit main, 0 subprograms and packages out of 1 analyzed
+  main at main.adb:7 skipped
