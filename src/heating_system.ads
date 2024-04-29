@@ -4,11 +4,6 @@ package Heating_System with SPARK_Mode is
    type Temperature is range 0..40;
    type Windows is (W_Open, W_Closed);
    
-   type Heating_Sys is record
-      T : Temperature;
-      W : Windows;
-   end record;
-   
    
    procedure Control_Temperature (Temp: in out Temperature) with
      Pre => Temp <= 40,

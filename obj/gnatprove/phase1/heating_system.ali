@@ -10,23 +10,20 @@ RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U heating_system%b	heating_system.adb	9745daf2 OO PK
+U heating_system%b	heating_system.adb	6efada4c OO PK
 
-U heating_system%s	heating_system.ads	d32f44c8 OO PK
+U heating_system%s	heating_system.ads	2a904476 OO PK
 
-D heating_system.ads	20240428213628 d32f44c8 heating_system%s
+D heating_system.ads	20240429135044 2a904476 heating_system%s
 D heating_system.adb	20240429074324 446a9e3a heating_system%b
 D system.ads		20210520051134 2ffa5114 system%s
 G a Z
 X 1 heating_system.ads
 1K9*Heating_System 21l5 21e19 2|1b14 54l5 54t19
-4I9*Temperature<short_short_integer> 8r11 13r48 2|4r47
-5E9*Windows 5e38 9r11 17r45 2|38r45 39r31
+4I9*Temperature<short_short_integer> 13r48 2|4r47
+5E9*Windows 5e38 17r45 2|38r45 39r31
 5n21*W_Open{5E9} 18r23 2|39r41 41r17 47r35
 5n29*W_Closed{5E9} 18r42 19r23 2|48r20
-7R9*Heating_Sys 10e14
-8i7*T{4I9}
-9e7*W{5E9}
 13U14*Control_Temperature 13=35 2|4b14 34l8 34t27
 13i35 Temp{4I9} 14r13 15r15 15r30 2|4b34 7m7 12r12 17r17 18m16 24r20 25m19
 17U14*Windows_Status 17=30 2|38b14 51l8 51t22

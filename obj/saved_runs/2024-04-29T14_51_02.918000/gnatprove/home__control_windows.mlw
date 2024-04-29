@@ -1,0 +1,1056 @@
+module Kitchen_appliances__fridge
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type fridge
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (1 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = fridge,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type fridge__ref = { mutable fridge__content : fridge }
+  
+  function fridge__ref_fridge__content__projection (a: fridge__ref) : fridge =
+    a.fridge__content
+  
+  meta "model_projection" function fridge__ref_fridge__content__projection
+  
+  meta "inline:no" function fridge__ref_fridge__content__projection
+  
+  val fridge__havoc (x: fridge__ref) : unit
+    writes { x }
+end
+
+module Kitchen_appliances__fridge__rep
+  use Kitchen_appliances__fridge as Kitchen_appliances__fridge
+  use _gnatprove_standard.Main
+  use int.Int
+  clone export ada__model.Rep_Proj_Int with
+    axiom .,
+    type t = Kitchen_appliances__fridge.fridge,
+    predicate in_range = Kitchen_appliances__fridge.in_range
+  
+  meta "model_projection" function to_rep
+  
+  meta "inline:no" function to_rep
+end
+
+module Kitchen_appliances__oven
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type oven
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (1 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = oven,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type oven__ref = { mutable oven__content : oven }
+  
+  function oven__ref_oven__content__projection (a: oven__ref) : oven =
+    a.oven__content
+  
+  meta "model_projection" function oven__ref_oven__content__projection
+  
+  meta "inline:no" function oven__ref_oven__content__projection
+  
+  val oven__havoc (x: oven__ref) : unit
+    writes { x }
+end
+
+module Kitchen_appliances__oven__rep
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  use _gnatprove_standard.Main
+  use int.Int
+  clone export ada__model.Rep_Proj_Int with
+    axiom .,
+    type t = Kitchen_appliances__oven.oven,
+    predicate in_range = Kitchen_appliances__oven.in_range
+  
+  meta "model_projection" function to_rep
+  
+  meta "inline:no" function to_rep
+end
+
+module Kitchen_appliances__not_open__rep
+  use _gnatprove_standard.Main
+  use int.Int
+  use Kitchen_appliances__fridge as Kitchen_appliances__fridge
+  use Kitchen_appliances__fridge__rep as Kitchen_appliances__fridge__rep
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  use Kitchen_appliances__oven__rep as Kitchen_appliances__oven__rep
+  
+  type __split_fields = {
+                       rec__kitchen_appliances__not_open__f :
+                         Kitchen_appliances__fridge.fridge;
+                       rec__kitchen_appliances__not_open__o :
+                         Kitchen_appliances__oven.oven
+                       }
+  
+  function __split_fields_rec__kitchen_appliances__not_open__f__projection (a: __split_fields) : 
+    Kitchen_appliances__fridge.fridge =
+    a.rec__kitchen_appliances__not_open__f
+  
+  meta "model_projection" function __split_fields_rec__kitchen_appliances__not_open__f__projection
+  
+  meta "inline:no" function __split_fields_rec__kitchen_appliances__not_open__f__projection
+  
+  function __split_fields_rec__kitchen_appliances__not_open__o__projection (a: __split_fields) : 
+    Kitchen_appliances__oven.oven =
+    a.rec__kitchen_appliances__not_open__o
+  
+  meta "model_projection" function __split_fields_rec__kitchen_appliances__not_open__o__projection
+  
+  meta "inline:no" function __split_fields_rec__kitchen_appliances__not_open__o__projection
+  
+  type __split_fields__ref = {
+                            mutable __split_fields__content : __split_fields
+                            }
+  
+  function __split_fields__ref___split_fields__content__projection (a: __split_fields__ref) : __split_fields =
+    __split_fields__content a
+  
+  meta "model_projection" function __split_fields__ref___split_fields__content__projection
+  
+  meta "inline:no" function __split_fields__ref___split_fields__content__projection
+  
+  val __split_fields__havoc (x: __split_fields__ref) : unit
+    writes { x }
+  
+  type __rep = { __split_fields : __split_fields }
+  
+  function __rep___split_fields__projection (a: __rep) : __split_fields =
+    __split_fields a
+  
+  meta "model_projection" function __rep___split_fields__projection
+  
+  meta "inline:no" function __rep___split_fields__projection
+  
+  function to_base (a: __rep) : __rep = a
+  
+  val to_base (a: __rep) : __rep
+    ensures { result = (to_base (a : __rep)) }
+  
+  function of_base (a: __rep) : __rep = a
+  
+  val of_base (a: __rep) : __rep
+    ensures { result = (of_base (a : __rep)) }
+  
+  predicate kitchen_appliances__not_open__f__pred (a: __rep) = true
+  
+  val kitchen_appliances__not_open__f__pred (a: __rep) : bool
+    ensures { result <-> (kitchen_appliances__not_open__f__pred (a : __rep)) }
+  
+  val rec__kitchen_appliances__not_open__f_ (a: __rep) : Kitchen_appliances__fridge.fridge
+    requires { kitchen_appliances__not_open__f__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__kitchen_appliances__not_open__f)) }
+  
+  predicate kitchen_appliances__not_open__o__pred (a: __rep) = true
+  
+  val kitchen_appliances__not_open__o__pred (a: __rep) : bool
+    ensures { result <-> (kitchen_appliances__not_open__o__pred (a : __rep)) }
+  
+  val rec__kitchen_appliances__not_open__o_ (a: __rep) : Kitchen_appliances__oven.oven
+    requires { kitchen_appliances__not_open__o__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__kitchen_appliances__not_open__o)) }
+  
+  function bool_eq (a: __rep) (b: __rep) : bool =
+    if (((Kitchen_appliances__fridge__rep.to_rep
+            ((__split_fields a).rec__kitchen_appliances__not_open__f))
+           = (Kitchen_appliances__fridge__rep.to_rep
+                ((__split_fields b).rec__kitchen_appliances__not_open__f))) /\
+          ((Kitchen_appliances__oven__rep.to_rep
+              ((__split_fields a).rec__kitchen_appliances__not_open__o))
+             = (Kitchen_appliances__oven__rep.to_rep
+                  ((__split_fields b).rec__kitchen_appliances__not_open__o)))) then
+      True
+    else False
+  
+  val bool_eq (a: __rep) (b: __rep) : bool
+    ensures { result = ((bool_eq (a : __rep)) (b : __rep)) }
+end
+
+module Kitchen_appliances__not_open
+  use export Kitchen_appliances__not_open__rep
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type not_open = __rep
+  
+  val function value__size : int
+  
+  val function object__size : int
+  
+  val function alignment : int
+  
+  axiom value__size_axiom: (value__size >= (0 : int))
+  
+  axiom object__size_axiom: (object__size >= (0 : int))
+  
+  axiom alignment_axiom: (alignment >= (0 : int))
+  
+  val function kitchen_appliances__not_open__f__first__bit : int
+  
+  val function kitchen_appliances__not_open__f__last__bit : int
+  
+  val function kitchen_appliances__not_open__f__position : int
+  
+  axiom kitchen_appliances__not_open__f__first__bit_axiom:
+    (kitchen_appliances__not_open__f__first__bit >= (0 : int))
+  
+  axiom kitchen_appliances__not_open__f__last__bit_axiom:
+    (kitchen_appliances__not_open__f__last__bit
+       > kitchen_appliances__not_open__f__first__bit)
+  
+  axiom kitchen_appliances__not_open__f__position_axiom:
+    (kitchen_appliances__not_open__f__position >= (0 : int))
+  
+  val function kitchen_appliances__not_open__o__first__bit : int
+  
+  val function kitchen_appliances__not_open__o__last__bit : int
+  
+  val function kitchen_appliances__not_open__o__position : int
+  
+  axiom kitchen_appliances__not_open__o__first__bit_axiom:
+    (kitchen_appliances__not_open__o__first__bit >= (0 : int))
+  
+  axiom kitchen_appliances__not_open__o__last__bit_axiom:
+    (kitchen_appliances__not_open__o__last__bit
+       > kitchen_appliances__not_open__o__first__bit)
+  
+  axiom kitchen_appliances__not_open__o__position_axiom:
+    (kitchen_appliances__not_open__o__position >= (0 : int))
+  
+  val function user_eq (a: not_open) (b: not_open) : bool
+  
+  val function dummy : not_open
+  
+  type not_open__ref = { mutable not_open__content : not_open }
+  
+  function not_open__ref_not_open__content__projection (a: not_open__ref) : not_open =
+    a.not_open__content
+  
+  meta "model_projection" function not_open__ref_not_open__content__projection
+  
+  meta "inline:no" function not_open__ref_not_open__content__projection
+  
+  val not_open__havoc (x: not_open__ref) : unit
+    writes { x }
+end
+
+module Heating_system__temperature
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type temperature = <range 0 40>
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (40 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = temperature,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type temperature__ref = { mutable temperature__content : temperature }
+  
+  function temperature__ref_temperature__content__projection (a: temperature__ref) : temperature =
+    a.temperature__content
+  
+  meta "model_projection" function temperature__ref_temperature__content__projection
+  
+  meta "inline:no" function temperature__ref_temperature__content__projection
+  
+  val temperature__havoc (x: temperature__ref) : unit
+    writes { x }
+end
+
+module Heating_system__temperature__rep
+  use Heating_system__temperature as Heating_system__temperature
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  function to_rep (x: Heating_system__temperature.temperature) : int =
+    Heating_system__temperature.temperature'int x
+  
+  clone export ada__model.Rep_Proj_Int with
+    axiom .,
+    type t = Heating_system__temperature.temperature,
+    predicate in_range = Heating_system__temperature.in_range,
+    function to_rep = to_rep
+  
+  meta "model_projection" function to_rep
+  
+  meta "inline:no" function to_rep
+end
+
+module Heating_system__windows
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type windows
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (1 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = windows,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type windows__ref = { mutable windows__content : windows }
+  
+  function windows__ref_windows__content__projection (a: windows__ref) : windows =
+    a.windows__content
+  
+  meta "model_projection" function windows__ref_windows__content__projection
+  
+  meta "inline:no" function windows__ref_windows__content__projection
+  
+  val windows__havoc (x: windows__ref) : unit
+    writes { x }
+end
+
+module Heating_system__windows__rep
+  use Heating_system__windows as Heating_system__windows
+  use _gnatprove_standard.Main
+  use int.Int
+  clone export ada__model.Rep_Proj_Int with
+    axiom .,
+    type t = Heating_system__windows.windows,
+    predicate in_range = Heating_system__windows.in_range
+  
+  meta "model_projection" function to_rep
+  
+  meta "inline:no" function to_rep
+end
+
+module Home__homesettingforenergy__rep
+  use _gnatprove_standard.Main
+  use int.Int
+  use Kitchen_appliances__not_open as Kitchen_appliances__not_open
+  use Heating_system__temperature as Heating_system__temperature
+  use Heating_system__temperature__rep as Heating_system__temperature__rep
+  use Heating_system__windows as Heating_system__windows
+  use Heating_system__windows__rep as Heating_system__windows__rep
+  
+  type __split_fields = {
+                       rec__home__homesettingforenergy__temperaturesetting :
+                         Heating_system__temperature.temperature;
+                       rec__home__homesettingforenergy__windowsstatus :
+                         Heating_system__windows.windows;
+                       rec__home__homesettingforenergy__fridgestatus :
+                         Kitchen_appliances__not_open.not_open;
+                       rec__home__homesettingforenergy__ovenstatus :
+                         Kitchen_appliances__not_open.not_open
+                       }
+  
+  function __split_fields_rec__home__homesettingforenergy__temperaturesetting__projection (a: __split_fields) : 
+    Heating_system__temperature.temperature =
+    a.rec__home__homesettingforenergy__temperaturesetting
+  
+  meta "model_projection" function __split_fields_rec__home__homesettingforenergy__temperaturesetting__projection
+  
+  meta "inline:no" function __split_fields_rec__home__homesettingforenergy__temperaturesetting__projection
+  
+  function __split_fields_rec__home__homesettingforenergy__windowsstatus__projection (a: __split_fields) : 
+    Heating_system__windows.windows =
+    a.rec__home__homesettingforenergy__windowsstatus
+  
+  meta "model_projection" function __split_fields_rec__home__homesettingforenergy__windowsstatus__projection
+  
+  meta "inline:no" function __split_fields_rec__home__homesettingforenergy__windowsstatus__projection
+  
+  function __split_fields_rec__home__homesettingforenergy__fridgestatus__projection (a: __split_fields) : 
+    Kitchen_appliances__not_open.not_open =
+    a.rec__home__homesettingforenergy__fridgestatus
+  
+  meta "model_projection" function __split_fields_rec__home__homesettingforenergy__fridgestatus__projection
+  
+  meta "inline:no" function __split_fields_rec__home__homesettingforenergy__fridgestatus__projection
+  
+  function __split_fields_rec__home__homesettingforenergy__ovenstatus__projection (a: __split_fields) : 
+    Kitchen_appliances__not_open.not_open =
+    a.rec__home__homesettingforenergy__ovenstatus
+  
+  meta "model_projection" function __split_fields_rec__home__homesettingforenergy__ovenstatus__projection
+  
+  meta "inline:no" function __split_fields_rec__home__homesettingforenergy__ovenstatus__projection
+  
+  type __split_fields__ref = {
+                            mutable __split_fields__content : __split_fields
+                            }
+  
+  function __split_fields__ref___split_fields__content__2__projection (a: __split_fields__ref) : __split_fields =
+    __split_fields__content a
+  
+  meta "model_projection" function __split_fields__ref___split_fields__content__2__projection
+  
+  meta "inline:no" function __split_fields__ref___split_fields__content__2__projection
+  
+  val __split_fields__havoc (x: __split_fields__ref) : unit
+    writes { x }
+  
+  type __rep = { __split_fields : __split_fields }
+  
+  function __rep___split_fields__2__projection (a: __rep) : __split_fields =
+    __split_fields a
+  
+  meta "model_projection" function __rep___split_fields__2__projection
+  
+  meta "inline:no" function __rep___split_fields__2__projection
+  
+  function to_base (a: __rep) : __rep = a
+  
+  val to_base (a: __rep) : __rep
+    ensures { result = (to_base (a : __rep)) }
+  
+  function of_base (a: __rep) : __rep = a
+  
+  val of_base (a: __rep) : __rep
+    ensures { result = (of_base (a : __rep)) }
+  
+  predicate home__homesettingforenergy__temperaturesetting__pred (a: __rep) =
+    true
+  
+  val home__homesettingforenergy__temperaturesetting__pred (a: __rep) : 
+    bool
+    ensures { result
+                <->
+                (home__homesettingforenergy__temperaturesetting__pred
+                   (a : __rep)) }
+  
+  val rec__home__homesettingforenergy__temperaturesetting_ (a: __rep) : 
+    Heating_system__temperature.temperature
+    requires { home__homesettingforenergy__temperaturesetting__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__home__homesettingforenergy__temperaturesetting)) }
+  
+  predicate home__homesettingforenergy__windowsstatus__pred (a: __rep) = true
+  
+  val home__homesettingforenergy__windowsstatus__pred (a: __rep) : bool
+    ensures { result
+                <->
+                (home__homesettingforenergy__windowsstatus__pred (a : __rep)) }
+  
+  val rec__home__homesettingforenergy__windowsstatus_ (a: __rep) : Heating_system__windows.windows
+    requires { home__homesettingforenergy__windowsstatus__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__home__homesettingforenergy__windowsstatus)) }
+  
+  predicate home__homesettingforenergy__fridgestatus__pred (a: __rep) = true
+  
+  val home__homesettingforenergy__fridgestatus__pred (a: __rep) : bool
+    ensures { result
+                <->
+                (home__homesettingforenergy__fridgestatus__pred (a : __rep)) }
+  
+  val rec__home__homesettingforenergy__fridgestatus_ (a: __rep) : Kitchen_appliances__not_open.not_open
+    requires { home__homesettingforenergy__fridgestatus__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__home__homesettingforenergy__fridgestatus)) }
+  
+  predicate home__homesettingforenergy__ovenstatus__pred (a: __rep) = true
+  
+  val home__homesettingforenergy__ovenstatus__pred (a: __rep) : bool
+    ensures { result
+                <->
+                (home__homesettingforenergy__ovenstatus__pred (a : __rep)) }
+  
+  val rec__home__homesettingforenergy__ovenstatus_ (a: __rep) : Kitchen_appliances__not_open.not_open
+    requires { home__homesettingforenergy__ovenstatus__pred a }
+    ensures { (result
+                 = ((__split_fields a).rec__home__homesettingforenergy__ovenstatus)) }
+  
+  function bool_eq (a: __rep) (b: __rep) : bool =
+    if ((((Heating_system__temperature__rep.to_rep
+             ((__split_fields a).rec__home__homesettingforenergy__temperaturesetting))
+            = (Heating_system__temperature__rep.to_rep
+                 ((__split_fields b).rec__home__homesettingforenergy__temperaturesetting))) /\
+           ((Heating_system__windows__rep.to_rep
+               ((__split_fields a).rec__home__homesettingforenergy__windowsstatus))
+              = (Heating_system__windows__rep.to_rep
+                   ((__split_fields b).rec__home__homesettingforenergy__windowsstatus)))) /\
+          (((Kitchen_appliances__not_open.bool_eq
+               ((__split_fields a).rec__home__homesettingforenergy__fridgestatus))
+              ((__split_fields b).rec__home__homesettingforenergy__fridgestatus)) /\
+             ((Kitchen_appliances__not_open.bool_eq
+                 ((__split_fields a).rec__home__homesettingforenergy__ovenstatus))
+                ((__split_fields b).rec__home__homesettingforenergy__ovenstatus)))) then
+      True
+    else False
+  
+  val bool_eq (a: __rep) (b: __rep) : bool
+    ensures { result = ((bool_eq (a : __rep)) (b : __rep)) }
+end
+
+module Home__homesettingforenergy
+  use export Home__homesettingforenergy__rep
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type homesettingforenergy = __rep
+  
+  val function value__size : int
+  
+  val function object__size : int
+  
+  val function alignment : int
+  
+  axiom value__size_axiom: (value__size >= (0 : int))
+  
+  axiom object__size_axiom: (object__size >= (0 : int))
+  
+  axiom alignment_axiom: (alignment >= (0 : int))
+  
+  val function home__homesettingforenergy__temperaturesetting__first__bit : 
+    int
+  
+  val function home__homesettingforenergy__temperaturesetting__last__bit : 
+    int
+  
+  val function home__homesettingforenergy__temperaturesetting__position : 
+    int
+  
+  axiom home__homesettingforenergy__temperaturesetting__first__bit_axiom:
+    (home__homesettingforenergy__temperaturesetting__first__bit >= (0 : int))
+  
+  axiom home__homesettingforenergy__temperaturesetting__last__bit_axiom:
+    (home__homesettingforenergy__temperaturesetting__last__bit
+       > home__homesettingforenergy__temperaturesetting__first__bit)
+  
+  axiom home__homesettingforenergy__temperaturesetting__position_axiom:
+    (home__homesettingforenergy__temperaturesetting__position >= (0 : int))
+  
+  val function home__homesettingforenergy__windowsstatus__first__bit : 
+    int
+  
+  val function home__homesettingforenergy__windowsstatus__last__bit : 
+    int
+  
+  val function home__homesettingforenergy__windowsstatus__position : 
+    int
+  
+  axiom home__homesettingforenergy__windowsstatus__first__bit_axiom:
+    (home__homesettingforenergy__windowsstatus__first__bit >= (0 : int))
+  
+  axiom home__homesettingforenergy__windowsstatus__last__bit_axiom:
+    (home__homesettingforenergy__windowsstatus__last__bit
+       > home__homesettingforenergy__windowsstatus__first__bit)
+  
+  axiom home__homesettingforenergy__windowsstatus__position_axiom:
+    (home__homesettingforenergy__windowsstatus__position >= (0 : int))
+  
+  val function home__homesettingforenergy__fridgestatus__first__bit : 
+    int
+  
+  val function home__homesettingforenergy__fridgestatus__last__bit : 
+    int
+  
+  val function home__homesettingforenergy__fridgestatus__position : int
+  
+  axiom home__homesettingforenergy__fridgestatus__first__bit_axiom:
+    (home__homesettingforenergy__fridgestatus__first__bit >= (0 : int))
+  
+  axiom home__homesettingforenergy__fridgestatus__last__bit_axiom:
+    (home__homesettingforenergy__fridgestatus__last__bit
+       > home__homesettingforenergy__fridgestatus__first__bit)
+  
+  axiom home__homesettingforenergy__fridgestatus__position_axiom:
+    (home__homesettingforenergy__fridgestatus__position >= (0 : int))
+  
+  val function home__homesettingforenergy__ovenstatus__first__bit : int
+  
+  val function home__homesettingforenergy__ovenstatus__last__bit : int
+  
+  val function home__homesettingforenergy__ovenstatus__position : int
+  
+  axiom home__homesettingforenergy__ovenstatus__first__bit_axiom:
+    (home__homesettingforenergy__ovenstatus__first__bit >= (0 : int))
+  
+  axiom home__homesettingforenergy__ovenstatus__last__bit_axiom:
+    (home__homesettingforenergy__ovenstatus__last__bit
+       > home__homesettingforenergy__ovenstatus__first__bit)
+  
+  axiom home__homesettingforenergy__ovenstatus__position_axiom:
+    (home__homesettingforenergy__ovenstatus__position >= (0 : int))
+  
+  val function user_eq (a: homesettingforenergy) (b: homesettingforenergy) : 
+    bool
+  
+  val function dummy : homesettingforenergy
+  
+  type homesettingforenergy__ref = {
+                                  mutable homesettingforenergy__content :
+                                    homesettingforenergy
+                                  }
+  
+  function homesettingforenergy__ref_homesettingforenergy__content__projection (a: homesettingforenergy__ref) : homesettingforenergy =
+    a.homesettingforenergy__content
+  
+  meta "model_projection" function homesettingforenergy__ref_homesettingforenergy__content__projection
+  
+  meta "inline:no" function homesettingforenergy__ref_homesettingforenergy__content__projection
+  
+  val homesettingforenergy__havoc (x: homesettingforenergy__ref) : unit
+    writes { x }
+end
+
+module Home__homesettingforenergy___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use Home__homesettingforenergy as Home__homesettingforenergy
+  
+  predicate dynamic_invariant (temp___expr_202: Home__homesettingforenergy.homesettingforenergy) (temp___is_init_198: bool) (temp___skip_constant_199: bool) (temp___do_toplevel_200: bool) (temp___do_typ_inv_201: bool) =
+    true
+  
+  val dynamic_invariant (temp___expr_202: Home__homesettingforenergy.homesettingforenergy) (temp___is_init_198: bool) (temp___skip_constant_199: bool) (temp___do_toplevel_200: bool) (temp___do_typ_inv_201: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant
+                       (temp___expr_202 :
+                          Home__homesettingforenergy.homesettingforenergy))
+                      (temp___is_init_198 : bool))
+                     (temp___skip_constant_199 : bool))
+                    (temp___do_toplevel_200 : bool))
+                   (temp___do_typ_inv_201 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_203: Home__homesettingforenergy.homesettingforenergy) (temp___skip_top_level_204: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_203: Home__homesettingforenergy.homesettingforenergy) (temp___skip_top_level_204: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption
+                    (temp___expr_203 :
+                       Home__homesettingforenergy.homesettingforenergy))
+                   (temp___skip_top_level_204 : bool)) }
+end
+
+module Home__control_windows__ch
+  use _gnatprove_standard.Main
+  use int.Int
+  use Home__homesettingforenergy as Home__homesettingforenergy
+  
+  val ch__split_fields : Home__homesettingforenergy.__split_fields__ref
+end
+
+module Heating_system__windows___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Heating_system__windows as Heating_system__windows
+  
+  predicate dynamic_invariant (temp___expr_172: int) (temp___is_init_168: bool) (temp___skip_constant_169: bool) (temp___do_toplevel_170: bool) (temp___do_typ_inv_171: bool) =
+    if ((temp___is_init_168 = True) \/
+          (Heating_system__windows.first <= Heating_system__windows.last)) then
+      (((Heating_system__windows.dynamic_property
+           Heating_system__windows.first)
+          Heating_system__windows.last)
+         temp___expr_172)
+    else true
+  
+  val dynamic_invariant (temp___expr_172: int) (temp___is_init_168: bool) (temp___skip_constant_169: bool) (temp___do_toplevel_170: bool) (temp___do_typ_inv_171: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_172 : int))
+                      (temp___is_init_168 : bool))
+                     (temp___skip_constant_169 : bool))
+                    (temp___do_toplevel_170 : bool))
+                   (temp___do_typ_inv_171 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_173: int) (temp___skip_top_level_174: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_173: int) (temp___skip_top_level_174: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_173 : int))
+                   (temp___skip_top_level_174 : bool)) }
+end
+
+module Heating_system__windows_status___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Heating_system__windows___axiom as Heating_system__windows___axiom
+  
+  val windows_status (window: int__ref) : unit
+    requires { [@GP_Pretty_Ada:1365]
+               (((window.int__content) = (0 : int)) \/
+                  ((window.int__content) = (1 : int)))
+    }
+    writes { window }
+    ensures { (([@GP_Pretty_Ada:1375] ((window.int__content) = (1 : int))) /\
+                 (((((Heating_system__windows___axiom.dynamic_invariant
+                        (window.int__content))
+                       True)
+                      True)
+                     True)
+                    True)) }
+end
+
+module Home__control_windows__ch___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Heating_system__temperature___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Heating_system__temperature as Heating_system__temperature
+  
+  predicate dynamic_invariant (temp___expr_165: int) (temp___is_init_161: bool) (temp___skip_constant_162: bool) (temp___do_toplevel_163: bool) (temp___do_typ_inv_164: bool) =
+    if ((temp___is_init_161 = True) \/
+          (Heating_system__temperature.first
+             <= Heating_system__temperature.last)) then
+      (((Heating_system__temperature.dynamic_property
+           Heating_system__temperature.first)
+          Heating_system__temperature.last)
+         temp___expr_165)
+    else true
+  
+  val dynamic_invariant (temp___expr_165: int) (temp___is_init_161: bool) (temp___skip_constant_162: bool) (temp___do_toplevel_163: bool) (temp___do_typ_inv_164: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_165 : int))
+                      (temp___is_init_161 : bool))
+                     (temp___skip_constant_162 : bool))
+                    (temp___do_toplevel_163 : bool))
+                   (temp___do_typ_inv_164 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_166: int) (temp___skip_top_level_167: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_166: int) (temp___skip_top_level_167: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_166 : int))
+                   (temp___skip_top_level_167 : bool)) }
+end
+
+module Kitchen_appliances__fridge___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Kitchen_appliances__fridge as Kitchen_appliances__fridge
+  
+  predicate dynamic_invariant (temp___expr_179: int) (temp___is_init_175: bool) (temp___skip_constant_176: bool) (temp___do_toplevel_177: bool) (temp___do_typ_inv_178: bool) =
+    if ((temp___is_init_175 = True) \/
+          (Kitchen_appliances__fridge.first
+             <= Kitchen_appliances__fridge.last)) then
+      (((Kitchen_appliances__fridge.dynamic_property
+           Kitchen_appliances__fridge.first)
+          Kitchen_appliances__fridge.last)
+         temp___expr_179)
+    else true
+  
+  val dynamic_invariant (temp___expr_179: int) (temp___is_init_175: bool) (temp___skip_constant_176: bool) (temp___do_toplevel_177: bool) (temp___do_typ_inv_178: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_179 : int))
+                      (temp___is_init_175 : bool))
+                     (temp___skip_constant_176 : bool))
+                    (temp___do_toplevel_177 : bool))
+                   (temp___do_typ_inv_178 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_180: int) (temp___skip_top_level_181: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_180: int) (temp___skip_top_level_181: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_180 : int))
+                   (temp___skip_top_level_181 : bool)) }
+end
+
+module Kitchen_appliances__oven___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Kitchen_appliances__oven as Kitchen_appliances__oven
+  
+  predicate dynamic_invariant (temp___expr_186: int) (temp___is_init_182: bool) (temp___skip_constant_183: bool) (temp___do_toplevel_184: bool) (temp___do_typ_inv_185: bool) =
+    if ((temp___is_init_182 = True) \/
+          (Kitchen_appliances__oven.first <= Kitchen_appliances__oven.last)) then
+      (((Kitchen_appliances__oven.dynamic_property
+           Kitchen_appliances__oven.first)
+          Kitchen_appliances__oven.last)
+         temp___expr_186)
+    else true
+  
+  val dynamic_invariant (temp___expr_186: int) (temp___is_init_182: bool) (temp___skip_constant_183: bool) (temp___do_toplevel_184: bool) (temp___do_typ_inv_185: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_186 : int))
+                      (temp___is_init_182 : bool))
+                     (temp___skip_constant_183 : bool))
+                    (temp___do_toplevel_184 : bool))
+                   (temp___do_typ_inv_185 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_187: int) (temp___skip_top_level_188: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_187: int) (temp___skip_top_level_188: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_187 : int))
+                   (temp___skip_top_level_188 : bool)) }
+end
+
+module Kitchen_appliances__not_open___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use Kitchen_appliances__not_open as Kitchen_appliances__not_open
+  
+  predicate dynamic_invariant (temp___expr_193: Kitchen_appliances__not_open.not_open) (temp___is_init_189: bool) (temp___skip_constant_190: bool) (temp___do_toplevel_191: bool) (temp___do_typ_inv_192: bool) =
+    true
+  
+  val dynamic_invariant (temp___expr_193: Kitchen_appliances__not_open.not_open) (temp___is_init_189: bool) (temp___skip_constant_190: bool) (temp___do_toplevel_191: bool) (temp___do_typ_inv_192: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant
+                       (temp___expr_193 :
+                          Kitchen_appliances__not_open.not_open))
+                      (temp___is_init_189 : bool))
+                     (temp___skip_constant_190 : bool))
+                    (temp___do_toplevel_191 : bool))
+                   (temp___do_typ_inv_192 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_194: Kitchen_appliances__not_open.not_open) (temp___skip_top_level_195: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_194: Kitchen_appliances__not_open.not_open) (temp___skip_top_level_195: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption
+                    (temp___expr_194 : Kitchen_appliances__not_open.not_open))
+                   (temp___skip_top_level_195 : bool)) }
+end
+
+module Home__control_windows__subprogram_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use _gnatprove_standard.Boolean as Boolean
+  use Home__homesettingforenergy as Home__homesettingforenergy
+  use Home__homesettingforenergy___axiom as Home__homesettingforenergy___axiom
+  use Home__control_windows__ch as Home__control_windows__ch
+  use Heating_system__windows_status___axiom as Heating_system__windows_status___axiom
+  use Heating_system__windows as Heating_system__windows
+  use Heating_system__windows__rep as Heating_system__windows__rep
+  use Home__homesettingforenergy___axiom as Home__homesettingforenergy___axiom
+  use Home__control_windows__ch___axiom as Home__control_windows__ch___axiom
+  use Heating_system__temperature___axiom as Heating_system__temperature___axiom
+  use Heating_system__windows___axiom as Heating_system__windows___axiom
+  use Heating_system__windows_status___axiom as Heating_system__windows_status___axiom
+  use Kitchen_appliances__fridge___axiom as Kitchen_appliances__fridge___axiom
+  use Kitchen_appliances__oven___axiom as Kitchen_appliances__oven___axiom
+  use Kitchen_appliances__not_open___axiom as Kitchen_appliances__not_open___axiom
+  
+  let def (__void_param : unit)
+    requires { [#"home.ads" 19 0 0] true }
+    ensures { [#"home.ads" 19 0 0]
+              [#"home.ads" 21 0 0]
+              [@GP_Reason:VC_POSTCONDITION]
+              [@GP_Shape:pragargs__cmp]
+              [@GP_Sloc:home.ads:21:14]
+              [@model_vc_post]
+              [@GP_Id:3]
+              [@comment:     Post => (ch.WindowsStatus = W_Closed);              ^ home.ads:21:14:VC_POSTCONDITION]
+              [@GP_Pretty_Ada:1495]
+              [@GP_Sloc:home.ads:21:14]
+              ((Heating_system__windows__rep.to_rep
+                  ((Home__homesettingforenergy.__split_fields
+                       { Home__homesettingforenergy.__split_fields =
+                           (Home__homesettingforenergy.__split_fields__content
+                               Home__control_windows__ch.ch__split_fields) }).
+                     Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus))
+                 = (1 : int)) }
+  = [@vc:divergent]
+    (([@GNAT-comment:Assume dynamic invariants of inputs of the subprogram home.ads:19]
+      ());
+     assume {
+       ((((Home__homesettingforenergy___axiom.dynamic_invariant
+             { Home__homesettingforenergy.__split_fields =
+                 (Home__homesettingforenergy.__split_fields__content
+                     Home__control_windows__ch.ch__split_fields) })
+            True)
+           False)
+          True)
+         True };
+     ([@GNAT-comment:Assume moved pointers in outputs of the subprogram home.ads:19]
+      ());
+     ([@GNAT-comment:Check for RTE in the Pre of the subprogram home.ads:19]
+      ());
+     (begin
+        ensures { true }
+        let _ =
+          let _ =
+            (Boolean.orb
+               ((Heating_system__windows__rep.to_rep
+                   ((Home__homesettingforenergy.__split_fields
+                        { Home__homesettingforenergy.__split_fields =
+                            (Home__homesettingforenergy.__split_fields__content
+                                Home__control_windows__ch.ch__split_fields) }).
+                      Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus))
+                  = (1 : int)))
+              ((Heating_system__windows__rep.to_rep
+                  ((Home__homesettingforenergy.__split_fields
+                       { Home__homesettingforenergy.__split_fields =
+                           (Home__homesettingforenergy.__split_fields__content
+                               Home__control_windows__ch.ch__split_fields) }).
+                     Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus))
+                 = (0 : int)) in
+          () in
+        ()
+      end);
+     ([@GNAT-comment:Assume Pre of the subprogram home.ads:19] ());
+     assume {
+       [@GP_Pretty_Ada:1483]
+       (((Heating_system__windows__rep.to_rep
+            ((Home__homesettingforenergy.__split_fields
+                 { Home__homesettingforenergy.__split_fields =
+                     (Home__homesettingforenergy.__split_fields__content
+                         Home__control_windows__ch.ch__split_fields) }).
+               Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus))
+           = (1 : int)) \/
+          ((Heating_system__windows__rep.to_rep
+              ((Home__homesettingforenergy.__split_fields
+                   { Home__homesettingforenergy.__split_fields =
+                       (Home__homesettingforenergy.__split_fields__content
+                           Home__control_windows__ch.ch__split_fields) }).
+                 Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus))
+             = (0 : int))) };
+     (try
+        ([@GP_Sloc:home.adb:21:7] [#"home.adb" 21 0 0] ());
+        ([@GP_Sloc:home.adb:21:7]
+         [#"home.adb" 21 0 0]
+         (let temp___compl_227 =
+            Heating_system__windows__rep.to_rep
+              ((Home__homesettingforenergy.__split_fields
+                   { Home__homesettingforenergy.__split_fields =
+                       (Home__homesettingforenergy.__split_fields__content
+                           Home__control_windows__ch.ch__split_fields) }).
+                 Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus) in
+          [#"home.adb" 21 0 0]
+          (let window = { int__content = temp___compl_227 } in
+           ([#"home.adb" 21 0 0] (val _f : unit in
+                                  _f));
+           ([#"home.adb" 21 0 0]
+            [@GP_Shape:call_windows_status]
+            [@GP_Reason:VC_PRECONDITION]
+            [@comment:      Windows_Status(ch.WindowsStatus);       ^ home.adb:21:7:VC_PRECONDITION]
+            [@vc:annotation]
+            [@GP_Sloc:home.adb:21:7]
+            [@GP_Id:2]
+            (Heating_system__windows_status___axiom.windows_status window));
+           (let temp___229 =
+              let temp___228 =
+                { Home__homesettingforenergy.__split_fields =
+                    (Home__homesettingforenergy.__split_fields__content
+                        Home__control_windows__ch.ch__split_fields) } in
+              (begin
+                 ensures { true }
+                 let _ =
+                   let _ =
+                     (Home__homesettingforenergy.__split_fields temp___228).
+                       Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus in
+                   () in
+                 ()
+               end);
+              ({ temp___228 with
+                 Home__homesettingforenergy.__split_fields =
+                   ({ (Home__homesettingforenergy.__split_fields temp___228) with
+                      Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus =
+                        (Heating_system__windows__rep.of_rep
+                           (window.int__content)) }) }) in
+            Home__control_windows__ch.ch__split_fields.Home__homesettingforenergy.__split_fields__content <-
+              (Home__homesettingforenergy.__split_fields temp___229)))));
+        (raise Return__exc)
+      with Return__exc -> ()
+      end);
+     (begin
+        ensures { true }
+        let _ =
+          let _ =
+            ((Heating_system__windows__rep.to_rep
+                ((Home__homesettingforenergy.__split_fields
+                     { Home__homesettingforenergy.__split_fields =
+                         (Home__homesettingforenergy.__split_fields__content
+                             Home__control_windows__ch.ch__split_fields) }).
+                   Home__homesettingforenergy.rec__home__homesettingforenergy__windowsstatus))
+               = (1 : int)) in
+          () in
+        ()
+      end))
+end
