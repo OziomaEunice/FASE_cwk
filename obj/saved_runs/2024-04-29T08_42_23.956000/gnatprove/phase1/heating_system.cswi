@@ -1,0 +1,7 @@
+20240429074222
+-c
+-x
+ada
+-gnatA
+-gnatc
+-gnates=C:\FASE\cwk\obj\gnatprove\aa176a6a.tmp

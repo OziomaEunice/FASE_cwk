@@ -5,7 +5,8 @@ package body Home with SPARK_Mode is
 
    procedure House_Temperature (ht: in out HomeSettingForEnergy) is
    begin
-      ht.TemperatureSetting := 15;
+      ht.TemperatureSetting := 15; -- also try ht.TemperatureSetting := 17
+                                   -- also try ht.TemperatureSetting := 23
       
       Control_Temperature(ht.TemperatureSetting);
       
