@@ -1,0 +1,1 @@
+home.ads:24:34: medium: postcondition might fail, cannot prove ov.O = O_Closed[#0]

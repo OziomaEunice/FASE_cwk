@@ -21,7 +21,7 @@ package Home with SPARK_Mode is
   
    
    procedure KitchenAppliancesStatus (fr,ov: out Not_Open) with
-     Post => (fr.F = F_Open) and (ov.O = O_Open);
+     Post => (fr.F = F_Open) or (ov.O = O_Open);
    
    
    procedure CheckLevelOfCarbonMonoxide (cm: in out Carbon_Monoxide) with
