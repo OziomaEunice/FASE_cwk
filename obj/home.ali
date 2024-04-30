@@ -10,45 +10,70 @@ RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U home%s		home.ads		bf286e4b EE OO PK
+U home%b		home.adb		dfcc1db9 OO PK
 W heating_system%s	heating_system.adb	heating_system.ali
 W kitchen_appliances%s	kitchen_appliances.adb	kitchen_appliances.ali
 
-D heating_system.ads	20240427172150 6bc8a509 heating_system%s
-D home.ads		20240428211356 ae5a5f0f home%s
+U home%s		home.ads		0b9e3a8a EE OO PK
+W heating_system%s	heating_system.adb	heating_system.ali
+W kitchen_appliances%s	kitchen_appliances.adb	kitchen_appliances.ali
+
+D heating_system.ads	20240429135126 2a904476 heating_system%s
+D home.ads		20240430135250 5bb4eab1 home%s
+D home.adb		20240430135336 d4522733 home%b
 D kitchen_appliances.ads  20240427154228 7aba944d kitchen_appliances%s
-G a Z
+G a e
+G c Z s b [house_temperature home 16 14 none]
+G c Z s b [kitchenappliancesstatus home 23 14 none]
+G c Z s b [checklevelofcarbonmonoxide home 27 14 none]
+G r c none [house_temperature home 16 14 none] [control_temperature heating_system 8 14 none]
+G r c none [house_temperature home 16 14 none] [windows_status heating_system 12 14 none]
+G r c none [kitchenappliancesstatus home 23 14 none] [oven_status kitchen_appliances 15 14 none]
+G r c none [kitchenappliancesstatus home 23 14 none] [fridge_status kitchen_appliances 12 14 none]
+G r c none [checklevelofcarbonmonoxide home 27 14 none] [control_temperature heating_system 8 14 none]
+G r c none [checklevelofcarbonmonoxide home 27 14 none] [windows_status heating_system 12 14 none]
+G r c none [checklevelofcarbonmonoxide home 27 14 none] [oven_status kitchen_appliances 15 14 none]
+G r c none [checklevelofcarbonmonoxide home 27 14 none] [fridge_status kitchen_appliances 12 14 none]
 X 1 heating_system.ads
-1K9*Heating_System 21e19 2|1w6 1r26
+1K9*Heating_System 16e19 2|1w6 1r26 3|1w6 1r26
 4I9*Temperature<short_short_integer> 2|7r28
 5E9*Windows 5e38 2|8r23
-5n21*W_Open{5E9} 2|21r63
-5n29*W_Closed{5E9} 2|21r32 22r34
+5n21*W_Open{5E9} 2|18r63
+5n29*W_Closed{5E9} 2|18r32 20r38 3|33r66 37r66 52r41
+8U14*Control_Temperature 3|11s7
+12U14*Windows_Status 3|12s7
 X 2 home.ads
-4K9*Home 35l5 35e9
-6R9*HomeSettingForEnergy 11e14 16r44 20r42
-7i7*TemperatureSetting{1|4I9} 17r16 17r46 18r18 18r50
-8e7*WindowsStatus{1|5E9} 21r16 21r47 22r18
-9r7*FridgeStatus{3|6R9}
-10r7*OvenStatus{3|6R9}
-13E9*Carbon_Monoxide 13e42 30r53
-13n29*Safe{13E9} 31r33 32r19
-13n35*Unsafe{13E9} 31r18
-16U14*House_Temperature 16=33
-16r33 ht{6R9} 17r13 17r43 18r15 18r47
-20U14*Control_Windows 20=31
-20r31 ch{6R9} 21r13 21r44 22r15
-24U14*IsFridgeOpenOrClosed 24<36
-24r36 fr{3|6R9} 25r14
-27U14*IsOvenOpenOrClosed 27<34
-27r34 ov{3|6R9} 28r14
-30U14*CheckLevelOfCarbonMonoxide 30=42
-30e42 cm{13E9} 31r13 31r28 32r14
-X 3 kitchen_appliances.ads
-1K9*Kitchen_Appliances 2|2w6 2r30 3|18e23
-3n20*F_Open{3E9} 2|25r21
-4n18*O_Open{4E9} 2|28r21
-6R9*Not_Open 2|9r22 10r20 24r44 27r42 3|9e14
-7e7*F{3E9} 2|25r17
-8e7*O{4E9} 2|28r17
+4K9*Home 32l5 32e9 3|4b14 67l5 67t9
+6R9*HomeSettingForEnergy 11e14 16r47 3|6r47 32r28 36r24
+7i7*TemperatureSetting{1|4I9} 19r18 19r50 3|8m10 11m30 32m53 36m49 50r29
+. 51r29
+8e7*WindowsStatus{1|5E9} 18r16 18r47 20r22 3|12m25 33m49 37m49 52r25
+9r7*FridgeStatus{4|6R9} 3|34m49 38m49
+10r7*OvenStatus{4|6R9} 3|35m49 39m49
+13E9*Carbon_Monoxide 13e42 27r53 3|29r53
+13n29*Safe{13E9} 28r33 29r20 3|56r16
+13n35*Unsafe{13E9} 28r18 29r33 3|59r16
+16U14*House_Temperature 16=33 16=36 3|6b14 14l8 14t25 44s7
+16r33 ht{6R9} 19r15 19r47 3|6b33 8m7 11m27 11r27
+16r36 ch{6R9} 18r13 18r44 20r19 3|6b36 12m22 12r22
+23U14*KitchenAppliancesStatus 23<39 23<42 3|17b14 25l8 25t31 45s7
+23r39 fr{4|6R9} 24r15 3|17b39 19m19
+23r42 ov{4|6R9} 24r35 3|17b42 22m21
+27U14*CheckLevelOfCarbonMonoxide 27=42 3|29b14 63l8 63t34
+27e42 cm{13E9} 28r13 28r28 29r15 29r28 3|29b42 56m10 59m10
+X 3 home.adb
+32r7 Temperature_Result{2|6R9} 44m25 44r25 50r10 51r10
+36r7 Windows_Result{2|6R9} 44m45 44r45 52r10
+40r7 Fridge_Result{4|6R9} 45m31 53r10
+41r7 Oven_Result{4|6R9} 45m46 54r10
+X 4 kitchen_appliances.ads
+1K9*Kitchen_Appliances 2|2w6 2r30 3|2w6 2r30 4|18e23
+3n20*F_Open{3E9} 2|24r22 3|34r71 35r69 38r71 39r69 53r28
+4n18*O_Open{4E9} 2|24r42
+4n26*O_Closed{4E9} 3|34r84 35r82 38r84 39r82 54r26
+6R9*Not_Open 2|9r22 10r20 23r50 3|17r50 40r23 41r21 4|9e14
+7e7*F{3E9} 2|24r18 3|34m66 35m64 38m66 39m64 53r24
+8e7*O{4E9} 2|24r38 3|34m79 35m77 38m79 39m77 54r22
+12U14*Fridge_Status 3|22s7
+15U14*Oven_Status 3|19s7
 

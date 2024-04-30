@@ -14,20 +14,20 @@ U heating_system%b	heating_system.adb	6efada4c OO PK
 
 U heating_system%s	heating_system.ads	2a904476 OO PK
 
-D heating_system.ads	20240429135044 2a904476 heating_system%s
+D heating_system.ads	20240429135126 2a904476 heating_system%s
 D heating_system.adb	20240429074324 446a9e3a heating_system%b
 D system.ads		20210520051134 2ffa5114 system%s
 G a Z
 X 1 heating_system.ads
-1K9*Heating_System 21l5 21e19 2|1b14 54l5 54t19
-4I9*Temperature<short_short_integer> 13r48 2|4r47
-5E9*Windows 5e38 17r45 2|38r45 39r31
-5n21*W_Open{5E9} 18r23 2|39r41 41r17 47r35
-5n29*W_Closed{5E9} 18r42 19r23 2|48r20
-13U14*Control_Temperature 13=35 2|4b14 34l8 34t27
-13i35 Temp{4I9} 14r13 15r15 15r30 2|4b34 7m7 12r12 17r17 18m16 24r20 25m19
-17U14*Windows_Status 17=30 2|38b14 51l8 51t22
-17e30 Window{5E9} 18r14 18r33 19r14 2|38b30 41m7 48m10
+1K9*Heating_System 16l5 16e19 2|1b14 54l5 54t19
+4I9*Temperature<short_short_integer> 8r48 2|4r47
+5E9*Windows 5e38 12r45 2|38r45 39r31
+5n21*W_Open{5E9} 13r23 2|39r41 41r17 47r35
+5n29*W_Closed{5E9} 13r42 14r23 2|48r20
+8U14*Control_Temperature 8=35 2|4b14 34l8 34t27
+8i35 Temp{4I9} 9r13 10r15 10r30 2|4b34 7m7 12r12 17r17 18m16 24r20 25m19
+12U14*Windows_Status 12=30 2|38b14 51l8 51t22
+12e30 Window{5E9} 13r14 13r33 14r14 2|38b30 41m7 48m10
 X 2 heating_system.adb
 39e7 Current_Windows_Status{1|5E9} 47r10
 

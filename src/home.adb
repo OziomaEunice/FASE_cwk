@@ -3,48 +3,29 @@ with Kitchen_Appliances; use Kitchen_Appliances;
 
 package body Home with SPARK_Mode is
 
-   procedure House_Temperature (ht: in out HomeSettingForEnergy) is
+   procedure House_Temperature (ht,ch: in out HomeSettingForEnergy) is
    begin
       ht.TemperatureSetting := 15; -- also try ht.TemperatureSetting := 17
                                    -- also try ht.TemperatureSetting := 23
       
       Control_Temperature(ht.TemperatureSetting);
+      Windows_Status(ch.WindowsStatus);
       
    end House_Temperature;
    
    
-   procedure Control_Windows (ch: in out HomeSettingForEnergy) is
-   begin
-      -- initialise window status
-      -- ch.WindowsStatus := W_Open;
-      
-      Windows_Status(ch.WindowsStatus);
-      
-   end Control_Windows;
-   
-   
-   procedure IsFridgeOpenOrClosed (fr: out Not_Open) is
+   procedure KitchenAppliancesStatus (fr,ov: out Not_Open) is
    begin 
-      --  fr.F := F_Open;
-      --  fr.O := O_Closed;
-      
       Oven_Status(fr); -- from the oven procedure: fridge is open,
                        -- while oven is closed
       
-   end IsFridgeOpenOrClosed;
-   
-   
-   procedure IsOvenOpenOrClosed (ov: out Not_Open) is
-   begin
-      --  ov.O := O_Closed;
-      --  ov.F := F_Open;
-      
       Fridge_Status(ov); -- from the fridge procedure: oven is open,
                          -- while fridge is closed
-      
-   end IsOvenOpenOrClosed;
-    
    
+   end KitchenAppliancesStatus;
+   
+   
+      
    procedure CheckLevelOfCarbonMonoxide (cm: in out Carbon_Monoxide) is
       -- These variables store the results of all the
       -- above procedures
@@ -60,10 +41,8 @@ package body Home with SPARK_Mode is
       Oven_Result : Not_Open;
    begin
       -- call the procedures to get their results
-      House_Temperature(Temperature_Result);
-      Control_Windows(Windows_Result);
-      IsFridgeOpenOrClosed(Fridge_Result);
-      IsOvenOpenOrClosed(Oven_Result);
+      House_Temperature(Temperature_Result, Windows_Result);
+      KitchenAppliancesStatus(Fridge_Result, Oven_Result);
       
       
       -- Evaluate the results and if they are all

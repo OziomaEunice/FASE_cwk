@@ -10,88 +10,80 @@ RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U home%b		home.adb		192e9abb OO PK
+U home%b		home.adb		a9df7949 OO PK
 W heating_system%s	heating_system.adb	heating_system.ali
 W kitchen_appliances%s	kitchen_appliances.adb	kitchen_appliances.ali
 
-U home%s		home.ads		4c7c4237 OO PK
+U home%s		home.ads		0b9e3a8a OO PK
 W heating_system%s	heating_system.adb	heating_system.ali
 W kitchen_appliances%s	kitchen_appliances.adb	kitchen_appliances.ali
 
-D heating_system.ads	20240429135044 2a904476 heating_system%s
-D home.ads		20240428213748 1c56920c home%s
-D home.adb		20240429074632 5552d88c home%b
+D heating_system.ads	20240429135126 2a904476 heating_system%s
+D home.ads		20240430135250 5bb4eab1 home%s
+D home.adb		20240430135350 a24143c3 home%b
 D kitchen_appliances.ads  20240427154228 7aba944d kitchen_appliances%s
 D system.ads		20210520051134 2ffa5114 system%s
 G a Z
 X 1 heating_system.ads
-1K9*Heating_System 21e19 2|1w6 1r26 3|1w6 1r26
+1K9*Heating_System 16e19 2|1w6 1r26 3|1w6 1r26
 4I9*Temperature<short_short_integer> 2|7r28
 5E9*Windows 5e38 2|8r23
-5n21*W_Open{5E9} 2|20r63
-5n29*W_Closed{5E9} 2|20r32 21r34 3|52r66 56r66 73r41
-13U14*Control_Temperature 3|11s7
-17U14*Windows_Status 3|21s7
+5n21*W_Open{5E9} 2|18r63
+5n29*W_Closed{5E9} 2|18r32 20r38 3|33r66 37r66 52r41
+8U14*Control_Temperature 3|11s7
+12U14*Windows_Status 3|12s7
 X 2 home.ads
-4K9*Home 34l5 34e9 3|4b14 88l5 88t9
-6R9*HomeSettingForEnergy 11e14 16r44 19r42 3|6r44 16r42 51r28 55r24
-7i7*TemperatureSetting{1|4I9} 17r18 17r50 3|8m10 11m30 51m53 55m49 71r29
-. 72r29
-8e7*WindowsStatus{1|5E9} 20r16 20r47 21r18 3|21m25 52m49 56m49 73r25
-9r7*FridgeStatus{4|6R9} 3|53m49 57m49
-10r7*OvenStatus{4|6R9} 3|54m49 58m49
-13E9*Carbon_Monoxide 13e42 29r53 3|48r53
-13n29*Safe{13E9} 30r33 31r20 3|77r16
-13n35*Unsafe{13E9} 30r18 31r33 3|80r16
-16U14*House_Temperature 16=33 3|6b14 13l8 13t25 63s7
-16r33 ht{6R9} 17r15 17r47 3|6b33 8m7 11m27 11r27
-19U14*Control_Windows 19=31 3|16b14 23l8 23t23 64s7
-19r31 ch{6R9} 20r13 20r44 21r15 3|16b31 21m22 21r22
-23U14*IsFridgeOpenOrClosed 23<36 3|26b14 34l8 34t28 65s7
-23r36 fr{4|6R9} 24r14 3|26b36 31m19
-26U14*IsOvenOpenOrClosed 26<34 3|37b14 45l8 45t26 66s7
-26r34 ov{4|6R9} 27r14 3|37b34 42m21
-29U14*CheckLevelOfCarbonMonoxide 29=42 3|48b14 84l8 84t34
-29e42 cm{13E9} 30r13 30r28 31r15 31r28 3|48b42 77m10 80m10
+4K9*Home 32l5 32e9 3|4b14 67l5 67t9
+6R9*HomeSettingForEnergy 11e14 16r47 3|6r47 32r28 36r24
+7i7*TemperatureSetting{1|4I9} 19r18 19r50 3|8m10 11m30 32m53 36m49 50r29
+. 51r29
+8e7*WindowsStatus{1|5E9} 18r16 18r47 20r22 3|12m25 33m49 37m49 52r25
+9r7*FridgeStatus{4|6R9} 3|34m49 38m49
+10r7*OvenStatus{4|6R9} 3|35m49 39m49
+13E9*Carbon_Monoxide 13e42 27r53 3|29r53
+13n29*Safe{13E9} 28r33 29r20 3|56r16
+13n35*Unsafe{13E9} 28r18 29r33 3|59r16
+16U14*House_Temperature 16=33 16=36 3|6b14 14l8 14t25 44s7
+16r33 ht{6R9} 19r15 19r47 3|6b33 8m7 11m27 11r27
+16r36 ch{6R9} 18r13 18r44 20r19 3|6b36 12m22 12r22
+23U14*KitchenAppliancesStatus 23<39 23<42 3|17b14 25l8 25t31 45s7
+23r39 fr{4|6R9} 24r15 3|17b39 19m19
+23r42 ov{4|6R9} 24r35 3|17b42 22m21
+27U14*CheckLevelOfCarbonMonoxide 27=42 3|29b14 63l8 63t34
+27e42 cm{13E9} 28r13 28r28 29r15 29r28 3|29b42 56m10 59m10
 X 3 home.adb
-51r7 Temperature_Result{2|6R9} 63m25 63r25 71r10 72r10
-55r7 Windows_Result{2|6R9} 64m23 64r23 73r10
-59r7 Fridge_Result{4|6R9} 65m28 74r10
-60r7 Oven_Result{4|6R9} 66m26 75r10
+32r7 Temperature_Result{2|6R9} 44m25 44r25 50r10 51r10
+36r7 Windows_Result{2|6R9} 44m45 44r45 52r10
+40r7 Fridge_Result{4|6R9} 45m31 53r10
+41r7 Oven_Result{4|6R9} 45m46 54r10
 X 4 kitchen_appliances.ads
 1K9*Kitchen_Appliances 2|2w6 2r30 3|2w6 2r30 4|18e23
-3n20*F_Open{3E9} 2|24r21 3|53r71 54r69 57r71 58r69 74r28
-4n18*O_Open{4E9} 2|27r21
-4n26*O_Closed{4E9} 3|53r84 54r82 57r84 58r82 75r26
-6R9*Not_Open 2|9r22 10r20 23r44 26r42 3|26r44 37r42 59r23 60r21 4|9e14
-7e7*F{3E9} 2|24r17 3|53m66 54m64 57m66 58m64 74r24
-8e7*O{4E9} 2|27r17 3|53m79 54m77 57m79 58m77 75r22
-12U14*Fridge_Status 3|42s7
-15U14*Oven_Status 3|31s7
+3n20*F_Open{3E9} 2|24r22 3|34r71 35r69 38r71 39r69 53r28
+4n18*O_Open{4E9} 2|24r42
+4n26*O_Closed{4E9} 3|34r84 35r82 38r84 39r82 54r26
+6R9*Not_Open 2|9r22 10r20 23r50 3|17r50 40r23 41r21 4|9e14
+7e7*F{3E9} 2|24r18 3|34m66 35m64 38m66 39m64 53r24
+8e7*O{4E9} 2|24r38 3|34m79 35m77 38m79 39m77 54r22
+12U14*Fridge_Status 3|22s7
+15U14*Oven_Status 3|19s7
 
 QQ SPARKVERSION SPARK Community 2021 (20210519)
-GG EK_DIRECT_CALLS home__house_temperature 1 heating_system__control_temperature
-GG EK_GLOBALS home__house_temperature local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 home proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 1 heating_system__control_temperature calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
-GG EK_DIRECT_CALLS home__control_windows 1 heating_system__windows_status
-GG EK_GLOBALS home__control_windows local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 home proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 1 heating_system__windows_status calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
-GG EK_DIRECT_CALLS home__isfridgeopenorclosed 1 kitchen_appliances__oven_status
-GG EK_GLOBALS home__isfridgeopenorclosed local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 home proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 1 kitchen_appliances__oven_status calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
-GG EK_DIRECT_CALLS home__isovenopenorclosed 1 kitchen_appliances__fridge_status
-GG EK_GLOBALS home__isovenopenorclosed local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 home proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 1 kitchen_appliances__fridge_status calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
-GG EK_DIRECT_CALLS home__checklevelofcarbonmonoxide 4 home__house_temperature home__control_windows home__isfridgeopenorclosed home__isovenopenorclosed
+GG EK_DIRECT_CALLS home__house_temperature 2 heating_system__control_temperature heating_system__windows_status
+GG EK_GLOBALS home__house_temperature local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 home proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 2 heating_system__control_temperature heating_system__windows_status calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS home__kitchenappliancesstatus 2 kitchen_appliances__fridge_status kitchen_appliances__oven_status
+GG EK_GLOBALS home__kitchenappliancesstatus local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 home proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 2 kitchen_appliances__fridge_status kitchen_appliances__oven_status calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS home__checklevelofcarbonmonoxide 2 home__house_temperature home__kitchenappliancesstatus
 GG EK_GLOBALS home__checklevelofcarbonmonoxide local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 home proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 4 heating_system__control_temperature heating_system__windows_status kitchen_appliances__fridge_status kitchen_appliances__oven_status calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS home 0
 GG EK_GLOBALS home local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 refined_initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
-GG EK_FLOW_SCOPE home__isovenopenorclosed FALSE FALSE FALSE FALSE TRUE home VISIBLE_PART
-GG EK_FLOW_SCOPE home TRUE FALSE FALSE FALSE FALSE __standard
-GG EK_FLOW_SCOPE home__control_windows FALSE FALSE FALSE FALSE TRUE home VISIBLE_PART
+GG EK_FLOW_SCOPE heating_system__windows_status FALSE FALSE FALSE FALSE TRUE heating_system VISIBLE_PART
+GG EK_FLOW_SCOPE kitchen_appliances__fridge_status FALSE FALSE FALSE FALSE TRUE kitchen_appliances VISIBLE_PART
+GG EK_FLOW_SCOPE home__kitchenappliancesstatus FALSE FALSE FALSE FALSE TRUE home VISIBLE_PART
+GG EK_FLOW_SCOPE heating_system TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE home__house_temperature FALSE FALSE FALSE FALSE TRUE home VISIBLE_PART
 GG EK_FLOW_SCOPE kitchen_appliances__oven_status FALSE FALSE FALSE FALSE TRUE kitchen_appliances VISIBLE_PART
 GG EK_FLOW_SCOPE kitchen_appliances TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE heating_system__control_temperature FALSE FALSE FALSE FALSE TRUE heating_system VISIBLE_PART
 GG EK_FLOW_SCOPE home__checklevelofcarbonmonoxide FALSE FALSE FALSE FALSE TRUE home VISIBLE_PART
-GG EK_FLOW_SCOPE heating_system__windows_status FALSE FALSE FALSE FALSE TRUE heating_system VISIBLE_PART
-GG EK_FLOW_SCOPE home__isfridgeopenorclosed FALSE FALSE FALSE FALSE TRUE home VISIBLE_PART
-GG EK_FLOW_SCOPE home__house_temperature FALSE FALSE FALSE FALSE TRUE home VISIBLE_PART
-GG EK_FLOW_SCOPE kitchen_appliances__fridge_status FALSE FALSE FALSE FALSE TRUE kitchen_appliances VISIBLE_PART
-GG EK_FLOW_SCOPE heating_system TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE home TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_END_MARKER
