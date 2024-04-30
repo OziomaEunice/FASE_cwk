@@ -3,7 +3,7 @@ with Kitchen_Appliances; use Kitchen_Appliances;
 
 package body Home with SPARK_Mode is
 
-   procedure House_Temperature (ht,ch: in out HomeSettingForEnergy) is
+   procedure RoomsSettings (ht,ch: in out HomeSettingForEnergy) is
    begin
       ht.TemperatureSetting := 15; -- also try ht.TemperatureSetting := 17
                                    -- also try ht.TemperatureSetting := 23
@@ -11,7 +11,7 @@ package body Home with SPARK_Mode is
       Control_Temperature(ht.TemperatureSetting);
       Windows_Status(ch.WindowsStatus);
       
-   end House_Temperature;
+   end RoomsSettings;
    
    
    procedure KitchenAppliancesStatus (fr,ov: out Not_Open) is
@@ -41,7 +41,7 @@ package body Home with SPARK_Mode is
       Oven_Result : Not_Open;
    begin
       -- call the procedures to get their results
-      House_Temperature(Temperature_Result, Windows_Result);
+      RoomsSettings(Temperature_Result, Windows_Result);
       KitchenAppliancesStatus(Fridge_Result, Oven_Result);
       
       

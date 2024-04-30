@@ -13,7 +13,7 @@ package Home with SPARK_Mode is
    type Carbon_Monoxide is (Safe, Unsafe);
 
    
-   procedure House_Temperature (ht,ch: in out HomeSettingForEnergy) 
+   procedure RoomsSettings (ht,ch: in out HomeSettingForEnergy) 
      with
      Pre => ch.WindowsStatus = W_Closed or ch.WindowsStatus = W_Open,
      Post => (ht.TemperatureSetting >= 17 and ht.TemperatureSetting <= 19)
