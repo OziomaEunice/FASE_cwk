@@ -3,3 +3,6 @@ The “Housing of the Future” project tackles the challenge of balancing house
 I developed a smart home control system to optimize energy efficiency and ensure occupant safety using Ada-SPARK. 
 Key features include:
   - temperature regulation, window management, kitchen appliance control, and carbon monoxide monitoring.
+
+---
+-> The src folder contains code for different specifications and implementation. 
